@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         "MajorMonoDisplay": ['Major Mono Display', 'monospace'],
         "Megrim": ["Megrim"],
-        "Quicksand": ["Quicksand", "sans-serif"],
+        "Quicksand": ['Quicksand', 'sans-serif'],
         "Montserrat": ["Montserrat Subrayada", "sans-serif"],
         "PressStart2P": ["Press Start 2P", "cursive"],
         "RubikMonoOne": ["Rubik Mono One", "sans-serif"],

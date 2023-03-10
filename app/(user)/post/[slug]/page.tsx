@@ -60,7 +60,7 @@ async function Post({params: {slug}}: Props) {
   return (
     <div>
       <article className="px-10 pb-10">
-        <section className="space-y-1 border-[#992715de] text-white pb-5">
+        <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
             <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2">
               <Image
@@ -73,10 +73,10 @@ async function Post({params: {slug}}: Props) {
             <section className="p-4 bg-[#ba3627] w-full">
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
-                  <h1 className="text-4xl font-extrabold">
+                  <h1 className="text-4xl font-extrabold font-MontserratAlternates">
                     {securePost.title}
                   </h1>
-                  <p>
+                  <p className="font-Quicksand font-bold">
                     {new Date(securePost._createdAt).toLocaleDateString("en-US", {
                       day: "numeric",
                       month: "long",
@@ -85,19 +85,27 @@ async function Post({params: {slug}}: Props) {
                   </p>
                 </div>
 
-                <div className='flex flex-col items-center justify-center content-center mt-3 ml-20'>
-                  <div className="flex flex-col items-center justify-center w-40 h-24 pt-14" >
+                <div className='flex mt-16 mb-0 pt-3'>
+                  <div className="flex flex-col items-center justify-center content-center w-52 h-24 pt-15" >
                     <Image
                       className='rounded-full'
                       src={urlFor(securePost.author.image).url()}
                       alt={securePost.author.name}
                       height={80}
-                      width={80}
+                      width={90}
                     /> 
-                    <div className='w-40 '>
-                      <h3 className="text-lg font-bold flex">
+                    <div className='w-28 '>
+                      <h3 className="text-lg font-Quicksand font-bold flex">
                         {securePost.author.name}
                       </h3>
+                    </div>
+                    <div className="flex flex-row font-Quicksand" >
+                    {securePost.categories.map((el: any) => (
+                      <p className="bg-[#274c86] text-white px-3 py-1 rounded-full text-sm font-semibold mt-3"
+                        key={el._id}>
+                        {el.title}
+                      </p>
+                    ))}
                     </div>
                   </div>
                 </div>
@@ -107,16 +115,16 @@ async function Post({params: {slug}}: Props) {
                   <img alt="blog icons" className="h-14 w-40" src={GMR.src}/>
 
                 </div>
-                <h2 className="italic pt-5">
+                <h2 className="italic pt-5 font-Quicksand font-bold">
                   {securePost.description}
                 </h2>
                 <div className='flex items-center justify-end mt-auto space-x-1'>
-                  {securePost.categories.map((el: any) => (
+                  {/* {securePost.categories.map((el: any) => (
                     <p className="bg-[#274c86] text-white px-3 py-1 rounded-full text-sm font-semibold mt-3"
                       key={el._id}>
                       {el.title}
                     </p>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </section>

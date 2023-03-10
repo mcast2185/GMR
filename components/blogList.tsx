@@ -30,7 +30,7 @@ export default function BlogList({posts}: Props) {
                 />
                 <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between" >
                   <div>
-                    <p className="font-bold" >
+                    <p className="font-bold font-Montserrat" >
                       {post.title}
                     </p>
                     <p>
