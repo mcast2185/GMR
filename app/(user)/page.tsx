@@ -5,6 +5,7 @@ import { client } from '../../lib/sanity.client';
 import React from "react";
 import BlogList from '../../components/blogList';
 import PreviewBlogList from '../../components/previewBlogList';
+import Carousel from 'components/carousel';
 
 // This component query function will be used to stream in data from 
 // // // sanity.io backend before it is published.

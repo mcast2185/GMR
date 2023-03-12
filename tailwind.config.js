@@ -1,5 +1,7 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
@@ -20,7 +22,7 @@ module.exports = {
         "TenorSans": ['Tenor Sans', 'sans-serif'],
         "JuliusSansOne": ['Julius Sans One', "sans-serif"],
         "Thasadith" : ['Thasadith', "sans-serif"]
-      }
+      },
     },
   },
   plugins: [

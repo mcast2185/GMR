@@ -1,3 +1,175 @@
+
+.html-selector {
+  overflow-block:clip;
+  object-fit: contain;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* if we want to keep the carousel for mobile devices just adjust the padding to 0, 0 */
 .container {
-  
+  max-width: 500px;
+  padding: 0rem 14rem;
+}
+
+.swiper {
+  height: 495px !important;
+  /* height: 350px !important; */
+} 
+
+
+.swiper-wrapper {
+  height: 65% !important;
+  width: 580px !important;
+  cursor: grab;
+  transition-duration: 0ms;
+  transform: translate3d(-1464.06px, 0px, 0px);
+}
+
+.swiper_container {
+  padding: 0rem 0rem !important;
+  position: relative;
+  width: 580px !important;
+  overflow: visible !important;
+}
+
+
+.swiper .swiper-container {
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.swiper-3d {
+  perspective: 130px !important;
+}
+
+
+.swiper-slide .img {
+  width: 22rem;
+  height: 24rem;
+  border-radius: 2rem;
+  margin-left: 105px;
+  object-fit: cover;
+
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+
+}
+
+.slider-controller {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.slider-controller .swiper-button-next {
+  left: 64% !important;
+  transition: ease-in-out;
+}
+
+.swiper-button-prev {
+  color: #ba3627 !important;
+  transition: ease-in-out;
+
+}
+.swiper-button-next {
+  color: #ba3627 !important;
+  transition: ease-in-out;
+}
+
+.slider-controller .slider-arrow-left {
+  transition: ease-in-out;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 24%; 
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.slider-controller .slider-arrow-right {
+  transition: ease-in-out;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+
+.slider-controller .slider-arrow::after {
+  content: '';
+}
+
+
+.swiper-button-prev:hover {
+  transition: .5s ease-in-out;
+  transform: scale(1.15);
+  color: #ffc847 !important;
+}
+
+.swiper-button-next:hover {
+  transition: .5s ease-in-out;
+  transform: scale(1.15);
+  color: #ffc847 !important;
+}
+
+.swiper-pagination {
+  position: relative;
+  z-index: -10 !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #274c86;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 10px !important;
+    width: 100%;
+}
+
+.rating {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.5 19.22  '><polygon fill='gold' points='10,15.27 16.18,19 14.54,11.97 20,7.24 12.81,6.63 10,0 7.19,6.63 0,7.24 5.46,11.97 3.82,19'/></svg>");
+  overflow: hidden;
+  height: 23px;
+  transform: scale(.9);
+  width: 100%;
+
+}
+
+/* Free this code up for production build only */
+
+/* @media (min-width: 1700px) {
+  .html-selector {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
+  .html-selector {
+    zoom: 1.7;
+  }
+}
+
+@media (min-width: 3860px) {
+  .html-selector {
+    zoom: 2.5;
+  }
+} */
+
+
+@media (max-width: 990px) {
+  .container {
+    display: none;
+    visibility: hidden;
+  }
 }
