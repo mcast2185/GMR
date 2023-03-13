@@ -1,6 +1,8 @@
 import { groq } from 'next-sanity';
 import { PortableText } from '@portabletext/react';
 import Image  from 'next/image';
+import React from "react";
+// import {useState} from "react";
 
 import { RichTextComponents } from '../../../../components/richTextComponents';
 import { client } from '../../../../lib/sanity.client';
@@ -18,6 +20,7 @@ type Props = {
 
 
 // re-render/validate updated backend data for this page
+
 export const revalidate = 60;
 
 
@@ -29,6 +32,7 @@ export async function generateStaticParams() {
 
   const slugs: Post[] = await client.fetch(query);
   const slugRoutes = slugs.map((slug) => slug.slug.current);
+
 
   return slugRoutes.map(slug => ({
     slug,
@@ -55,7 +59,7 @@ async function Post({params: {slug}}: Props) {
 
   const posts = await client.fetch(query);
   const securePost = posts[0];
-
+  
 
   return (
     <div>
