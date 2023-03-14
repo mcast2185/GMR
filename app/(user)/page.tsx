@@ -1,14 +1,13 @@
 import { groq } from 'next-sanity';
 import { PreviewSuspense } from 'next-sanity/preview';
 import { previewData } from 'next/headers';
+
 import { client } from '../../lib/sanity.client';
-import React from "react";
+import Carousel from 'components/carousel';
 import BlogList from '../../components/blogList';
 import PreviewBlogList from '../../components/previewBlogList';
-import Carousel from 'components/carousel';
+import SampleContent from 'components/sampleContent';
 
-// This component query function will be used to stream in data from 
-// // // sanity.io backend before it is published.
 
 
 const query = groq`
@@ -19,11 +18,7 @@ const query = groq`
   } | order(_createdAt desc)
 `
 
-// const PreviewBloglistLazy = React.lazy(() => import('../../components/previewBlogList'))
-
-
 export default async function Home () {
-  // const posts = await client.fetch(query);
   if (previewData())
   return (
     <PreviewSuspense fallback={
@@ -32,7 +27,6 @@ export default async function Home () {
           Just a moment...
         </p>
       </div>}>
-      {/* <PreviewBloglistLazy query={posts}/> */}
       <PreviewBlogList query={query}/>
     </PreviewSuspense>
   )
@@ -41,10 +35,9 @@ export default async function Home () {
   return (
     <div>
       <Carousel/>
+      <SampleContent/>
       <BlogList posts={posts}/>
     </div>
   )
-
-
 };
 

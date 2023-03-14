@@ -1,6 +1,5 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
 import {Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 import Image from 'next/image';
@@ -16,45 +15,9 @@ import slide_image_6 from "../public/hogwarts.png";
 import "../styles/carousel.module.css";
 
 
-let original: string = "";
-let url: string = "";
-
-
-
 const Carousel = () => {
-  const [display, setDisplay] = useState(true);
-  
-  // useEffect(()=> {
-  //   const originalURL: string = window.location.origin + "/";
 
-  //   const effect = () => {
-  //     original = originalURL;
-  //     url = window.document.documentURI;
-      
-  //     console.log(display);
-  //   };
-
-  //   if (window.document.URL === originalURL) {
-  //     effect();
-  //     setDisplay(true);
-      
-  //     console.log(window.document.URL, " === ", originalURL);
-  //   };
-    
-  //   if (window.document.URL !== originalURL) {
-  //     effect();
-  //     setDisplay(false);
-      
-  //     console.log(window.document.URL, " !== ", originalURL);
-  //   };
-
-  //   effect();
-  // });
-
-  
   return (
-    <>
-    {/* {display === true ? */}
     <div className="container">
       <Swiper
         effect={"coverflow"}
@@ -159,8 +122,6 @@ const Carousel = () => {
         </div>
       </Swiper>
     </div>
-    {/* : <>{console.log(" Carousel did not appear")}</>} */}
-    </>
   )
 };
 

@@ -14,9 +14,7 @@
 
 .swiper {
   height: 495px !important;
-  /* height: 350px !important; */
 } 
-
 
 .swiper-wrapper {
   height: 65% !important;
@@ -106,7 +104,6 @@
   content: '';
 }
 
-
 .swiper-button-prev:hover {
   transition: .5s ease-in-out;
   transform: scale(1.15);
@@ -165,6 +162,12 @@
     zoom: 2.5;
   }
 } */
+
+@media (min-width: 1600px) {
+  .html-selector {
+    zoom: .94;
+  }
+}
 
 
 @media (max-width: 990px) {

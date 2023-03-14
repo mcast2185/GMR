@@ -21,7 +21,9 @@ module.exports = {
         "Philosopher" : ['Philosopher', "sans-serif"],
         "TenorSans": ['Tenor Sans', 'sans-serif'],
         "JuliusSansOne": ['Julius Sans One', "sans-serif"],
-        "Thasadith" : ['Thasadith', "sans-serif"]
+        "Thasadith" : ['Thasadith', "sans-serif"],
+        "Fahkwang": ['Fahkwang', "sans-serif"],
+        "AdventPro": ['Advent Pro', "sans-serif"]
       },
     },
   },
