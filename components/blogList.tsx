@@ -9,27 +9,28 @@ type Props = {
 };
 
 // Component organizes the created blogs for the home page.
-// Return here to implement a cap limit for a certain amount of posts being rendered.
-
 
 export default function BlogList({posts}: Props) {
+  const filteredPosts = posts.slice(0, 6);
+
   return (
     <div>
       <hr className="border-[#992715de] mb-10"/>
       <div className="grid grid-cols-1 
         md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
-        {posts.map((post) => (
+        {filteredPosts.map((post) => (
           <ClientSideRoute key={post._id} 
             route={`/post/${post.slug.current}`}>
-            <div className="group cursor-pointer flex flex-col">
+            <div className="group cursor-pointer overflow-hidden flex flex-col">
               <div className="relative w-full h-80 drop-shadow-xl 
-                group-hover:scale-105 transition-transform duration-200 ease-out">
+                group-hover:scale-105 overflow-hidden transition-transform duration-200 ease-out">
                 <Image
                   priority
                   className='object-cover 
                   object-left lg:object-center'
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
+                  sizes='height: auto, width: auto'
                   fill
                 />
                 <div className="absolute bottom-0 w-full 

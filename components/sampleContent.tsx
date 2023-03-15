@@ -33,7 +33,7 @@ const SampleContent = () => {
 
           <div className="h-60 max-w-xl">
           <div className="h-full max-w-2xl pl-6 pt-6 -mr-5">
-            <h1 className="text-base text-black">
+            <h1 className="text-base text-black font-MontserratAlternates">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem soluta beatae eaque eveniet reprehenderit optio est, 
               architecto autem assumenda esse similique a. Incidunt consequatur enim minima suscipit. Fugiat, distinctio eligendi!
               Eveniet illo voluptate aperiam magni voluptates distinctio unde error placeat? Eum eos consequuntur
@@ -43,9 +43,12 @@ const SampleContent = () => {
           </div>
 
           <div className="h-80 max-w-2xl mt-5">
-            <div className="max-w-2xl h-full overflow-hidden">
+            <div className="max-w-2xl h-full flex justify-start overflow-hidden">
               <Image className="h-full w-full object-cover hover:scale-105 transition-transform duration-200 ease-in-out"
                 src={BOMB} alt="The Bombcast"/>
+              <h1 className="font-semibold p-2 rounded-sm bg-[#3c3c3c] bg-opacity-80 text-stone-50 mr-2 text-xl font-MontserratAlternates absolute">
+                Gaming Podcasts
+              </h1>
             </div>
           </div>
           <h1 className="text-black underline decoration-[#992715de] font-bold 
@@ -55,9 +58,12 @@ const SampleContent = () => {
           {/* <div className="h-20 max-w-xl "> */}
             <div className="h-full w-auto mb-2 pt-5 pl-5 flex flex-row overflow-x-scroll overflow-scroll " >
               <div className='flex justify-center pr-6'> 
-                <iframe width="200" className='object-contain' height="225" src="https://www.youtube.com/embed/Sqa8Zo2XWc4" title="YouTube video player" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}>
+                <iframe width="200" height="225" src="https://www.youtube.com/embed/vgmYHte2Grs" title="YouTube video player"  
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
                 </iframe>
+                {/* <iframe width="200" className='object-contain' height="225" src="https://www.youtube.com/embed/Sqa8Zo2XWc4" title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={true}>
+                </iframe> */}
               </div>
 
               <div className="flex justify-center pr-6 overflow-hidden">
@@ -82,7 +88,7 @@ const SampleContent = () => {
             bg-[#3c3c3c] bg-opacity-80 w-72 h-auto overflow-scroll border-t-4 border-amber-300">
             <h1 className='text-3xl mt-2 text-stone-50 
               font-semibold decoration-amber-300 font-MontserratAlternates italic'>
-              Recent News:
+              Top Picks:
             </h1>
             <div className="w-64 border-t-4 mt-2 border-amber-300 px-2">
               <div className="mr-2 h-44 flex flex-row">

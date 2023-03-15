@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from 'react';
 import {Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 import Image from 'next/image';
@@ -15,8 +16,20 @@ import slide_image_6 from "../public/hogwarts.png";
 import "../styles/carousel.module.css";
 
 
-const Carousel = () => {
 
+const Carousel = () => {
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setIsLoaded(true);
+    } else {
+      window.addEventListener("load", ()=> setIsLoaded(true));
+      return () => window.removeEventListener("load", ()=> setIsLoaded);
+    };
+  });
+
+  if (isLoaded == true)
   return (
     <div className="container">
       <Swiper
