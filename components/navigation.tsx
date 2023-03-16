@@ -1,8 +1,19 @@
+"use client"
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect } from 'react';
 
 
 const Navigation = () => {
+  let ref: any;
+
+  useEffect(() => {
+    ref = document.querySelector(".blogList");
+  })
+
+  const scrollEffect = () => {
+    return ref?.scrollIntoView();
+  };
+
   return (
     <div className="flex flex-row justify-center w-full space-x-2 ">
 
@@ -14,7 +25,7 @@ const Navigation = () => {
         </h1>
        </Link>
         <p>·</p>
-       <Link href="/">
+       <Link href="/about">
         <h1 className="text-lg text-black 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
           hover:text-stone-800 transition-transform ease-in-out duration-500" >
@@ -22,7 +33,7 @@ const Navigation = () => {
         </h1>
        </Link>
         <p>·</p>
-       <Link href="/">
+       <Link href="/contact">
         <h1 className="text-lg text-black 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
           hover:text-stone-800 transition-transform ease-in-out duration-500" >
@@ -30,7 +41,7 @@ const Navigation = () => {
         </h1>
        </Link>
         <p>·</p>
-       <Link href="/">
+       <Link href="/" onClick={scrollEffect}>
         <h1 className="text-lg text-black 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
           hover:text-stone-800 transition-transform ease-in-out duration-500" >
@@ -38,15 +49,7 @@ const Navigation = () => {
         </h1>
        </Link>
         <p>·</p>
-       <Link href="/">
-        <h1 className="text-lg text-black 
-          font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
-          hover:text-stone-800 transition-transform ease-in-out duration-500" >
-          Podcasts 
-        </h1>
-       </Link>
-        <p>·</p>
-       <Link href="/">
+       <Link href="/other">
         <h1 className="text-lg text-black 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
           hover:text-stone-800 transition-transform ease-in-out duration-500" >

@@ -54,7 +54,7 @@ export const RichTextComponents = {
       <p className="py-5 text-[#292727] text-base leading-8 font-medium font-Quicksand px-20 ">{children}</p>
     ),
     blockquote: ({children}: any) => (
-      <blockquote className="border-x-[#992715de] border-x-2 pl-40 pr-0 my-5 text-lg font-Megrim tracking-tighter font-semibold sm:my-0 sm:pl-0 sm:flex sm:justify-center">
+      <blockquote className="border-x-[#992715de] border-l-4 pl-40 pr-0 my-5 text-base font-Quicksand tracking-tighter font-bold sm:my-0 sm:pl-0 sm:flex sm:justify-center">
         <p className='border-b-[#992715de] pt-5 px-0 w-fit border-b-2 '>{children}</p>
       </blockquote>
     ),

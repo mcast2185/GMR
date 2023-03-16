@@ -29,7 +29,8 @@ const Carousel = () => {
     };
   });
 
-  if (isLoaded == true)
+  if (isLoaded == true) {
+
   return (
     <div className="container">
       <Swiper
@@ -54,7 +55,8 @@ const Carousel = () => {
 
         <SwiperSlide>
           <div className="h-auto w-auto flex items-center !md:invisible !sm:invisible">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible bg-opacity-80 h-16 w-40 rounded-md absolute pt-2 pr-0 mr-0 -bottom-20 right-36 flex flex-row justify-center items-center">
+            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible bg-opacity-80 h-16 
+              w-40 rounded-md absolute pt-2 pr-0 mr-0 -bottom-20 right-36 flex flex-row justify-center items-center">
               <p className="text-[#d3d3d3]  text-base pl-1">
               4.8/5: 
               </p> 
@@ -135,7 +137,13 @@ const Carousel = () => {
         </div>
       </Swiper>
     </div>
-  )
+  )}
+  return (
+      <div role="status">
+        <p className="text-center text-lg animate-pulse text-[#992715de]">
+          Just a moment...
+        </p>
+      </div>)
 };
 
 export default Carousel;

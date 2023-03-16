@@ -8,8 +8,6 @@ import BlogList from '../../components/blogList';
 import PreviewBlogList from '../../components/previewBlogList';
 import SampleContent from 'components/sampleContent';
 
-
-
 const query = groq`
   *[_type == "post"]{
     ...,
@@ -18,8 +16,10 @@ const query = groq`
   } | order(_createdAt desc)
 `
 
+export const revalidate = 60;
+
 export default async function Home () {
-  if (previewData())
+  if (previewData()) {
   return (
     <PreviewSuspense fallback={
       <div role="status">
@@ -30,7 +30,9 @@ export default async function Home () {
       <PreviewBlogList query={query}/>
     </PreviewSuspense>
   )
+  }
   const posts = await client.fetch(query);
+  // const posts = await res;
 
   return (
     <div>
@@ -40,4 +42,5 @@ export default async function Home () {
     </div>
   )
 };
+
 

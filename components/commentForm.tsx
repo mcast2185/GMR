@@ -52,7 +52,7 @@ const CommentForm = ({post}: Props) => {
           Thank you for submitting your comment
         </h3>
         <p>
-          Once it has been approved, it will appear below!
+          Give us a second to review!
         </p>
        </div>
       ): (

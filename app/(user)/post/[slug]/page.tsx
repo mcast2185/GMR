@@ -2,7 +2,6 @@ import { groq } from 'next-sanity';
 import { PortableText } from '@portabletext/react';
 import Image  from 'next/image';
 import React from "react";
-// import {useState} from "react";
 
 import { RichTextComponents } from '../../../../components/richTextComponents';
 import { client } from '../../../../lib/sanity.client';
@@ -12,6 +11,10 @@ import urlFor from '../../../../lib/urlFor';
 import CommentForm from '../../../../components/commentForm';
 
 
+// re-render/validate updated backend data for this page
+// this component recieves the fetched posts and statically generates the pages and routes at build time
+
+
 type Props = {
   params: {
     slug: string;
@@ -19,11 +22,7 @@ type Props = {
 };
 
 
-// re-render/validate updated backend data for this page
-
 export const revalidate = 60;
-
-
 export async function generateStaticParams() {
   const query = groq`*[_type == 'post']
   {
@@ -32,7 +31,6 @@ export async function generateStaticParams() {
 
   const slugs: Post[] = await client.fetch(query);
   const slugRoutes = slugs.map((slug) => slug.slug.current);
-
 
   return slugRoutes.map(slug => ({
     slug,
@@ -59,13 +57,13 @@ async function Post({params: {slug}}: Props) {
 
   const posts = await client.fetch(query);
   const securePost = posts[0];
-  
 
   return (
     <div>
       <article className="px-10 pb-10">
         <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
+
             <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2">
               <Image
                 className='object-cover object-left lg:object-center'
@@ -74,13 +72,14 @@ async function Post({params: {slug}}: Props) {
                 fill
               /> 
             </div>
-            <section className="p-4 bg-[#ba3627] w-full">
+
+            <section className="p-4 bg-[#ba3627] w-full" aria-details='Section that categorizes and provides detail to post'>
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
-                  <h1 className="text-4xl font-extrabold font-MontserratAlternates">
+                  <h1 className="text-4xl font-extrabold font-MontserratAlternates" aria-details='Post title'>
                     {securePost.title}
                   </h1>
-                  <p className="font-Quicksand font-bold">
+                  <p className="font-Quicksand font-bold" aria-details='post date'>
                     {new Date(securePost._createdAt).toLocaleDateString("en-US", {
                       day: "numeric",
                       month: "long",
@@ -99,13 +98,14 @@ async function Post({params: {slug}}: Props) {
                       width={90}
                     /> 
                     <div className='w-28 '>
-                      <h3 className="text-lg font-Quicksand font-bold flex">
+                      <h3 className="text-lg font-Quicksand font-bold flex" aria-details='Post author name'>
                         {securePost.author.name}
                       </h3>
                     </div>
-                    <div className="flex flex-row font-Quicksand" >
+                    <div className="flex flex-row font-Quicksand" aria-details='Post categories'>
                     {securePost.categories.map((el: any) => (
-                      <p className="bg-[#274c86] text-white px-3 py-1 rounded-full text-sm font-semibold mt-3"
+                      <p className="bg-[#3c3c3c] bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-semibold mt-3"
+                        aria-details='category'
                         key={el._id}>
                         {el.title}
                       </p>
@@ -114,29 +114,24 @@ async function Post({params: {slug}}: Props) {
                   </div>
                 </div>
               </div>
-              <div>
-                <div className="h-14 w-44 pl-3 mt-0 flex justify-start border-l">
-                  <img alt="blog icons" className="h-14 w-40" src={GMR.src}/>
 
+              <div>
+                <div className="h-14 w-44 pl-3 mt-0 flex justify-start">
+                  
                 </div>
-                <h2 className="italic pt-5 font-Quicksand font-bold">
+                <h2 className="italic pt-5 font-Quicksand font-bold" aria-details='Post desc'>
                   {securePost.description}
                 </h2>
                 <div className='flex items-center justify-end mt-auto space-x-1'>
-                  {/* {securePost.categories.map((el: any) => (
-                    <p className="bg-[#274c86] text-white px-3 py-1 rounded-full text-sm font-semibold mt-3"
-                      key={el._id}>
-                      {el.title}
-                    </p>
-                  ))} */}
                 </div>
               </div>
             </section>
           </div>
         </section>
+
         <div className="border-r-black border-l-black border border-opacity-10 bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
           <PortableText value={securePost.body} 
-            components={RichTextComponents}/>
+            components={RichTextComponents} aria-details='Portable text body render'/>
           
           {securePost.body.map((el: any) => {
             if (el.url){
@@ -154,6 +149,6 @@ async function Post({params: {slug}}: Props) {
       <CommentForm post={securePost}/>
     </div>
   );
-}
+};
 
 export default Post;

@@ -1,7 +1,7 @@
 
 .html-selector {
-  overflow-block:clip;
-  object-fit: contain;
+  /* overflow-block:clip; */
+  /* object-fit: contain; */
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -163,11 +163,11 @@
   }
 } */
 
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
   .html-selector {
-    zoom: .94;
+    zoom: ;
   }
-}
+} */
 
 
 @media (max-width: 990px) {
