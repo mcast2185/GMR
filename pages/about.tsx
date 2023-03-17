@@ -1,9 +1,11 @@
 import Header from '../components/header';
 import Banner from '../components/banner';
+import Mouse from 'components/mouse';
 export default function About () {
   
   return (
     <div className="about">
+      <Mouse/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
@@ -22,10 +24,10 @@ export default function About () {
             </div>
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 
-            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
-            <div className="mt-8 px-20" >
-              <h2 className="py-5 text-[#000000] text-xl leading-10 font-semibold font-Quicksand px-20 ">
-                Welcome to GMRseat, the ultimate platform for everything gaming and game-related! Our site covers a range of topics, 
+            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-10" >
+            <div className="mt-16 px-20" >
+              <h2 className=" text-[#000000] text-xl leading-10 font-semibold font-Quicksand ">
+                <b className="text-5xl font-bold">W</b>elcome to <i>GMRseat</i>, the ultimate platform for everything gaming and game-related! Our site covers a range of topics, 
                 from the latest video game releases to comic book movies, pop culture shows, and much more. 
                 Whether you're a hardcore gamer or just a casual fan, GMR has got you covered with in-depth blog posts, video clips, podcasts, and more.
                 Our goal at GMR is to create a community of gamers and enthusiasts who share a passion for all things gaming. 

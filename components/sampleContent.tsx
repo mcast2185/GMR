@@ -92,7 +92,7 @@ const SampleContent = () => {
         
         <div>
           <div className="flex flex-col items-center content-center mb-10 
-            bg-[#3c3c3c] bg-opacity-80 w-72 h-auto overflow-scroll border-t-4 border-amber-300">
+            bg-[#3c3c3c] bg-opacity-80 w-72 h-auto overflow-scroll border-t-4 border-gray-800">
             <h1 className='text-3xl mt-2 text-stone-50 
               font-semibold decoration-[#ffff] font-MontserratAlternates italic'>
               Top Picks:

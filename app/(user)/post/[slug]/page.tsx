@@ -6,7 +6,6 @@ import React from "react";
 import { RichTextComponents } from '../../../../components/richTextComponents';
 import { client } from '../../../../lib/sanity.client';
 import { Post } from '../../../../typings';
-import GMR from './../../../../public/GMRICON.png'
 import urlFor from '../../../../lib/urlFor';
 import CommentForm from '../../../../components/commentForm';
 
@@ -73,7 +72,7 @@ async function Post({params: {slug}}: Props) {
               /> 
             </div>
 
-            <section className="p-4 bg-[#ba3627] w-full" aria-details='Section that categorizes and provides detail to post'>
+            <section className="p-4 bg-gray-800 w-full" aria-details='Section that categorizes and provides detail to post'>
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
                   <h1 className="text-4xl font-extrabold font-MontserratAlternates" aria-details='Post title'>
@@ -88,7 +87,7 @@ async function Post({params: {slug}}: Props) {
                   </p>
                 </div>
 
-                <div className='flex mt-16 mb-0 pt-3'>
+                <div className='flex mt-16 w-52 mb-0 pt-3 justify-center'>
                   <div className="flex flex-col items-center justify-center content-center w-52 h-24 pt-15" >
                     <Image
                       className='rounded-full'
@@ -97,14 +96,14 @@ async function Post({params: {slug}}: Props) {
                       height={80}
                       width={90}
                     /> 
-                    <div className='w-28 '>
-                      <h3 className="text-lg font-Quicksand font-bold flex" aria-details='Post author name'>
+                    <div className='w-52 '>
+                      <h3 className="text-lg font-Quicksand font-bold flex flex-row ml-8" aria-details='Post author name'>
                         {securePost.author.name}
                       </h3>
                     </div>
                     <div className="flex flex-row font-Quicksand" aria-details='Post categories'>
                     {securePost.categories.map((el: any) => (
-                      <p className="bg-[#3c3c3c] bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-semibold mt-3"
+                      <p className="bg-[#3c3c3c] bg-opacity-90 text-white flex flex-row mr-3 px-3 py-1 rounded-2xl text-sm font-semibold mt-3"
                         aria-details='category'
                         key={el._id}>
                         {el.title}

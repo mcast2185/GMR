@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
-import { Post } from '../typings.d';
-import Image from 'next/image';
-import urlFor from '../lib/urlFor';
-import ClientSideRoute from './clientSideRoute';
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faArrowRight} from "@fortawesome/free-solid-svg-icons"
+import Image from 'next/image';
 
+import ClientSideRoute from './clientSideRoute';
+import { Post } from '../typings.d';
+import urlFor from '../lib/urlFor';
 
 type Props = {
   posts: Post[];
@@ -17,7 +18,7 @@ type Props = {
 
 function BlogList({posts}: Props) {
   const [allPosts, setAllPosts] = useState<boolean>(false);
-  let filteredPosts = posts.slice(0, 6);
+  let filteredPosts = posts.slice(0, 4);
   let morePosts = posts.slice(6);
 
 
@@ -70,7 +71,7 @@ function BlogList({posts}: Props) {
                   <div className="flex flex-col md:flex-row 
                     gap-y-2 md:gap-x-2 items-center">
                     {post.categories.map((category) => (
-                      <div className="bg-[#992715de] font-Quicksand text-center 
+                      <div className="bg-[#3c3c3c] opacity-80 font-Quicksand text-center 
                         text-white px-3 py-1 rounded-full text-sm font-bold" aria-details='rendered post categories'>
                        <p>{category.title}</p>
                       </div>
@@ -91,7 +92,7 @@ function BlogList({posts}: Props) {
               <p className="mt-5 font-MontserratAlternates 
                 font-bold flex items-center group-hover:underline">
                 Read Post
-                <ArrowRightIcon className='ml-2 h-4 w-4'/>
+                <FontAwesomeIcon icon={faArrowRight} className='ml-2 h-4 w-4' />
               </p>
             </div>
           </ClientSideRoute>
@@ -101,7 +102,7 @@ function BlogList({posts}: Props) {
           <h2 className="mt-5 font-MontserratAlternates 
             font-bold flex items-center group-hover:underline" aria-details='read more link'>
             Read more...
-          <ArrowRightIcon className='ml-2 h-4 w-4'/>
+          <FontAwesomeIcon icon={faArrowRight} className='ml-2 h-4 w-4' />
           </h2>
         </button>
         {allPosts == true ? morePosts.map((post) => (
@@ -158,7 +159,7 @@ function BlogList({posts}: Props) {
               <p className="mt-5 font-MontserratAlternates 
                 font-bold flex items-center group-hover:underline">
                 Read Post
-                <ArrowRightIcon className='ml-2 h-4 w-4'/>
+                <FontAwesomeIcon icon={faArrowRight} className='ml-2 h-4 w-4' />
               </p>
             </div>
           </ClientSideRoute>

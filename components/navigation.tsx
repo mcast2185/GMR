@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link';
 import React, { useEffect } from 'react';
+import SocialMediaIcons from './socialMediaIcons';
 
 
 const Navigation = () => {
@@ -15,7 +16,11 @@ const Navigation = () => {
   };
 
   return (
-    <div className="flex flex-row justify-center w-full space-x-2 ">
+    <div className="flex flex-col justify-center" >
+      <div className="flex flex-row justify-center w-full " >
+        <SocialMediaIcons/>
+      </div>
+      <div className="flex flex-row justify-center w-full space-x-2 m-0">
 
        <Link href="/">
         <h1 className="text-lg text-black 
@@ -56,7 +61,10 @@ const Navigation = () => {
           Other
         </h1>
        </Link>
-
+      </div>
+      {/* <div className="flex flex-row justify-center mt-1 -mb-3 w-full " >
+        <SocialMediaIcons/>
+      </div> */}
     </div>
   );
 };

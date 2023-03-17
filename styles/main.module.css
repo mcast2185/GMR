@@ -19,10 +19,10 @@
   background-position: bottom;
 }
 
-/* .mando {
-  height: 450px;
-  width: 100%;
-} */
+#tictok {
+  width: 390;
+  max-width: 670;
+}
 
 
 .main-cursor,
@@ -44,8 +44,9 @@
 .main-cursor-background {
   width: 30px;
   height: 30px;
-  background: white;
+  background: transparent;
   border-radius: 50%;
+  
 }
 
 .secondary-cursor {
@@ -55,6 +56,7 @@
 
 .cursor-background {
   mix-blend-mode: difference;
+  filter: invert(1);
   width: 100%;
   height: 100%;
   border-radius: 50%;

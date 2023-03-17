@@ -5,8 +5,6 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { Post } from '../typings.d';
 
 
-// changed the previous code to turnary 
-
 interface FormInput {
   _id: string;
   name: string;
@@ -21,13 +19,9 @@ interface Props {
 
 const CommentForm = ({post}: Props) => {
   const [submitted, setSubmitted] = useState(false);
-  const {register, handleSubmit, formState: {errors}} = useForm<FormInput>()
-
-
+  const {register, handleSubmit, formState: {errors}} = useForm<FormInput>();
 
   const onSubmit: SubmitHandler<FormInput> = async(data) => {
-    console.log(data);
-    
     await fetch('/api/create-comment', {
       method: "POST",
       body: JSON.stringify(data),
@@ -122,11 +116,14 @@ const CommentForm = ({post}: Props) => {
           )}
         </div>
         <input type="submit" 
-          className="shadow bg-[#992715de]
-          hover:bg-yellow-400
+          className="shadow bg-transparent
+          border-[#992715de]
+          border-2
+          hover:border-amber-300
+          hover:text-amber-300
           focus:shadow-outline
           focus:outline-none
-          text-white font-bold
+          text-[#992715de] font-bold
           py-2 px-4 rounded
           cursor-pointer"/>
       </form>

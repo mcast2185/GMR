@@ -7,6 +7,8 @@ import Carousel from 'components/carousel';
 import BlogList from '../../components/blogList';
 import PreviewBlogList from '../../components/previewBlogList';
 import SampleContent from 'components/sampleContent';
+import Newsletter from 'components/newsletter';
+import Footer from 'components/footer';
 
 const query = groq`
   *[_type == "post"]{
@@ -32,13 +34,15 @@ export default async function Home () {
   )
   }
   const posts = await client.fetch(query);
-  // const posts = await res;
+
 
   return (
     <div>
       <Carousel/>
       <SampleContent/>
       <BlogList posts={posts}/>
+      <Newsletter/>
+      <Footer/>
     </div>
   )
 };
