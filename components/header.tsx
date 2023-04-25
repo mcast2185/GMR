@@ -13,13 +13,6 @@ const Header = () => {
             width={150} height={150} src={GMRS} alt="logo"/>
         </Link>
       </div>
-      <div>
-        {/* <Link
-          href="https://twitter.com/JamesP_mcAdams"
-          className="px-5 py-3 text-sm md:text-base bg-gray-900 text-[#F7AB0A] flex items-center rounded-full text-center">
-          <p>Click {" "}<i>here</i>{" "} to follow on Twitter</p>
-        </Link> */}
-      </div>
     </header>
   )
 }

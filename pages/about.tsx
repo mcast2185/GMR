@@ -1,15 +1,28 @@
+import Head from 'next/head';
+
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Mouse from 'components/mouse';
+import Footer from 'components/footer';
+
+import "../styles/globals.css";
+
 export default function About () {
   
   return (
     <div className="about">
+      <Head>
+        <title>
+          GMRseat About Us
+        </title>
+        <meta name="description" content="short look at what GMRseat is all about." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Mouse/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-10 pb-10">
+        <article className="px-10 pb-5">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
               <section className="p-4 bg-transparent w-full">
@@ -41,6 +54,7 @@ export default function About () {
           </div>
         </article> 
       </div>
+      <Footer/>
     </div>
   )
 };

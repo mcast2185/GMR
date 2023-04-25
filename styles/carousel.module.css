@@ -1,24 +1,22 @@
 
 .html-selector {
-  /* overflow-block:clip; */
-  /* object-fit: contain; */
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* if we want to keep the carousel for mobile devices just adjust the padding to 0, 0 */
+
 .container {
-  max-width: 500px;
-  padding: 0rem 14rem;
+  max-width: 350px;
+  padding: 0rem 22.5rem;
 }
 
 .swiper {
-  height: 495px !important;
+  height: 230px !important;
 } 
 
 .swiper-wrapper {
-  height: 65% !important;
-  width: 580px !important;
+  height: 135px !important;
+  width: 176px !important;
   cursor: grab;
   transition-duration: 0ms;
   transform: translate3d(-1464.06px, 0px, 0px);
@@ -27,10 +25,9 @@
 .swiper_container {
   padding: 0rem 0rem !important;
   position: relative;
-  width: 580px !important;
+  width: 290px !important;
   overflow: visible !important;
 }
-
 
 .swiper .swiper-container {
   list-style: none;
@@ -40,17 +37,20 @@
 }
 
 .swiper-3d {
-  perspective: 130px !important;
+  perspective: 400px !important;
 }
 
-
 .swiper-slide .img {
-  width: 22rem;
-  height: 24rem;
+  width: 350px;
+  height: 250px;
   border-radius: 2rem;
-  margin-left: 105px;
+  margin-left: 0px;
   object-fit: cover;
 
+}
+.img {
+  width: 170px !important;
+  height: 185px !important;
 }
 
 .swiper-slide-shadow-left,
@@ -64,7 +64,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 40px;
+  margin-left: 0px;
 }
 
 .slider-controller .swiper-button-next {
@@ -99,7 +100,6 @@
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
-
 .slider-controller .slider-arrow::after {
   content: '';
 }
@@ -118,7 +118,7 @@
 
 .swiper-pagination {
   position: relative;
-  z-index: -10 !important;
+  z-index: 10 !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -141,38 +141,4 @@
   transform: scale(.9);
   width: 100%;
 
-}
-
-/* Free this code up for production build only */
-
-/* @media (min-width: 1700px) {
-  .html-selector {
-    zoom: 1.5;
-  }
-}
-
-@media (min-width: 2560px) {
-  .html-selector {
-    zoom: 1.7;
-  }
-}
-
-@media (min-width: 3860px) {
-  .html-selector {
-    zoom: 2.5;
-  }
-} */
-
-/* @media (min-width: 1600px) {
-  .html-selector {
-    zoom: ;
-  }
-} */
-
-
-@media (max-width: 990px) {
-  .container {
-    display: none;
-    visibility: hidden;
-  }
 }

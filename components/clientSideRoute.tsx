@@ -12,7 +12,7 @@ function ClientSideRoute({
   route: string
 }) {
   return (
-    <Link href={route}>{children}</Link>
+    <Link rel="preload" href={route}>{children}</Link>
   )
 };
 

@@ -6,6 +6,15 @@ type Base = {
   _updatedAt: string;
 };
 
+export interface Brand extends Base {
+  tags: Tags[];
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  company: string;
+};
+
 export interface Post extends Base {
   _id: string;
   _createdAt: string;
@@ -51,6 +60,7 @@ interface Author extends Base {
   slug: Slug;
 };
 
+
 interface Image {
   _type: "image";
   asset: Reference;
@@ -89,6 +99,12 @@ interface Span {
 interface Categories extends Base {
   description: string;
   title: string;
+};
+
+interface Tags extends Base {
+  description: string;
+  title: string;
+  assets: Reference;
 };
 
 interface MainImage {

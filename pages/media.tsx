@@ -9,10 +9,21 @@ import MANDO from '../public/mando.png';
 import LAST from '../public/lastofus.png';
 import DCU from '../public/dcu.png';
 import CAPCOM from '../public/capcom.png';
+import "../styles/globals.css";
 import "../styles/main.module.css"
+import Head from 'next/head';
+
 
 export default function Other () {
   useEffect(() => {
+    document.getElementById("mainImg")?.addEventListener("mouseenter", ()=> {
+      document.getElementById("mando")!.style.filter = "brightness(.6)";
+    });
+    
+    document.getElementById("mainImg")?.addEventListener("mouseleave", ()=> {
+      document.getElementById("mando")!.style.filter = "brightness(1)";
+    });
+
     if (document.getElementById("tiktok")){
       console.log("script already exists");
     } else {
@@ -25,22 +36,28 @@ export default function Other () {
   });
   
   return (
-    <div className="other">
+    <div className="media">
+      <Head>
+        <title>
+          GMRseat Media Content
+        </title>
+        <meta name="description" content="GMRseat Media page including Tiktok clips, Youtube shorts, podcasts and more." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Mouse/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
         <div className="flex justify-center overflow-hidden">
-            <Image src={MANDO} alt="The last of Us" 
-              className="object-cover rounded-sm " />
-          <h1 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform duration-200 ease-in-out
-            bg-opacity-20 text-stone-50 mr-2 text-5xl font-Quicksand absolute bottom-0">
-            <Link href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
+          <Image src={MANDO} alt="The last of Us" id="mando"
+            className="object-cover rounded-sm transition-translate duration-500 ease-in-out " />
+          <h1 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
+            duration-200 ease-in-out bg-opacity-20 text-stone-50 mr-2 text-5xl font-Quicksand absolute bottom-0">
+            <Link id='mainImg' href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
               Mandalorian Season 3, Click Here
             </Link>
           </h1>
         </div>
-
 
         <div className="flex flex-col mt-10 " >
           <div className="flex flex-row justify-center items-center mb-10">

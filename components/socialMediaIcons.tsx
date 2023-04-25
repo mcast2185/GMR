@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const SocialMediaIcons = () => {
   return (
-    <div className='flex flex-row justify-center m-0 p-0 h-8 items-center text-black'>
+    <div className='flex flex-row justify-center m-0 p-0 h-8 items-center text-black '>
       <Link href="https://www.youtube.com/channel/UC1icCCZS95xCvRI3RHRUgyQ" aria-details="youtube channel">
         <FontAwesomeIcon icon={faYoutube} className="h-4 w-4 pr-3 hover:text-gray-800 hover:scale-125 transition-transform duration-200 ease-out "/>
       </Link>

@@ -2,13 +2,15 @@ import { groq } from 'next-sanity';
 import { PreviewSuspense } from 'next-sanity/preview';
 import { previewData } from 'next/headers';
 
-import { client } from '../../lib/sanity.client';
 import Carousel from 'components/carousel';
-import BlogList from '../../components/blogList';
 import PreviewBlogList from '../../components/previewBlogList';
 import SampleContent from 'components/sampleContent';
 import Newsletter from 'components/newsletter';
 import Footer from 'components/footer';
+import ClientSideFetch from '../../components/clientSideFetch';
+import { client } from 'lib/sanity.client';
+import { Post } from 'typings';
+
 
 const query = groq`
   *[_type == "post"]{
@@ -33,14 +35,21 @@ export default async function Home () {
     </PreviewSuspense>
   )
   }
-  const posts = await client.fetch(query);
+
+  const posts: Post[] = await client.fetch(`
+    *[_type == "post"]{
+      ...,
+      author->,
+      categories[]->,
+    } | order(_createdAt desc)
+  `)
 
 
   return (
     <div>
       <Carousel/>
       <SampleContent/>
-      <BlogList posts={posts}/>
+      <ClientSideFetch posts={posts}/>
       <Newsletter/>
       <Footer/>
     </div>

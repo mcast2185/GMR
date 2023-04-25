@@ -8,6 +8,7 @@ import { client } from '../../../../lib/sanity.client';
 import { Post } from '../../../../typings';
 import urlFor from '../../../../lib/urlFor';
 import CommentForm from '../../../../components/commentForm';
+import Head from 'next/head';
 
 
 // re-render/validate updated backend data for this page
@@ -59,6 +60,11 @@ async function Post({params: {slug}}: Props) {
 
   return (
     <div>
+      <Head>
+        <title>
+          Dynamically generated blog post page reviewing game and pop culture content.
+        </title>
+      </Head>
       <article className="px-10 pb-10">
         <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>

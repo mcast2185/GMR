@@ -7,6 +7,7 @@ import myTheme from './theme';
 import StudioNavbar from "./components/studioNavbar";
 import Logo from "./components/logo";
 import {getDefaultDocumentNode} from './structure';
+import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
 
 
 
@@ -21,7 +22,7 @@ export default defineConfig({
   dataset,
   plugins: [deskTool({
     defaultDocumentNode: getDefaultDocumentNode
-  }), visionTool()],
+  }), visionTool(), unsplashImageAsset()],
 
   schema: {
     types: schemaTypes,

@@ -1,3 +1,23 @@
+#scroll::-webkit-scrollbar{
+    display: none;
+
+}
+
+/* .navigation, *, ::before, ::after {
+    box-sizing: content-box !important;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+} */
+.navigation, *, ::before, ::after {
+    box-sizing: content-box !important;
+    /* border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb; */
+}
+
+
+
 .about {
   background-image: url("../public/kratos.png");
   background-repeat: no-repeat;
@@ -11,15 +31,34 @@
 
 }
 
+.blogs {
+  background-image: url("../public/snake.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.other {
+}
+.brand {
+  background-image: url("../public/leon.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
+
+.media {
   background-image: url("../public/chief.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
 }
 
-#tictok {
+.login {
+  background-image: url("../public/GMRBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#tiktok {
   width: 390;
   max-width: 670;
 }

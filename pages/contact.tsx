@@ -1,11 +1,13 @@
 "use client";
 
+import "../styles/globals.css";
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Post } from '../typings.d';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Mouse from 'components/mouse';
+import Head from "next/head";
 
 
 interface FormInput {
@@ -44,6 +46,13 @@ export default function Contact ({post}: Props) {
   
   return (
     <div className="contact">
+      <Head>
+        <title>
+          GMRseat Contact us
+        </title>
+        <meta name="description" content="a brief look as to how to contact us" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Mouse/>
       <div className="max-w-5xl mx-auto">
         <Header/>
@@ -66,7 +75,7 @@ export default function Contact ({post}: Props) {
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
             <div className=" px-10" >
               <h2 className="mt-16 text-[#000000] text-xl leading-8 font-semibold font-Quicksand px-10 ">
-                <b className="text-5xl font-bold">W</b>e'd love to hear from you! If you have any questions, comments, or feedback about <i>GMRseat</i>, please don't hesitate to get in touch. Here are some ways you can contact us: <br/>
+                <b className="text-5xl font-bold">W</b>e'd love to hear from you! Submit your <u>Youtube</u> video links wearing or supporting some of our <i>GMRseat</i> merchandise for a chance to be hosted on our page. If you have any questions, comments, or feedback about <i>GMRseat</i>, please don't hesitate to get in touch. Here are some ways you can contact us: <br/>
               </h2>
               <div className="py-10" >
                

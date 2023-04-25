@@ -5,6 +5,12 @@ const nextConfig = {
     appDir: true,
 
   },
+  headers: [
+    {
+      key: 'Cache-Control',
+      value: 'public, max-age=31536000, stale-while-revalidate',
+    },
+  ],
   images: {
     domains: ["https://cdn.sanity.io/", "cdn.sanity.io"]
   },

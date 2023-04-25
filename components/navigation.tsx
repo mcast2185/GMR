@@ -5,19 +5,11 @@ import SocialMediaIcons from './socialMediaIcons';
 
 
 const Navigation = () => {
-  let ref: any;
 
-  useEffect(() => {
-    ref = document.querySelector(".blogList");
-  })
-
-  const scrollEffect = () => {
-    return ref?.scrollIntoView();
-  };
 
   return (
-    <div className="flex flex-col justify-center" >
-      <div className="flex flex-row justify-center w-full " >
+    <div className="flex flex-col justify-center " >
+      <div className="flex flex-row justify-center w-full navigation" >
         <SocialMediaIcons/>
       </div>
       <div className="flex flex-row justify-center w-full space-x-2 m-0">
@@ -38,6 +30,22 @@ const Navigation = () => {
         </h1>
        </Link>
         <p>·</p>
+       <Link href="/blogs">
+        <h1 className="text-lg text-black 
+          font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
+          hover:text-stone-800 transition-transform ease-in-out duration-500" >
+          Blogs 
+        </h1>
+       </Link>
+        <p>·</p>
+       <Link href="/brand">
+        <h1 className="text-lg text-black 
+          font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
+          hover:text-stone-800 transition-transform ease-in-out duration-500" >
+          Brand 
+        </h1>
+       </Link>
+        <p>·</p>
        <Link href="/contact">
         <h1 className="text-lg text-black 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
@@ -46,19 +54,11 @@ const Navigation = () => {
         </h1>
        </Link>
         <p>·</p>
-       <Link href="/" onClick={scrollEffect}>
+       <Link href="/media">
         <h1 className="text-lg text-black 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
           hover:text-stone-800 transition-transform ease-in-out duration-500" >
-          Blogs 
-        </h1>
-       </Link>
-        <p>·</p>
-       <Link href="/other">
-        <h1 className="text-lg text-black 
-          font-MontserratAlternates font-normal hover:font-medium hover:scale-105 
-          hover:text-stone-800 transition-transform ease-in-out duration-500" >
-          Other
+          Media
         </h1>
        </Link>
       </div>
