@@ -8,8 +8,8 @@ const Navigation = () => {
 
 
   return (
-    <div className="flex flex-col justify-center " >
-      <div className="flex flex-row justify-center w-full navigation" >
+    <div className="flex flex-col justify-center" >
+      <div className="flex flex-row justify-center w-full pl-2 navigation" >
         <SocialMediaIcons/>
       </div>
       <div className="flex flex-row justify-center w-full space-x-2 m-0">

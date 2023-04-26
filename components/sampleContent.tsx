@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 import ELDEN from '../public/eRing.jpeg';
@@ -11,6 +13,7 @@ import FINAL from '../public/ff.jpeg';
 import GOOD from '../public/Good.png';
 import No3 from '../public/blackno3.png';
 import Link from 'next/link';
+
 
 
 
@@ -64,14 +67,31 @@ const SampleContent = () => {
           <div className="mb-2 pt-5 flex justify-between" >
 
             <div className="flex justify-center pr-6 overflow-hidden">
-              <Link href="/brand">
+              {/* <Link href="/brand">
                 <Image src={No3} alt="Whats Good Games podcast" width={200} 
                   className="h-56 object-cover hover:scale-105 transition-transform duration-200 ease-in-out" />
               </Link>
               <h1 className="font-semibold p-2 rounded-sm bg-[#3c3c3c] 
                 bg-opacity-80 text-stone-50 mr-2 text-xl font-MontserratAlternates absolute">
                 Apparel
-              </h1>
+              </h1> */}
+              <section className="grid clearfix" id="grid">
+                <Link href="/brand" className="linktag"
+                  data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+                  <figure>
+                      <Image src={No3} className="imgtag"
+                        alt="Whats Good Games podcast" />
+                      <svg viewBox="0 0 180 320" preserveAspectRatio="none" id="svgtag">
+                        <path id="path" d="M 180,160 0,218 0,0 180,0 z"/>
+                      </svg>
+                      <figcaption>
+                        <h2>Apparel</h2>
+                        <p>GMR gear for the Gamer.</p>
+                        <button>Quick look</button>
+                      </figcaption>
+                  </figure>
+                </Link>
+              </section>
             </div>
 
             <div className="flex justify-center pr-6 overflow-hidden">

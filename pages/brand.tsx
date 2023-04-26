@@ -24,7 +24,7 @@ const Brand = ({brand}: Props) => {
         <meta name="description" content="catalog of all GMRseat related products sold" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Mouse/>
+      {/* <Mouse/> */}
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>

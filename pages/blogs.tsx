@@ -25,7 +25,7 @@ const Blogs = ({posts}: Props) => {
         <meta name="description" content="archive page of every blog posts" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Mouse/>
+      {/* <Mouse/> */}
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>

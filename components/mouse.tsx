@@ -23,12 +23,12 @@ const Mouse = () => {
       const mouseX = clientX;
       const mouseY = clientY;
 
-      positionRef.current.mouseX = mouseX - secondCursor.current.clientWidth/2;
-      positionRef.current.mouseY = mouseY - secondCursor.current.clientHeight/2;
+      positionRef!.current!.mouseX = mouseX - secondCursor!.current!.clientWidth/2;
+      positionRef!.current!.mouseY = mouseY - secondCursor!.current!.clientHeight/2;
 
-      Cursor.current.style.transform = `translate3d(${mouseX -
-        Cursor.current.clientWidth / 2}px, ${mouseY -
-        Cursor.current.clientHeight / 2}px, 0)`;
+      Cursor!.current!.style!.transform = `translate3d(${mouseX -
+        Cursor!.current!.clientWidth / 2}px, ${mouseY -
+        Cursor!.current!.clientHeight / 2}px, 0)`;
     });
 
     return () => {};
@@ -36,7 +36,7 @@ const Mouse = () => {
 
   useEffect(() => {
     const followMouse = () => {
-      positionRef.current.key = requestAnimationFrame(followMouse);
+      positionRef!.current!.key = requestAnimationFrame(followMouse);
 
       const {    
         mouseX,
@@ -45,25 +45,25 @@ const Mouse = () => {
         destinationY,
         distanceX,
         distanceY,
-        key } = positionRef.current;
+        key } = positionRef!.current;
       
       if(!destinationX || !destinationY) {
-        positionRef.current.destinationX = mouseX;
-        positionRef.current.destinationY = mouseY;
+        positionRef!.current!.destinationX = mouseX;
+        positionRef!.current!.destinationY = mouseY;
       } else {
-        positionRef.current.distanceX = (mouseX - destinationX) * .3;
-        positionRef.current.distanceY = (mouseY - destinationY) * .3;
+        positionRef!.current!.distanceX = (mouseX - destinationX) * .3;
+        positionRef!.current!.distanceY = (mouseY - destinationY) * .3;
 
-        if(Math.abs(positionRef.current.distanceX) + Math.abs(positionRef.current.distanceY) < .1 ) {
-          positionRef.current.destinationX = mouseX;
-          positionRef.current.destinationY = mouseY;
+        if(Math.abs(positionRef!.current!.distanceX) + Math.abs(positionRef!.current!.distanceY) < .1 ) {
+          positionRef!.current!.destinationX = mouseX;
+          positionRef!.current!.destinationY = mouseY;
         } else {
-          positionRef.current.destinationX += distanceX;
-          positionRef.current.destinationY += distanceY;
+          positionRef!.current!.destinationX += distanceX;
+          positionRef!.current!.destinationY += distanceY;
         }
       }
 
-      secondCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`
+      secondCursor!.current!.style!.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`
     }
     followMouse();
   }, []);

@@ -10,7 +10,6 @@ import LAST from '../public/lastofus.png';
 import DCU from '../public/dcu.png';
 import CAPCOM from '../public/capcom.png';
 import "../styles/globals.css";
-import "../styles/main.module.css"
 import Head from 'next/head';
 
 
@@ -44,19 +43,26 @@ export default function Other () {
         <meta name="description" content="GMRseat Media page including Tiktok clips, Youtube shorts, podcasts and more." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Mouse/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
         <div className="flex justify-center overflow-hidden">
-          <Image src={MANDO} alt="The last of Us" id="mando"
+          <Link id='mainImg' href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
+            <Image src={MANDO} alt="The last of Us" id="mando"
+              className="object-cover rounded-sm transition-translate duration-500 ease-in-out " />
+          </Link>
+          <h1 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
+            duration-200 ease-in-out bg-opacity-20 text-stone-50 mr-2 text-5xl font-Quicksand absolute">
+            Mandalorian Season 3, Click Here
+          </h1>
+          {/* <Image src={MANDO} alt="The last of Us" id="mando"
             className="object-cover rounded-sm transition-translate duration-500 ease-in-out " />
           <h1 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
             duration-200 ease-in-out bg-opacity-20 text-stone-50 mr-2 text-5xl font-Quicksand absolute bottom-0">
             <Link id='mainImg' href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
               Mandalorian Season 3, Click Here
             </Link>
-          </h1>
+          </h1> */}
         </div>
 
         <div className="flex flex-col mt-10 " >
@@ -108,24 +114,27 @@ export default function Other () {
             </iframe>
           </div>
 
-          <div className="flex flex-row justify-between items-center mt-5">
+          <div className="flex flex-row justify-center h-[550px] items-center mt-5">
+
             <div className="flex justify-center px-2" >
-              <iframe width="525" height="300" src="https://www.youtube.com/embed/2izTju-uxrk" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+              <iframe width="400" height="600" src="https://www.youtube.com/embed/kVe5UM_k1S0" title="YouTube video player"
+                allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
               </iframe>
             </div>
-            <div className="flex justify-center px-2" >
-              <iframe width="400" height="300" src="https://www.youtube.com/embed/Fb8qjYKk4Mc" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+
+            <div className="flex justify-center mb-5 pt-6 px-2 " > 
+              <iframe width="300" height="600" src="https://www.tiktok.com/embed/7209055934377659694" title="YouTube video player" allowFullScreen={false} className="overflow-hidden"
+                allow="accelerometer; play; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allow-forms allow-same-origin; allow-scripts; allow-top-navigation;">
               </iframe>
             </div>
+
           </div>
 
           <div className="flex flex-row h-96 mt-10 mb-10 overflow-scroll" >
            
-          <iframe width="300" height="350" src="https://www.tiktok.com/embed/7210895054909623558" title="YouTube video player" allowFullScreen={false}
+          {/* <iframe width="300" height="350" src="https://www.tiktok.com/embed/7210895054909623558" title="YouTube video player" allowFullScreen={false}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allow-forms allow-same-origin; allow-scripts; allow-top-navigation;">
-          </iframe>
+          </iframe> */}
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import '../styles/globals.css';
 
 // export default MyApp;
 import { SessionProvider } from "next-auth/react"
+import Mouse from 'components/mouse';
 
 export default function App({
   Component,
@@ -17,6 +18,7 @@ export default function App({
 }: AppProps) {
   return (
     <SessionProvider session={session}>
+      <Mouse/>
       <Component {...pageProps} />
     </SessionProvider>
   )

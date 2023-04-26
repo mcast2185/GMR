@@ -8,6 +8,7 @@ import Header from '../components/header';
 import Banner from '../components/banner';
 import Mouse from 'components/mouse';
 import Head from "next/head";
+import Footer from "../components/footer";
 
 
 interface FormInput {
@@ -53,7 +54,7 @@ export default function Contact ({post}: Props) {
         <meta name="description" content="a brief look as to how to contact us" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Mouse/>
+      {/* <Mouse/> */}
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
@@ -202,6 +203,7 @@ export default function Contact ({post}: Props) {
           </div>
         </article> 
       </div>
+      <Footer/>
     </div>
   );
 };

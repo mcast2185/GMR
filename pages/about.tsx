@@ -18,7 +18,7 @@ export default function About () {
         <meta name="description" content="short look at what GMRseat is all about." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Mouse/>
+      {/* <Mouse/> */}
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
