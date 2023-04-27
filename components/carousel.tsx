@@ -9,7 +9,7 @@ import Image from 'next/image';
 import slide_image_1 from "../public/elden.png";
 import slide_image_2 from "../public/GOW.png";
 import slide_image_3 from "../public/horizon.png";
-import slide_image_4 from "../public/mcu.png";
+import slide_image_4 from "../public/remake.png";
 import slide_image_5 from "../public/Pokemon.png";
 import slide_image_6 from "../public/hogwarts.png";
 
@@ -69,99 +69,92 @@ const Carousel = () => {
         className="swiper_container">
 
         <SwiperSlide>
-          <div className="h-auto w-auto flex 
-            items-center !md:invisible !sm:invisible scale-95">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible 
-              bg-opacity-80 h-9 duration-500 transition-transform ease-in-out w-40 rounded-md 
-              absolute pl-1 pr-0 mr-0 ml-1 top-36 flex flex-row justify-center items-center scale-90">
-              <p className="text-[#d3d3d3]  text-base !pt-0">
-              4.8/5: 
+          <div className="flex justify-center ">
+            <Image priority src={slide_image_4} alt="Resident evil 4 remake rating of 4.7/5" 
+              className='img hover:scale-105 hover:brightness-75 duration-500 
+              h-[250px] w-[180px] transition-transform ease-in-out object-contain overflow-hidden'/>
+            <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-40 rounded-md absolute
+              -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
+              <p className="text-[#d3d3d3] text-base pl-1">
+              4.7/5: 
               </p> 
-              <span className="rating" aria-label='4.8 out of 5' role="img"/>
+              <span className="rating" aria-label='4.7 out of 5' role="img"/>
             </div>
-          <Image priority src={slide_image_1} alt="4.8/5" height={400} width={300} 
-            className='img hover:scale-95 hover:brightness-75 duration-500 
-              transition-transform ease-in-out object-cover overflow-hidden'/>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="h-auto w-auto flex items-center !md:invisible !sm:invisible scale-95">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible 
-              bg-opacity-80 h-9 duration-500 transition-transform ease-in-out w-40 
-              rounded-md absolute pl-1 pr-0 mr-0 ml-1 top-36 flex flex-row justify-center items-center scale-90">
+          <div className="flex justify-center">
+            <Image priority src={slide_image_1} alt="Elden Ring rating of 4.8/5" 
+              className='img hover:scale-105 hover:brightness-75 duration-500 h-[250px] w-[180px]
+                transition-transform ease-in-out object-contain overflow-hidden'/>
+            <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-40 rounded-md absolute
+              -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
+              <p className="text-[#d3d3d3]  text-base pl-1">
+              4.8/5: 
+              </p> 
+              <span className="rating" aria-label='4.8 out of 5' role="img"/>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="flex justify-center">
+            <Image priority src={slide_image_2} alt="God of War Ragnarok rating of 4.8/5" 
+              className='img hover:scale-105 hover:brightness-75 duration-500 h-[250px] w-[180px]
+              transition-transform ease-in-out object-contain overflow-hidden'/>
+            <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-40 rounded-md absolute
+              -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
               <p className="text-[#d3d3d3] text-base pl-1">
               4.8/5: 
               </p> 
               <span className="rating" aria-label='4.8 out of 5' role="img"/>
             </div> 
-          <Image priority src={slide_image_2} alt="4.8/5" height={400} width={300} 
-            className='img hover:scale-95 hover:brightness-75 duration-500 
-            transition-transform ease-in-out object-cover overflow-hidden'/>
           </div>
         </SwiperSlide>
         
         <SwiperSlide>
-          <div className="h-auto w-auto flex items-center !md:invisible !sm:invisible scale-95">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible 
-              bg-opacity-80 h-9 duration-500 transition-transform ease-in-out w-36 rounded-md 
-              absolute pl-1 pr-0 mr-0 ml-3 top-36 flex flex-row justify-center items-center scale-90">
+          <div className="flex justify-center">
+            <Image priority src={slide_image_3} alt="Horizon Forbidden West rating of 4/5" 
+              className='img hover:scale-105 hover:brightness-75 h-[250px] w-[180px]
+              duration-500 transition-transform ease-in-out object-contain overflow-hidden'/>
+            <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[139px] rounded-md absolute
+              -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
               <p className="text-[#d3d3d3] text-base pl-2">
               4/5: 
               </p> 
               <span className="rating" aria-label='4 out of 5' role="img"/>
             </div> 
-          <Image priority src={slide_image_3} alt="4/5" height={400} width={300} 
-            className='img hover:scale-95 hover:brightness-75 
-            duration-500 transition-transform ease-in-out object-cover overflow-hidden'/>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="h-auto w-auto flex items-center !md:invisible !sm:invisible scale-95">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible 
-              bg-opacity-80 h-9 duration-500 transition-transform ease-in-out w-28 rounded-md 
-              absolute pl-1 pr-0 mr-0 ml-7 top-36 flex flex-row justify-center items-center scale-90">
-              <p className="text-[#d3d3d3] text-base pl-1">
-              2.6/5: 
-              </p> 
-              <span className="rating" aria-label='2.6 out of 5' role="img"/>
-            </div>
-          <Image priority src={slide_image_4} alt="2.6/5" height={400} width={300} 
-            className='img hover:scale-95 hover:brightness-75 duration-500 
-            transition-transform ease-in-out object-cover overflow-hidden'/>
-            </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="h-auto w-auto flex items-center !md:invisible !sm:invisible scale-95">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible 
-              bg-opacity-80 h-9 duration-500 transition-transform ease-in-out w-36 rounded-md 
-              absolute pl-1 pr-0 mr-0 ml-3 top-36 flex flex-row justify-center items-center scale-90">
+          <div className="flex justify-center">
+            <Image priority src={slide_image_5} alt="Pokemon Legends Arceus rating of 3.9/5" 
+              className='img hover:scale-105 hover:brightness-75 duration-500 h-[250px] w-[180px]
+              transition-transform ease-in-out object-contain overflow-hidden'/>
+            <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[138px] rounded-md absolute
+              -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
               <p className="text-[#d3d3d3] text-base pl-1">
               3.9/5: 
               </p> 
               <span className="rating" aria-label='3.9 out of 5' role="img"/>
             </div> 
-          <Image priority src={slide_image_5} alt="3.9/5" height={400} width={300} 
-            className='img hover:scale-95 hover:brightness-75 duration-500 
-            transition-transform ease-in-out object-cover overflow-hidden'/>
             </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="h-auto w-auto flex items-center !md:invisible !sm:invisible scale-95">
-            <div className="bg-[#3c3c3c] !md:invisible !sm:invisible 
-              bg-opacity-80 h-9 duration-500 transition-transform ease-in-out w-40 rounded-md 
-              absolute pl-1 pr-0 mr-0 ml-1 top-36 flex flex-row justify-center items-center scale-90">
+          <div className="flex justify-center">
+            <Image priority src={slide_image_6} alt="4.4/5" 
+              className='img hover:scale-105 hover:brightness-75 duration-500 h-[250px] w-[180px]
+              transition-transform ease-in-out object-contain overflow-hidden'/>
+            <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[158px] rounded-md absolute
+              -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
               <p className="text-[#d3d3d3] text-base pl-1">
               4.4/5: 
               </p> 
               <span className="rating" aria-label='4.4 out of 5' role="img"/>
             </div> 
-          <Image priority src={slide_image_6} alt="4.4/5" height={400} width={300} 
-            className='img hover:scale-95 hover:brightness-75 duration-500 
-            transition-transform ease-in-out object-cover overflow-hidden'/>
             </div>
         </SwiperSlide>
 
@@ -170,15 +163,6 @@ const Carousel = () => {
             <div className="swiper-pagination"></div>
           </div>
         </div>
-        {/* <div className="slider-controller">
-          <div className="flex h-14 w-28 items-center content-center" >
-            <div className="swiper-button-prev slider-arrow-left ">
-            </div>
-            <div className="swiper-button-next slider-arrow-right">
-            </div>
-            <div className="swiper-pagination"></div>
-          </div>
-        </div> */}
       </Swiper>
     </div>
   )}
