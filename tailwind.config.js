@@ -27,8 +27,12 @@ module.exports = {
       },
     },
   },
-  // plugins: [
-  //   require('@tailwindcss/line-clamp'),
-  // ],
+  plugins: [
+    require('@neojp/tailwindcss-box-sizing-utilities')
+  ],
+  corePlugins: {
+     boxSizing: false,
+     preflight: false,
+    }
 }
 

@@ -69,7 +69,7 @@ async function Post({params: {slug}}: Props) {
         <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
 
-            <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2">
+            <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2 border-box">
               <Image
                 className='object-cover object-left lg:object-center'
                 src={urlFor(securePost.mainImage).url()}
@@ -78,7 +78,7 @@ async function Post({params: {slug}}: Props) {
               /> 
             </div>
 
-            <section className="p-4 bg-gray-800 w-full" aria-details='Section that categorizes and provides detail to post'>
+            <div className="p-4 bg-[#ba3627] w-full" aria-details='Section that categorizes and provides detail to post'>
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
                   <h1 className="text-4xl font-extrabold font-MontserratAlternates" aria-details='Post title'>
@@ -109,7 +109,8 @@ async function Post({params: {slug}}: Props) {
                     </div>
                     <div className="flex flex-row font-Quicksand" aria-details='Post categories'>
                     {securePost.categories.map((el: any) => (
-                      <p className="bg-[#3c3c3c] bg-opacity-90 text-white flex flex-row mr-3 px-3 py-1 rounded-2xl text-sm font-semibold mt-3"
+                      <p className="bg-[#3c3c3c] bg-opacity-90 text-white 
+                        flex flex-row mr-3 px-3 py-1 rounded-2xl text-sm font-semibold mt-3"
                         aria-details='category'
                         key={el._id}>
                         {el.title}
@@ -124,32 +125,33 @@ async function Post({params: {slug}}: Props) {
                 <div className="h-14 w-44 pl-3 mt-0 flex justify-start">
                   
                 </div>
-                <h2 className="italic pt-5 font-Quicksand font-bold" aria-details='Post desc'>
+                <h2 className="italic pt-5 underline decoration-white font-Quicksand font-bold" aria-details='Post desc'>
                   {securePost.description}
                 </h2>
                 <div className='flex items-center justify-end mt-auto space-x-1'>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         </section>
-
-        <div className="border-r-black border-l-black border border-opacity-10 bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
+        <section className="border-r-black border-l-black border border-opacity-10 bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
           <PortableText value={securePost.body} 
             components={RichTextComponents} aria-details='Portable text body render'/>
           
           {securePost.body.map((el: any) => {
             if (el.url){
               return (
-                <div className="flex justify-center w-full py-2 px-10 cursor-pointer">
-                  <iframe className="object-cover" height={650} 
-                    width={950} src={el.url}>
-                  </iframe>
+                <div className="flex justify-center w-full p-2 cursor-pointer">
+                  <a id="youtube_hyperlink">
+                    <iframe className="object-contain" height={600} 
+                      width={850} src={el.url}>
+                    </iframe>
+                  </a>
                 </div>
               )
             }
           })}
-        </div>
+        </section>
       </article> 
       <CommentForm post={securePost}/>
     </div>

@@ -10,6 +10,7 @@ import Footer from 'components/footer';
 import ClientSideFetch from '../../components/clientSideFetch';
 import { client } from 'lib/sanity.client';
 import { Post } from 'typings';
+import FloatButtonComp from '../../components/floatButton';
 
 
 const query = groq`

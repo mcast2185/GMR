@@ -9,7 +9,7 @@ const Navigation = () => {
 
   return (
     <div className="flex flex-col justify-center" >
-      <div className="flex flex-row justify-center w-full pl-2 navigation" >
+      <div className="flex flex-row justify-center w-full pl-2 content-box" >
         <SocialMediaIcons/>
       </div>
       <div className="flex flex-row justify-center w-full space-x-2 m-0">

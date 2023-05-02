@@ -1,23 +1,6 @@
 #scroll::-webkit-scrollbar{
     display: none;
-
 }
-
-/* .navigation, *, ::before, ::after {
-    box-sizing: content-box !important;
-    border-width: 0;
-    border-style: solid;
-    border-color: #e5e7eb;
-} */
-.navigation, *, ::before, ::after {
-    box-sizing: content-box !important;
-    /* border-width: 0;
-    border-style: solid;
-    border-color: #e5e7eb; */
-
-}
-
-
 
 .about {
   background-image: url("../public/kratos.png");
@@ -64,8 +47,13 @@
   max-width: 670;
 }
 
-/* mouse pointer css */
+#shorthand-links {
+  background-image: linear-gradient(to right, rgba(255,0,0,0) 20%, rgba(255,0,0,.15) 50%, rgba(255, 0, 0, 0.5));
 
+}
+
+
+/* mouse pointer css */
 .main-cursor,
 .secondary-cursor {
   z-index: 10000;
@@ -149,180 +137,6 @@
 /*  */
 
 
-/* image hover effect */
-.grid {
-  max-height: 1000px;
-	max-width: 1000px;
-  height: 90%;
-	width: 100%;
-}
-
-.grid .linktag {
-	float: left;
-	max-width: 180px;
-  max-height: 250px;
-	color: #333; 
-
-}
-
-.grid .linktag:nth-child(odd) {
-	margin: 0 0 -25px 0;
-}
-
-.grid figure {
-	position: relative;
-	overflow: hidden;
-	/* margin: 10px; */
-	background: #333;
-}
-
-.grid figure #path {
-  background: none;
-}
-
-.grid figure .imgtag {
-	position: relative;
-	display: block;
-  height: 250px;
-	width: 100%;
-	opacity: 0.7;
-	transition: opacity 0.3s;
-}
-
-.grid figcaption {
-	position: absolute;
-	top: 0;
-	z-index: 11;
-	padding-top: 10px;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-}
-
-.grid figcaption h2 {
-	margin: 0 0 20px 0;
-	color: #d5433e;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 300;
-	font-size: 130%;
-	transition: transform 0.5s;
-}
-
-.grid figcaption p {
-	padding: 18px 20px;
-	color: #fff;
-	font-weight: 300;
-	transition: opacity 0.3s, transform 0.3s;
-}
-
-.grid figcaption h2,
-.grid figcaption p {
-	transform: translateY(50px);
-}
-
-.grid figure button {
-	position: absolute;
-	padding: 2px 15px;
-  margin-top: 18px;
-	border: none;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: bold;
-	transition: opacity 0.3s, transform 0.3s;
-}
-
-.grid figcaption,
-.grid figcaption h2,
-.grid figcaption p,
-.grid figure button {
-	backface-visibility: hidden;
-}
-
-.grid svg {
-	position: absolute;
-	top: -1px; /* fixes rendering issue in FF */
-	z-index: 10;
-	width: 100%;
-	height: 80%;
-}
-
-.grid svg path {
-	fill: #fff;
-
-}
-
-
-.grid:hover path {
-    animation: pathEffect 5s ease-in-out;
-}  
-.grid:hover #path {
-    animation: pathEffectTwo 4.5s ease-in-out;
-}  
-
-
-.grid .linktag:hover figure .imgtag {
-	opacity: 1;
-}
-
-.grid .linktag:hover figcaption h2,
-.grid .linktag:hover figcaption p {
-	transform: translateY(10px);
-}
-
-.grid .linktag:hover figcaption p {
-	opacity: 0;
-}
-
-.grid figure button {
-	top: 50%;
-	left: 50%;
-	border: 3px solid #fff;
-	background: transparent;
-	color: #fff;
-	opacity: 0;
-	transform: translateY(-50%) translateX(-50%) scale(0.25);
-}
-
-.grid .linktag:hover figure button {
-	opacity: 1;
-	transform: translateY(-50%) translateX(-50%) scale(1);
-
-}
-/*  */
-
-@keyframes pathEffect {
-  0% {
-    transition: ease-in;
-    d: path("M 180,160 0,218 0,0 180,0 z");
-  }
-  50% {
-    transition: ease-in;
-    d: path("m 180,23.57627 -180,0 L 0,0 180,0 z");
-  }
-  100% {
-    transition: ease;
-    d: path("m 180,16.57627 -180,0 L 0,0 180,0 z");
-  }
-}
-
-@keyframes pathEffectTwo {
-  0% {
-    fill: #fff;
-    transition: ease-in;
-    d: path("M 180,160 0,218 0,0 180,0 z");
-  }
-  50% {
-    fill: rgba(249, 247, 247, 0.2);
-    transition: ease-in;
-    d: path("m 180,23.57627 -180,0 L 0,0 180,0 z");
-  }
-  100% {
-    fill: rgba(249, 247, 247, 0);
-    transition: ease;
-    d: path("m 180,16.57627 -180,0 L 0,0 180,0 z");
-  }
-}
 
 @keyframes fadeIn {
   0% {

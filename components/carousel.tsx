@@ -13,7 +13,7 @@ import slide_image_4 from "../public/remake.png";
 import slide_image_5 from "../public/Pokemon.png";
 import slide_image_6 from "../public/hogwarts.png";
 
-import "../styles/carousel.module.css";
+import "../styles/globals.css";
 
 // make sure that we understand exactly where we need to enter... being the blog post
 // we need to dive into what is making the resolution so slow.

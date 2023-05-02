@@ -10,10 +10,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className='html-selector bg-[#515151] bg-opacity-10'>
-      <body className="mx-auto max-w-full flex">
+    <html className='html-selector w-full h-fit bg-[#515151] bg-opacity-10'>
+      <body className="mx-auto min-w-full flex min-h-full">
         <Mouse/>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto h-fit flex flex-col">
           <Header/>
           <Banner/>
           {children}

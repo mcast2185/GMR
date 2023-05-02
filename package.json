@@ -19,7 +19,9 @@
     "@sanity/ui": "^1.2.2",
     "@sanity/vision": "^3.0.0",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "antd": "^5.4.6",
     "eslint-config-next": "^13.2.4",
+    "framer-motion": "^10.12.7",
     "get-youtube-id": "^1.0.1",
     "next": "^13.2.4",
     "next-auth": "^4.22.1",
@@ -43,6 +45,7 @@
     "swr": "^2.1.0"
   },
   "devDependencies": {
+    "@neojp/tailwindcss-box-sizing-utilities": "^1.0.1",
     "@sanity/eslint-config-studio": "^2.0.1",
     "@types/node": "18.11.19",
     "@types/react": "^18.0.27",

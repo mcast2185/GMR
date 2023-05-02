@@ -1,0 +1,310 @@
+/* gradient background test */
+#shorthand-links {
+  background-image: linear-gradient(to right, rgba(255,0,0,0) 20%, rgba(255,0,0,.15) 50%,45deg rgba(255, 0, 0, 0.5));
+
+}
+/*  */
+
+
+/* hover slide effect css  */
+.grid {
+  max-height: 100%;
+	max-width: 1000px;
+  height: 100%;
+	width: 100%;
+}
+
+.grid .linktag {
+	float: left;
+	max-width: 180px;
+  max-height: 250px;
+	color: #333; 
+
+}
+
+.grid .linktag:nth-child(odd) {
+	margin: 0 0 -25px 0;
+}
+
+.grid #figure {
+	position: relative;
+	overflow: hidden;
+	/* margin: 10px; */
+	background: #333;
+}
+
+.grid #figure #path {
+  background: none;
+}
+
+.grid #figure .imgtag {
+	position: relative;
+	display: block;
+  height: 250px;
+	width: 100%;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+.grid #figcaption {
+	position: absolute;
+	top: 0;
+	z-index: 11;
+	padding-top: 16px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.grid #figcaption h2 {
+	margin: 0 0 20px 0;
+	color: #d5433e;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 130%;
+	transition: transform 0.5s;
+}
+
+.grid #figcaption p {
+	padding: 18px 20px;
+	color: #fff;
+	font-weight: 300;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.grid #figcaption h2,
+.grid #figcaption p {
+	transform: translateY(50px);
+}
+
+.grid #figure button {
+	position: absolute;
+	padding: 2px 15px;
+  margin-top: 30px;
+  width: 90px;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	transition: opacity 0.3s, transform 0.3s;
+
+}
+
+.grid #figcaption,
+.grid #figcaption h2,
+.grid #figcaption p,
+.grid #figure button {
+	backface-visibility: hidden;
+}
+
+.grid #svg {
+	position: absolute;
+	top: -1px; /* fixes rendering issue in FF */
+	z-index: 10;
+	width: 100%;
+	height: 70%;
+  border-left: solid 2px #d5433e;
+}
+
+.grid #svg .path {
+	fill: #fff;
+}
+.grid #svg #path {
+	fill: #fff;
+}
+
+.grid:hover .path {
+    animation: pathEffect 5s ease-in-out;
+}  
+.grid:hover #path {
+    animation: pathEffectTwo 4.5s ease-in-out;
+}  
+
+
+.grid .linktag:hover #figure .imgtag {
+	opacity: 1;
+}
+
+.grid .linktag:hover #figcaption h2,
+.grid .linktag:hover #figcaption p {
+	transform: translateY(10px);
+}
+
+.grid .linktag:hover #figcaption p {
+	opacity: 0;
+}
+
+.grid #figure button {
+	top: 50%;
+	left: 50%;
+	border: 3px solid #fff;
+	background: transparent;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(-50%) translateX(-50%) scale(0.25);
+}
+
+.grid .linktag:hover #figure button {
+	opacity: 1;
+	transform: translateY(-50%) translateX(-50%) scale(1);
+
+}
+/* */
+
+/* image swap on hover effect */
+
+
+#flash-wrapper {
+	position: relative;
+	width: 390px;
+	height: 220px;
+	display: inline-block;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: 2px solid #2a2a2a;
+}
+
+#flash {
+	width: 100%;
+	transition: all linear 0.7s;
+}
+
+.img-effect {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+#flash-wrapper:hover #flash {
+	opacity: 0;
+}
+
+#flash-wrapper:hover #flash.img-effect {
+	opacity: 1;
+}
+
+/* second part */
+
+#flash-parent-tag {
+	float: left;
+	max-width: 390px;
+  max-height: 220px;
+	color: #333; 
+	cursor: pointer;
+}
+
+
+#flash-wrapper #flash-content {
+	position: absolute;
+	top: 0;
+	z-index: 11;
+	/* padding-top: 95px; */
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+
+#flash-wrapper #flash-content #prompt-one{
+	background: rgba(0, 0, 0, 0.5);
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 45px;
+	font-size: 24px;
+	width: 90%;
+	color: #fff;
+	font-weight: 300;
+	transition: opacity 0.5s, transform 0.7s;
+}
+
+#flash-content #prompt-one {
+	transform: translateY(50px);
+	
+}
+
+#flash-wrapper #prompt-two{
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+  margin-top: 45px;
+  width: 90%;
+	border: none;
+	letter-spacing: 1px;
+	font-weight: bold;
+	transition: opacity 0.5s, transform 0.7s;
+
+}
+
+#flash-content,
+#flash-content #prompt-one,
+#flash-wrapper #prompt-two {
+	backface-visibility: hidden;
+}
+
+#flash-parent-tag:hover #flash-content #prompt-one{
+	transform: translateY(40px);
+}
+
+#flash-parent-tag:hover #flash-content #prompt-one {
+	border: 2px solid #fff;
+	opacity: 0;
+}
+
+#flash-wrapper #prompt-two {
+	top: 58%;
+  left: 45%;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 45px;
+	font-size: 24px;
+	width: 90%;
+	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	opacity: 0;
+	transform: translateY(-50%) translateX(-50%) scale(0.25);
+}
+
+#flash-parent-tag:hover #flash-wrapper #prompt-two {
+	opacity: 1;
+	transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+/*  */
+
+
+
+@keyframes pathEffect {
+  0% {
+    transition: ease-in;
+    d: path("M 180,160 0,218 0,0 180,0 z");
+  }
+  50% {
+    transition: ease-in;
+    d: path("m 180,15.57627 -180,0 L 0,0 180,0 z");
+  }
+  100% {
+    transition: ease;
+    d: path("m 180,14.57627 -180,0 L 0,0 180,0 z");
+  }
+}
+
+@keyframes pathEffectTwo {
+  0% {
+    fill: #fff;
+    transition: ease-in;
+    d: path("M 180,160 0,218 0,0 180,0 z");
+  }
+  50% {
+    fill: rgba(249, 247, 247, 0.2);
+    transition: ease-in;
+    d: path("m 180,15.57627 -180,0 L 0,0 180,0 z");
+  }
+  100% {
+    fill: rgba(249, 247, 247, 0);
+    transition: ease;
+    d: path("m 180,14.57627 -180,0 L 0,0 180,0 z");
+  }
+}

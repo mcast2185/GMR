@@ -8,6 +8,7 @@ import Image from 'next/image';
 import ClientSideRoute from './clientSideRoute';
 import { Post } from '../typings.d';
 import urlFor from '../lib/urlFor';
+import LINK from '../public/wind.png';
 
 type Props = {
   posts: Post[];
@@ -31,7 +32,6 @@ function BlogList({posts}: Props) {
 
   return (
     <div className="blogList">
-      <hr className="border-[#992715de] mb-10"/>
       <header>
         <h1 className="text-black underline decoration-[#992715de] font-bold 
           text-2xl font-MontserratAlternates m-2 mt-1 pb-4">
@@ -39,7 +39,7 @@ function BlogList({posts}: Props) {
         </h1>
       </header>
       <div className="grid grid-cols-1 
-        md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
+        md:grid-cols-2 px-10 gap-10 gap-y-12 pb-24">
         {filteredPosts.map((post) => (
           <ClientSideRoute key={post._id} 
             route={`/post/${post.slug.current}`}>
@@ -112,7 +112,7 @@ function BlogList({posts}: Props) {
         {allPosts == true ? morePosts.map((post) => (
           <ClientSideRoute key={post._id} 
             route={`/post/${post.slug.current}`}>
-            <article key={post._id} className=" flex flex-col" aria-details='renders for read more only'>
+            <article key={post._id} className=" flex flex-col overflow-hidden" aria-details='renders for read more only'>
               <section className="relative w-full h-80 hover:scale-105 transition-transform duration-200 ease-out">
                 <Image
                   className='object-cover 
