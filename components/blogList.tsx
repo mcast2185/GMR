@@ -39,7 +39,7 @@ function BlogList({posts}: Props) {
         </h1>
       </header>
       <div className="grid grid-cols-1 
-        md:grid-cols-2 px-10 gap-10 gap-y-12 pb-24">
+        md:grid-cols-2 px-8 gap-10 gap-y-12 pb-24">
         {filteredPosts.map((post) => (
           <ClientSideRoute key={post._id} 
             route={`/post/${post.slug.current}`}>
@@ -61,7 +61,7 @@ function BlogList({posts}: Props) {
                   bg-opacity-60 bg-black 
                   rounded text-white p-5 flex justify-between">
                   <span className="scale-95" property='blog detail'>
-                    <p className="font-bold font-Montserrat" aria-details='rendered post title'>
+                    <p className="font-bold font-Quicksand" aria-details='rendered post title'>
                       {post.title}
                     </p>
                     <p className="font-Quicksand font-bold text-base" aria-details='rendered post date'>
@@ -73,7 +73,7 @@ function BlogList({posts}: Props) {
                     </p>
                   </span>
                   <div className="flex flex-col md:flex-row 
-                    gap-y-2 md:gap-x-2 items-center scale-95">
+                    gap-y-2 md:gap-x-2 items-center scale-95 pr-6">
                     {post.categories.map((category) => (
                       <div key={Math.random()} className="bg-[#3c3c3c] opacity-80 font-Quicksand text-center 
                         text-white px-3 py-1 rounded-full text-sm font-bold" aria-details='rendered post categories'>
@@ -93,7 +93,7 @@ function BlogList({posts}: Props) {
                   {post.description}
                 </p>
               </section>
-              <p className="mt-5 font-MontserratAlternates 
+              <p className="mt-5 font-MontserratAlternates  
                 font-bold flex items-center group-hover:underline">
                 Read Post
                 <FontAwesomeIcon icon={faArrowRight} className='ml-2 h-4 w-4' />
@@ -129,7 +129,7 @@ function BlogList({posts}: Props) {
                   bg-opacity-60 bg-black 
                   rounded text-white p-5 flex justify-between">
                   <span className="scale-95" property='blog detail'>
-                    <p className="font-bold font-Montserrat" aria-details='rendered post title'>
+                    <p className="font-bold font-Quicksand" aria-details='rendered post title'>
                       {post.title}
                     </p>
                     <p className="font-Quicksand font-bold text-base" aria-details='rendered post date'>
@@ -141,9 +141,9 @@ function BlogList({posts}: Props) {
                     </p>
                   </span>
                   <div className="flex flex-col md:flex-row scale-95
-                    gap-y-2 md:gap-x-2 items-center">
+                    gap-y-2 md:gap-x-2 items-center pr-6">
                     {post.categories.map((category) => (
-                      <div key={Math.random()} className="bg-[#992715de] font-Quicksand text-center 
+                      <div key={Math.random()} className="bg-[#3c3c3c] font-Quicksand text-center pr-3
                         text-white px-3 py-1 rounded-full text-sm font-bold" aria-details='rendered post category'>
                        <p>{category.title}</p>
                       </div>

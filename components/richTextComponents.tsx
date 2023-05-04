@@ -37,13 +37,13 @@ export const RichTextComponents = {
   },
   block: {
     h1: ({children}: any) => (
-      <h1 className="text-5xl px-10 font-MontserratAlternates underline decoration-[#992715de] text-[#333333] py-8 font-bold">{children}</h1>
+      <h1 className="text-5xl px-10 font-AlegreyaSans underline decoration-[#992715de] text-[#333333] py-8 font-bold">{children}</h1>
     ),
     h2: ({children}: any) => (
-      <h2 className="text-4xl px-10 font-Montserrat underline decoration-[#992715de] text-[#333333] py-10 font-bold">{children}</h2>
+      <h2 className="text-4xl px-10 font-AlegreyaSans underline decoration-[#992715de] text-[#333333] py-10 font-bold">{children}</h2>
     ),
     h3: ({children}: any) => (
-      <h3 className="text-3xl px-10 font-Montserrat underline decoration-[#992715de] text-[#333333] py-10 font-bold">{children}</h3>
+      <h3 className="text-3xl px-10 font-AlegreyaSans underline decoration-[#992715de] text-[#333333] py-10 font-bold">{children}</h3>
     ),
     h4: ({children}: any) => (
       <div className="flex items-center h-20" >

@@ -22,7 +22,7 @@ export default function About () {
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-10 pb-5">
+        <article className="px-10 pb-10">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
               <section className="p-4 bg-transparent w-full">
@@ -38,8 +38,8 @@ export default function About () {
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-10" >
-            <div className="mt-16 px-20" >
-              <h2 className=" text-[#000000] text-xl leading-10 font-semibold font-Quicksand ">
+            <div className="mt-16 mb-16 px-20" >
+              <p className=" text-[#000000] text-lg leading-8 font-semibold font-Quicksand ">
                 <b className="text-5xl font-bold">W</b>elcome to <i>GMRseat</i>, the ultimate platform for everything gaming and game-related! Our site covers a range of topics, 
                 from the latest video game releases to comic book movies, pop culture shows, and much more. 
                 Whether you're a hardcore gamer or just a casual fan, GMR has got you covered with in-depth blog posts, video clips, podcasts, and more.
@@ -49,7 +49,7 @@ export default function About () {
                 At GMR, we are dedicated to featuring the most talented content creators and podcasters in the gaming industry. 
                 Our site is a platform for both established and up-and-coming voices in the gaming community, and we strive to provide a diverse range of perspectives and opinions.
                 So join us on this epic journey into the world of gaming and pop culture. Let's explore, analyze, and celebrate the games and stories that define our culture!
-              </h2>
+              </p>
             </div>
           </div>
         </article> 

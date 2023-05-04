@@ -11,16 +11,11 @@ import CommentForm from '../../../../components/commentForm';
 import Head from 'next/head';
 
 
-// re-render/validate updated backend data for this page
-// this component recieves the fetched posts and statically generates the pages and routes at build time
-
-
 type Props = {
   params: {
     slug: string;
   }
 };
-
 
 export const revalidate = 60;
 export async function generateStaticParams() {
@@ -36,7 +31,6 @@ export async function generateStaticParams() {
     slug,
   }))
 };
-
 
 async function Post({params: {slug}}: Props) {
   const query = groq`
@@ -81,7 +75,7 @@ async function Post({params: {slug}}: Props) {
             <div className="p-4 bg-[#ba3627] w-full" aria-details='Section that categorizes and provides detail to post'>
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
-                  <h1 className="text-4xl font-extrabold font-MontserratAlternates" aria-details='Post title'>
+                  <h1 className="text-4xl font-extrabold font-AlegreyaSans" aria-details='Post title'>
                     {securePost.title}
                   </h1>
                   <p className="font-Quicksand font-bold" aria-details='post date'>

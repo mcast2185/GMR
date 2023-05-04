@@ -1,13 +1,10 @@
 import Link from 'next/link';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-import { SwiperSlide, Swiper } from 'swiper/react';
 import React, { useState, useEffect } from 'react';
 import type { RadioChangeEvent } from 'antd';
-import { Carousel, Radio } from 'antd';
+import { Carousel} from 'antd';
 import type { DotPosition } from 'antd/es/carousel';
 
 
-import Mouse from 'components/mouse';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Image from 'next/image';
@@ -19,9 +16,10 @@ import GALAXY from '../public/Galaxy.png';
 import KINGDOM from '../public/kingdom.png';
 import APEX from '../public/apex.png';
 import TED from '../public/ted.png';
-import "../styles/globals.css";
+import DUNE from '../public/dune.png';
 import Head from 'next/head';
 import Footer from 'components/footer';
+import "../styles/globals.css";
 
 
 
@@ -41,15 +39,6 @@ export default function Media () {
       document.getElementById("mando")!.style.filter = "brightness(1)";
     });
 
-    if (document.getElementById("tiktok")){
-      console.log("script already exists");
-    } else {
-      let script = document.createElement("script");
-      script.src = "https://www.tiktok.com/embed.js";
-      script.async = true;
-      script.setAttribute("id", "tiktok");
-      document.head.appendChild(script);
-    };
   });
   
   return (
@@ -111,7 +100,7 @@ export default function Media () {
             </div>
           </div>
           <hr className="border-[#992715de] mb-5"/>
-          <div className="flex flex-row justify-center items-center m-10" >
+          <div className="flex flex-row justify-center items-center m-5" >
             <iframe src="https://embed.podcasts.apple.com/us/podcast/resident-evil-4-gameplay-preview/id1239568910?i=1000602655277"
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="175" className="w-full max-w-md overflow-hidden bg-transparent" 
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
@@ -121,153 +110,78 @@ export default function Media () {
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
             </iframe>
           </div>
-          <div className=" flex flex-row mb-10 w-full">
-            <div className="flex flex-col justify-start pr-5 ml-[60px] items-center w-[580px]" >
-              <Carousel autoplay autoplaySpeed={3000} effect="fade" className="w-[580px] h-[250px] mb-10">
-                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px]">
+          <div className=" flex flex-row mb-5 w-full">
+            <div className="flex flex-col justify-start pr-5 ml-[40px] items-center w-[580px]" >
+              <Carousel autoplay autoplaySpeed={3000} effect="fade" className="w-[580px] h-[250px] mb-5">
+                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
+                  <Link target="_blank" href="https://www.youtube.com/watch?v=hvfTZM4aNck" aria-details='Guardians of the Galaxy 3 movie promo'>
                   <Image src={GALAXY} width={580} height={250} alt="Guardians of the Galaxy 3 movie promo"/>
-                  <Link target="_blank" href="https://www.youtube.com/watch?v=hvfTZM4aNck" aria-details=''>
+                  </Link>
                     <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
                       duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[150px]">
                       Guardians of the Galaxy 3: Final trailer
                     </h3>
-                  </Link>
                 </div>
-                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px]">
+                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
+                  <Link target="_blank" href="http://localhost:3000/post/the-legend-of-zelda-tears-of-the-kingdom" aria-details='The Legend of Zelda: Tears of the Kingdom'>
                   <Image src={KINGDOM} width={580} height={250} alt="The Legend of Zelda: Tears of the Kingdom"/>
-                  <Link href="" aria-details='The Legend of Zelda: Tears of the Kingdom'>
+                  </Link>
                     <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
                       duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[150px]">
                       "Zelda: Tears of the Kingdom" 
                     </h3>
-                  </Link>
                 </div>
-                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px]">
+                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
+                  <Link target="_blank" href="http://localhost:3000/post/apex-legends-season-17-arsenal" aria-details='Apex Legends Season 17: Arsenal'>
                   <Image src={APEX} width={580} height={250} alt="Apex Legends Season 17: Arsenal"/>
-                  <Link href="" aria-details='Apex Legends Season 17: Arsenal'>
+                  </Link>
                     <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
                       duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[150px]">
                       Apex Legends: Season 17
                     </h3>
-                  </Link>
                 </div>
-                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px]">
+                <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
+                  <Link target="_blank" href="http://localhost:3000/post/ted-lasso-season-3" aria-details='Ted Lasso Season 3'>
                   <Image src={TED} width={580} height={250} alt="Ted Lasso Season 3"/>
-                  <Link href="" aria-details='Ted Lasso Season 3'>
+                  </Link>
                     <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
                       duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[150px]">
                       Ted Lasso season 3
                     </h3>
-                  </Link>
                 </div>
               </Carousel>
-              <div className="container justify-start">
-                <Swiper
-                  effect={"coverflow"}
-                  grabCursor={true}
-                  centeredSlides={true}
-                  loop={true}
-                  slidesPerView={"auto"}
-                  coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 2.5}}
-                    pagination={{el: ".swiper-pagination", clickable: true}}
-                    navigation={{
-                      nextEl: ".swiper-button-next",
-                      prevEl: ".swiper-button-prev",
-                      enabled: true
-                    }}
-                  modules={[EffectCoverflow, Pagination, Navigation]}
-                  className="swiper_container">
-
-                  <SwiperSlide>
-                    <div className="flex justify-center ">
-                      <iframe width="180" height="250" src="https://www.youtube.com/embed/kVe5UM_k1S0" title="YouTube video player"
-                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
-                      </iframe>
-                    </div>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <div className="flex justify-center">
-                      <iframe width="180" height="250" src="https://www.youtube.com/embed/F4FQETyGuWs" title="YouTube video player"
-                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
-                      </iframe>         
-
-                    </div>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <div className="flex justify-center">
-                      <iframe width="180" height="250" src="https://www.youtube.com/embed/fLmu19go2cs" title="YouTube video player"
-                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
-                      </iframe>         
-
-                    </div>
-                  </SwiperSlide>
-                  
-                  <SwiperSlide>
-                    <div className="flex justify-center">
-                      <iframe width="180" height="250" src="https://www.youtube.com/embed/9AMm0NuiXOo" title="YouTube video player"
-                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
-                      </iframe>      
-                  </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="flex justify-center">
-                      <iframe width="180" height="250" src="https://www.youtube.com/embed/64_wlwcQTfA" title="YouTube video player"
-                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
-                      </iframe>          
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="flex justify-center">
-                      <iframe width="180" height="250" src="https://www.youtube.com/embed/mkCK0P1BXac" title="YouTube video player"
-                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
-                      </iframe>          
-                    </div>
-                  </SwiperSlide>
-                  <div className="slider-controller">
-                    <div className="flex h-14 w-28 items-center content-center" >
-                      <div className="swiper-pagination"></div>
-                    </div>
-                  </div>
-                </Swiper>
+              <div id="scroll" className="flex flex-row overflow-y-scroll 
+                md:grid-cols-2 gap-4 mr-4 pb-24 w-[580px] scale-95">
+                <iframe width="375" height="250" className="scale-90 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/Bbdq2JmUkl0" title="YouTube video player"
+                  allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+                </iframe>  
+                <iframe width="180" height="250" className="border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/kVe5UM_k1S0" title="YouTube video player"
+                  allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+                </iframe>
+                <iframe width="375" height="250" className="scale-90 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/ey22EdpkMDE" title="YouTube video player"
+                  allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+                </iframe>    
+                <iframe width="180" height="250" className="border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/fLmu19go2cs" title="YouTube video player"
+                  allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+                </iframe>  
+                <iframe width="375" height="250" className="scale-90 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/gyFxUYulM4U" title="YouTube video player"
+                  allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen={false}>
+                </iframe> 
               </div>
             </div>
-            <div className="flex flex-col h-[605px]">
-              <Carousel autoplaySpeed={4500} dotPosition="left" effect="fade" className="w-[305px] h-[605px] mb-10">
-                <div className="flex flex-col justify-center mb-3 pr-2 pl-2 w-[305px] h-[605px] overflow-hidden" > 
-                  <div className="overflow-hidden h-[1500px]">
-                    <iframe sandbox="allow-modal" width="300" height="1500" src="https://www.tiktok.com/embed/7209055934377659694" title="YouTube video player" allowFullScreen={false} className="pb-20 overflow-hidden"
-                      allow="accelerometer; pause; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;  allow-scripts; allow-top-navigation;">
-                    </iframe>
-                  </div> 
-                </div>
-                <div className="flex flex-col justify-center mb-3 pr-2 pl-2 w-[305px] h-[605px] overflow-hidden" > 
-                  <div className="overflow-hidden h-[1500px]">
-                    <iframe sandbox="allow-modal" width="300" height="1500" src="https://www.tiktok.com/embed/7173074436902473002" title="YouTube video player" allowFullScreen={false} className="pb-20 overflow-hidden"
-                      allow="accelerometer; pause; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;  allow-scripts; allow-top-navigation;">
-                    </iframe>
-                  </div> 
-                </div>
-                <div className="flex flex-col justify-center mb-3 pr-2 pl-2 w-[305px] h-[605px] overflow-hidden" > 
-                  <div className="overflow-hidden h-[1500px]">
-                    <iframe sandbox="allow-modal" width="300" height="1500" src="https://www.tiktok.com/embed/7212371511603219754" title="YouTube video player" allowFullScreen={false} className="pb-20 overflow-hidden"
-                      allow="accelerometer; pause; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;  allow-scripts; allow-top-navigation;">
-                    </iframe>
-                  </div> 
-                </div>
-                <div className="flex flex-col justify-center mb-3 pr-2 pl-2 w-[305px] h-[605px] overflow-hidden" > 
-                  <div className="overflow-hidden h-[1500px]">
-                    <iframe sandbox="allow-modal" width="300" height="1500" src="https://www.tiktok.com/embed/7085773186960313646" title="YouTube video player" allowFullScreen={false} className="pb-20 overflow-hidden"
-                      allow="accelerometer; pause; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;  allow-scripts; allow-top-navigation;">
-                    </iframe>
-                  </div> 
-                </div>
-              </Carousel>
+            <div className="flex flex-col h-[700px] ">
+              <div className="flex justify-center pr-3 pl-3 overflow-hidden pt-5 h-[700px] cursor-pointer">
+                <Link target="_blank" href="https://www.youtube.com/watch?v=Way9Dexny3w" aria-details='Dune: Part 2'>
+                  <Image src={DUNE} width={320} height={600} alt="Dune: Part 2" className="object-cover rounded-sm transition-translate duration-500 ease-in-out hover:brightness-50"/>
+                </Link>
+                <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
+                  duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[350px]">
+                <Link target="_blank" href="https://www.youtube.com/watch?v=Way9Dexny3w" aria-details='Dune: Part 2'>
+                  Watch the trailer here
+                </Link>
+                </h3>
+              </div>
+              
             </div>
           </div>
         </div>

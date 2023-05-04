@@ -54,12 +54,12 @@ const SampleContent = () => {
                     bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default
                     leading-relaxed font-MontserratAlternates space-y-2 p-4 ">
                     <b className="ml-4 text-xl">W</b>elcome to <b><i>GMRseat</i></b>, where gaming lives and content inspires. From 
-                    <a href="/blogs" className="decoration-[#d5433e] text-sky-800 underline decoration-1"> blog posts</a> and 
-                    <a href="/media" className="decoration-[#d5433e] text-sky-800 underline decoration-1"> video shorts to podcasts</a>
+                    <a href="/blogs" className="decoration-[#d5433e] text-sky-800 underline decoration-1" aria-details='Blog posts'> blog posts</a> and 
+                    <a href="/media" className="decoration-[#d5433e] text-sky-800 underline decoration-1" aria-details='media page'> video shorts to podcasts</a>
                     featuring some of the most talented voices in the gaming industry, stay up-to-date 
                     here on the hottest new source for gamers. Housing the coldest
                     video game highlights from some of your favorite games and favorite 
-                    <a href="/media" className="decoration-[#d5433e] text-sky-800 underline decoration-1"> content creators </a>
+                    <a href="/media" className="decoration-[#d5433e] text-sky-800 underline decoration-1" aria-details='media page'> content creators </a>
                     on social media, we aim to promote more than just timely news, but the culture built by us, 
                     the sweatiest of players. Cheers... <i>[GMR]!</i>
                   </p>
@@ -208,17 +208,20 @@ const SampleContent = () => {
         </h1>
 
         <section ref={ref} className="mb-8">
-          <div style={{
-            display: "flex",
-            width: "100%",
-            position: "relative",
-            transform: isInView ? "none" : "translateX(-20px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
+          <div className="flex w-full relative"
+            // style={{
+            //   display: "flex",
+            //   width: "100%",
+            //   position: "relative",
+            // }}
+            >
           <div className="flex w-full h-[180px] absolute"/>
             <div className="mb-5 pr-3 pt-8 flex justify-between w-[600px]" >
               <div className="flex justify-center mr-3 overflow-hidden border-t-2 border-black scale-105">
-                <section className="grid clearfix" id="grid">
+                <section className="grid clearfix" id="grid" style={{
+                  transform: isInView ? "none" : "translateX(-20px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                   <Link href="/brand" className="linktag"
                     data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                     <figure id="figure">
@@ -227,7 +230,7 @@ const SampleContent = () => {
                       <svg viewBox="0 0 180 320" preserveAspectRatio="none" id="svg">
                         <path className="path" d="M 180,160 0,218 0,0 180,0 z"/>
                       </svg>
-                      <figcaption id="figcaption">
+                      <figcaption id="figcaption" className="font-Quicksand">
                         <h2>Apparel</h2>
                         <p>GMR gear for the Gamer.</p>
                         <button className="bg-[rgba(0,0,0,.45)]">Quick look </button>
@@ -238,7 +241,10 @@ const SampleContent = () => {
               </div>
 
               <div className="flex justify-center mr-3 overflow-hidden border-t-2 border-black scale-105">
-                <section className="grid clearfix" id="grid">
+                <section className="grid clearfix" id="grid" style={{
+                  transform: isInView ? "none" : "translateX(-15px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 2.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                   <Link href="/media" className="linktag">
                     <figure id="figure">
                         <Image src={KINDA} alt="Whats Good Games podcast"
@@ -246,7 +252,7 @@ const SampleContent = () => {
                           <svg viewBox="0 0 180 320" preserveAspectRatio="none" id="svg">
                           <path id="path" d="M 180,160 0,218 0,0 180,0 z"/>
                         </svg>
-                        <figcaption id="figcaption">
+                        <figcaption id="figcaption" className="font-Quicksand">
                           <h2>Podcasts</h2>
                           <button className="bg-[rgba(0,0,0,.45)]">Quick look</button>
                         </figcaption>
@@ -256,7 +262,10 @@ const SampleContent = () => {
               </div>
 
               <div className="flex justify-center mr-3 pb-5 overflow-hidden border-t-2 border-black scale-105">
-                <section className="grid clearfix" id="grid">
+                <section className="grid clearfix" id="grid" style={{
+                  transform: isInView ? "none" : "translateX(-10px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 3.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                   <Link href="/media" className="linktag "
                     data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                     <figure id="figure">
@@ -265,7 +274,7 @@ const SampleContent = () => {
                       <svg viewBox="0 0 180 320" preserveAspectRatio="none" id="svg">
                         <path className="path" d="M 180,160 0,218 0,0 180,0 z"/>
                       </svg>
-                      <figcaption id="figcaption">
+                      <figcaption id="figcaption" className="font-Quicksand">
                         <h2>Coming Soon</h2>
                         <p>Stay updated on upcoming content.</p>
                         <button className="bg-[rgba(0,0,0,.45)]">Quick look</button>
@@ -275,13 +284,16 @@ const SampleContent = () => {
                 </section>
               </div> 
             </div>
-            <section id="flash-parent-tag">
+            <section id="flash-parent-tag" style={{
+              transform: isInView ? "none" : "translateY(-20px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 3.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
               <Link target="_blank" href="http://localhost:3000/post/the-flash-humanizing-a-hero#youtube_hyperlink">
                 <figure id="flash-wrapper" className="flex mt-[45px]">
                   <Image id="flash" className="h-[220px] w-[390px] img-transform" src={FLASH} alt="Flash the movie"/>
                     <Image id="flash" className="h-[220px] w-[390px] img-effect" src={FLASH2} alt="Flash the movie"/>
                   <figcaption id="flash-content">
-                    <h3 id="prompt-one"><i>"The Flash"</i> releases a new footage</h3>
+                    <h3 id="prompt-one"><i>"The Flash"</i> new trailer release</h3>
                     <h3 id="prompt-two"> Click here to watch the trailer</h3>
                   </figcaption>
                 </figure>
