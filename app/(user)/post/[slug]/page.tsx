@@ -9,6 +9,7 @@ import { Post } from '../../../../typings';
 import urlFor from '../../../../lib/urlFor';
 import CommentForm from '../../../../components/commentForm';
 import Head from 'next/head';
+import FloatButtonComp from 'components/floatButton';
 
 
 type Props = {
@@ -29,25 +30,25 @@ export async function generateStaticParams() {
 
   return slugRoutes.map(slug => ({
     slug,
-  }))
+  }));
 };
 
 async function Post({params: {slug}}: Props) {
   const query = groq`
-  *[_type == "post" && slug.current == "${slug}"]{
-    ...,
-    author->,
-    categories[]->,
-    'comments': *[
-      _type == "comment" && 
-      post._ref == ^._id &&
-      approved == true
-    ], 
-    description,
-    mainImage,
-    slug,
-    body
-  }`;
+    *[_type == "post" && slug.current == "${slug}"]{
+      ...,
+      author->,
+      categories[]->,
+      'comments': *[
+        _type == "comment" && 
+        post._ref == ^._id &&
+        approved == true
+      ], 
+      description,
+      mainImage,
+      slug,
+      body
+    }`;
 
   const posts = await client.fetch(query);
   const securePost = posts[0];
@@ -56,23 +57,26 @@ async function Post({params: {slug}}: Props) {
     <div>
       <Head>
         <title>
-          Dynamically generated blog post page reviewing game and pop culture content.
+          {`${securePost.title}`}
         </title>
+        <meta name="description" content={`${securePost.description}`} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <article className="px-10 pb-10">
         <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
-
-            <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2 border-box">
-              <Image
-                className='object-cover object-left lg:object-center'
-                src={urlFor(securePost.mainImage).url()}
-                alt={securePost.author.name}
-                fill
-              /> 
-            </div>
-
-            <div className="p-4 bg-[#ba3627] w-full" aria-details='Section that categorizes and provides detail to post'>
+            <figure>
+              <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2 border-box">
+                <Image
+                  className='object-cover object-left lg:object-center'
+                  src={urlFor(securePost!.mainImage).url()}
+                  alt={securePost.author.name}
+                  fill
+                /> 
+              </div>
+            </figure>
+            <div className="p-4 bg-[#ba3627] w-full" 
+              aria-details='Section that categorizes and provides detail to post'>
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
                   <h1 className="text-4xl font-extrabold font-AlegreyaSans" aria-details='Post title'>
@@ -86,38 +90,37 @@ async function Post({params: {slug}}: Props) {
                     })}
                   </p>
                 </div>
-
                 <div className='flex mt-16 w-52 mb-0 pt-3 justify-center'>
-                  <div className="flex flex-col items-center justify-center content-center w-52 h-24 pt-15" >
-                    <Image
-                      className='rounded-full'
-                      src={urlFor(securePost.author.image).url()}
-                      alt={securePost.author.name}
-                      height={80}
-                      width={90}
-                    /> 
-                    <div className='w-52 '>
-                      <h3 className="text-lg font-Quicksand font-bold flex flex-row ml-8" aria-details='Post author name'>
-                        {securePost.author.name}
-                      </h3>
-                    </div>
-                    <div className="flex flex-row font-Quicksand" aria-details='Post categories'>
-                    {securePost.categories.map((el: any) => (
-                      <p className="bg-[#3c3c3c] bg-opacity-90 text-white 
-                        flex flex-row mr-3 px-3 py-1 rounded-2xl text-sm font-semibold mt-3"
-                        aria-details='category'
-                        key={el._id}>
-                        {el.title}
-                      </p>
-                    ))}
-                    </div>
+                  <div className="flex flex-col items-center 
+                    justify-center content-center w-52 h-24 pt-15" >
+                    <figure>
+                      <Image
+                        className='rounded-full'
+                        src={urlFor(securePost.author.image).url()}
+                        alt={securePost.author.name}
+                        height={80}
+                        width={90}
+                      /> 
+                      <div className='w-52 '>
+                        <h3 className="text-lg font-Quicksand font-bold flex flex-row ml-8" aria-details='Post author name'>
+                          {securePost.author.name}
+                        </h3>
+                      </div>
+                      <div className="flex flex-row font-Quicksand" aria-details='Post categories'>
+                        {securePost.categories.map((el: any) => (
+                          <p aria-details='category' key={el._id}
+                            className="bg-[#3c3c3c] bg-opacity-90 text-white 
+                            flex flex-row mr-3 px-3 py-1 rounded-2xl text-sm font-semibold mt-3">
+                            {el.title}
+                          </p>
+                        ))}
+                      </div>
+                    </figure>
                   </div>
                 </div>
               </div>
-
               <div>
                 <div className="h-14 w-44 pl-3 mt-0 flex justify-start">
-                  
                 </div>
                 <h2 className="italic pt-5 underline decoration-white font-Quicksand font-bold" aria-details='Post desc'>
                   {securePost.description}
@@ -128,10 +131,10 @@ async function Post({params: {slug}}: Props) {
             </div>
           </div>
         </section>
-        <section className="border-r-black border-l-black border border-opacity-10 bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
+        <section className="border-r-black border-l-black border border-opacity-10 
+          bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default">
           <PortableText value={securePost.body} 
             components={RichTextComponents} aria-details='Portable text body render'/>
-          
           {securePost.body.map((el: any) => {
             if (el.url){
               return (

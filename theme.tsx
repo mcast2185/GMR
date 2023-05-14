@@ -25,7 +25,6 @@ const myTheme: StudioTheme = buildLegacyTheme({
   "--brand-primary": props["--my-Gold"],
 
 
-  // "--default-button-color": "#666",
   "--default-button-primary-color": props["--my-Gold"],
   "--default-button-success-color": props["--my-green"],
   "--default-button-warning-color": props["--my-yellow"],

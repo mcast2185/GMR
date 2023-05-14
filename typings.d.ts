@@ -60,7 +60,6 @@ interface Author extends Base {
   slug: Slug;
 };
 
-
 interface Image {
   _type: "image";
   asset: Reference;
@@ -115,5 +114,4 @@ interface MainImage {
 interface Title {
   _type: "string";
   current: string;
-}
-
+};

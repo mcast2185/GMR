@@ -10,8 +10,9 @@ export default function Head() {
       <meta name="Googlebot" content="index, archive"/>
       <meta property="og:url" content="https://www.gmrseat.com/"/>
       <meta name="HandheldFriendly" content="true"/>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico"/>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3427987474449935" crossOrigin="anonymous"></script>
       <title>[GMR]seat</title>
     </>
-  )
-}
+  );
+};

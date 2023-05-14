@@ -1,16 +1,17 @@
 "use client";
 
-import "../styles/globals.css";
+import Head from "next/head";
+import Link from "next/link";
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+
 import { Post } from '../typings.d';
 import Header from '../components/header';
 import Banner from '../components/banner';
-import Mouse from 'components/mouse';
-import Head from "next/head";
 import Footer from "../components/footer";
-import Link from "next/link";
+import FloatButtonComp from "components/floatButton";
 
+import "../styles/globals.css";
 
 interface FormInput {
   _id: string;
@@ -28,8 +29,6 @@ export default function Contact ({post}: Props) {
   const [submitted, setSubmitted] = useState(false);
   const {register, handleSubmit, formState: {errors}} = useForm<FormInput>()
 
-
-
   const onSubmit: SubmitHandler<FormInput> = async(data) => {
     console.log(data);
     
@@ -43,7 +42,7 @@ export default function Contact ({post}: Props) {
     .catch((e) => {
       console.error(e);
       setSubmitted(false);
-    })
+    });
   };
   
   return (
@@ -52,9 +51,10 @@ export default function Contact ({post}: Props) {
         <title>
           GMRseat Contact us
         </title>
-        <meta name="description" content="a brief look as to how to contact us" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="a brief look as to how to contact us"/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
+      <FloatButtonComp/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
@@ -73,32 +73,33 @@ export default function Contact ({post}: Props) {
             </div>
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 
-            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default" >
-            <div className=" px-10" >
-              <p className="mt-16 text-[#000000] text-xl leading-8 font-semibold font-Quicksand px-10 ">
+            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default">
+            <div className=" px-10">
+              <p className="mt-16 text-[#000000] text-xl leading-8 font-semibold font-Quicksand px-10">
                 <b className="text-5xl font-bold">W</b>e'd love to hear from you! Submit your <Link target="_blank" href="https://youtube.com"><u>Youtube</u> </Link>
                 video links wearing or supporting some of our <i>GMRseat</i> merchandise for a chance to be hosted on our page. 
                 If you have any questions, comments, or feedback about <i>GMRseat</i>, please don't hesitate to get in touch. Here are some ways you can contact us: <br/>
               </p>
               <div className="py-10" >
                 <span className="ml-10 overflow-clip">
-                  <p className=" text-[#6b6b6b]  text-xl leading-8 font-semibold font-Quicksand px-20 ">
-                  <b className='font-bold text-lg underline decoration-[#992715de]'>Email:</b> You can reach us at <u>gmrseat@gmail.com</u>. We'll do our best to respond to your message within 24-48 hours.
+                  <p className=" text-[#6b6b6b] text-xl leading-8 font-semibold font-Quicksand px-20">
+                    <b className='font-bold text-lg underline decoration-[#992715de]'>Email:</b> You can reach us at <u>gmrseat@gmail.com</u>. We'll do our best to respond to your message within 24-48 hours.
                   </p>
                 </span>
-
                 <span className="ml-10 overflow-clip">
-                  <p className=" text-[#6b6b6b]  text-xl leading-8 font-semibold font-Quicksand px-20 ">
-                  <b className='font-bold text-lg underline decoration-[#992715de]'>Social Media:</b> Follow us on 
-                  <Link target="_blank" href="https://twitter.com/GMRxSeat" className="decoration-[#d5433e] text-sky-800 underline decoration-1"> Twitter</Link>, 
-                  <Link target="_blank" href="https://www.instagram.com/gmr.seat" className="decoration-[#d5433e] text-sky-800 underline decoration-1"> Instagram</Link>, and 
-                  <Link target="_blank" href="https://www.instagram.com/gmr.seat" className="decoration-[#d5433e] text-sky-800 underline decoration-1"> Facebook</Link> to stay up-to-date on the latest news and trends in the gaming world. You can also send us a direct message on any of these platforms. 
+                  <p className=" text-[#6b6b6b]  text-xl leading-8 font-semibold font-Quicksand px-20">
+                    <b className='font-bold text-lg underline decoration-[#992715de]'>Social Media:</b> Follow us on 
+                    <Link target="_blank" href="https://twitter.com/GMRxSeat" 
+                      className="decoration-[#d5433e] text-sky-800 underline decoration-1"> Twitter</Link>, 
+                    <Link target="_blank" href="https://www.instagram.com/gmr.seat" 
+                      className="decoration-[#d5433e] text-sky-800 underline decoration-1"> Instagram</Link>, and 
+                    <Link target="_blank" href="https://www.instagram.com/gmr.seat" 
+                      className="decoration-[#d5433e] text-sky-800 underline decoration-1"> Facebook</Link> to stay up-to-date on the latest news and trends in the gaming world. You can also send us a direct message on any of these platforms. 
                   </p>
                 </span>
-
                 <span className="ml-10 overflow-clip">
                   <p className=" text-[#6b6b6b]  text-xl leading-8 font-semibold font-Quicksand px-20 ">
-                  <b className='font-bold text-lg underline decoration-[#992715de]'>Contact Form:</b> Use our online contact form to send us a message directly through our website. We'll get back to you as soon as possible.
+                    <b className='font-bold text-lg underline decoration-[#992715de]'>Contact Form:</b> Use our online contact form to send us a message directly through our website. We'll get back to you as soon as possible.
                   </p>
                 </span>
                 <p className="mt-16 text-[#000000]  text-xl leading-8 font-semibold font-Quicksand px-10 ">
@@ -206,4 +207,3 @@ export default function Contact ({post}: Props) {
     </div>
   );
 };
-

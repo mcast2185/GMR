@@ -1,7 +1,8 @@
-import NextAuth from "next-auth"
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
-import { SanityAdapter, SanityCredentials } from 'next-auth-sanity';
+import { SanityAdapter } from 'next-auth-sanity';
+
 import { client } from 'lib/sanity.client';
 
 
@@ -21,4 +22,4 @@ export default NextAuth({
   },
   adapter: SanityAdapter(client),
   secret: process.env.NEXTAUTH_SECRET
-})
+});

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Post } from '../typings.d';
+import { useState } from 'react';
 
+import { Post } from '../typings.d';
 
 interface FormInput {
   _id: string;
@@ -32,7 +32,7 @@ const CommentForm = ({post}: Props) => {
     .catch((e) => {
       console.error(e);
       setSubmitted(false);
-    })
+    });
   };
 
   return (
@@ -137,18 +137,16 @@ const CommentForm = ({post}: Props) => {
 
         {post && post.comments.map((comment: any) => (
           <div key={comment._id!}>
-          {/* <div key={comment ? comment._id : undefined}> */}
             <p>
               <span className="text-[#992715de]">
                 {comment.name!}: </span>{comment.comment!}
-                {/* {comment && comment.name}: </span>{comment && comment.comment} */}
             </p>
           </div>
         ))}
       </div>    
     </div>
-  )
-}
+  );
+};
 
 
 export default CommentForm;

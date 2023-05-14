@@ -3,6 +3,7 @@
 import React, { useState} from 'react';
 import emailjs from "@emailjs/browser";
 
+
 const Result = () => {
   return (
     <p>
@@ -26,15 +27,18 @@ const Newsletter: React.FC = () => {
     showResult(true);
   };
 
-
   return (
-    
     <div className="bg-gray-800 text-[#d9d9d9] flex mb-10 mt-10
       justify-center items-center mr-2 text-base font-Quicksand rounded-md shadow-lg overflow-hidden">
-      <div className="p-4 md:p-8  flex flex-col justify-center items-center">
-        <h2 className="text-6xl font-MontserratAlternates md:text-2xl font-bold mb-4">[GMR] Newsletter</h2>
-        <p className="mb-4">Stay up to date with the latest game related news by subscribing to our newsletter.</p>
-        <form className="mb-4 text-black flex flex-col justify-center items-center" method='POST' onSubmit={sendEmail}>
+      <div className="p-4 md:p-8 flex flex-col justify-center items-center">
+        <h2 className="text-6xl font-MontserratAlternates md:text-2xl font-bold mb-4">
+          [GMR] Newsletter
+        </h2>
+        <p className="mb-4">
+          Stay up to date with the latest game related news by subscribing to our newsletter.
+        </p>
+        <form method='POST' onSubmit={sendEmail}
+          className="mb-4 text-black flex flex-col justify-center items-center">
           <input
             className="border rounded-md mb-4 h-10 w-60"
             type="text"
@@ -72,5 +76,6 @@ const Newsletter: React.FC = () => {
     </div>
   );
 };
+
 
 export default Newsletter;

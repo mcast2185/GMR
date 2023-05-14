@@ -43,5 +43,4 @@ export default {
       type: "string"
     }
   ],
-
 };

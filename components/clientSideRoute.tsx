@@ -13,7 +13,8 @@ function ClientSideRoute({
 }) {
   return (
     <Link rel="preload" href={route}>{children}</Link>
-  )
+  );
 };
+
 
 export default ClientSideRoute;

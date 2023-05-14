@@ -11,6 +11,7 @@ import ClientSideFetch from '../../components/clientSideFetch';
 import { client } from 'lib/sanity.client';
 import { Post } from 'typings';
 import FloatButtonComp from '../../components/floatButton';
+import Head from 'next/head';
 
 
 const query = groq`
@@ -19,23 +20,22 @@ const query = groq`
     author->,
     categories[]->,
   } | order(_createdAt desc)
-`
+`;
 
 export const revalidate = 60;
-
 export default async function Home () {
   if (previewData()) {
-  return (
-    <PreviewSuspense fallback={
-      <div role="status">
-        <p className="text-center text-lg animate-pulse text-[#992715de]">
-          Just a moment...
-        </p>
-      </div>}>
-      <PreviewBlogList query={query}/>
-    </PreviewSuspense>
-  )
-  }
+    return (
+      <PreviewSuspense fallback={
+        <div role="status">
+          <p className="text-center text-lg animate-pulse text-[#992715de]">
+            Just a moment...
+          </p>
+        </div>}>
+        <PreviewBlogList query={query}/>
+      </PreviewSuspense>
+    )
+  };
 
   const posts: Post[] = await client.fetch(`
     *[_type == "post"]{
@@ -43,11 +43,18 @@ export default async function Home () {
       author->,
       categories[]->,
     } | order(_createdAt desc)
-  `)
+  `);
 
 
   return (
     <div>
+      <Head>
+        <title>
+          GMRseat, Where Gaming Is The Culture
+        </title>
+        <meta name="description" content="GMRseat home page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Carousel/>
       <SampleContent/>
       <ClientSideFetch posts={posts}/>

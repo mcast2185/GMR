@@ -1,7 +1,7 @@
 import React from 'react';
 import { FloatButton } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBlog, faContactCard, faVideo, faNewspaper} from "@fortawesome/free-solid-svg-icons"
+import {faBlog, faContactCard, faNewspaper} from "@fortawesome/free-solid-svg-icons"
 import Link from 'next/link';
 
 const FloatButtonComp: React.FC = () => (

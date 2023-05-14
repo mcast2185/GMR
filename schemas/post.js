@@ -1,4 +1,4 @@
-import Youtube from "./youtube"
+import Youtube from "./youtube";
 
 export default {
   name: 'post',
@@ -57,7 +57,6 @@ export default {
       type: 'blockContent',
     },
   ],
-
   preview: {
     select: {
       title: 'title',
@@ -72,5 +71,3 @@ export default {
     },
   },
 };
-
-

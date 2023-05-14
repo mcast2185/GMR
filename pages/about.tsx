@@ -2,23 +2,22 @@ import Head from 'next/head';
 
 import Header from '../components/header';
 import Banner from '../components/banner';
-import Mouse from 'components/mouse';
 import Footer from 'components/footer';
+import FloatButtonComp from 'components/floatButton';
 
 import "../styles/globals.css";
 
 export default function About () {
-  
   return (
     <div className="about">
       <Head>
         <title>
           GMRseat About Us
         </title>
-        <meta name="description" content="short look at what GMRseat is all about." />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="short look at what GMRseat is all about."/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
-      {/* <Mouse/> */}
+      <FloatButtonComp/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
@@ -39,16 +38,14 @@ export default function About () {
           <div className="border-r-black border-l-black border border-opacity-10 
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-10" >
             <div className="mt-16 mb-16 px-20" >
-              <p className=" text-[#000000] text-lg leading-8 font-semibold font-Quicksand ">
-                <b className="text-5xl font-bold">W</b>elcome to <i>GMRseat</i>, the ultimate platform for everything gaming and game-related! Our site covers a range of topics, 
-                from the latest video game releases to comic book movies, pop culture shows, and much more. 
-                Whether you're a hardcore gamer or just a casual fan, GMR has got you covered with in-depth blog posts, video clips, podcasts, and more.
-                Our goal at GMR is to create a community of gamers and enthusiasts who share a passion for all things gaming. 
-                We believe that games are more than just a way to pass the time; they are a cultural phenomenon that reflects and shapes our society. 
-                Our mission is to explore the deeper meaning and significance of games, and to provide insightful commentary and analysis that goes beyond the surface level.
-                At GMR, we are dedicated to featuring the most talented content creators and podcasters in the gaming industry. 
-                Our site is a platform for both established and up-and-coming voices in the gaming community, and we strive to provide a diverse range of perspectives and opinions.
-                So join us on this epic journey into the world of gaming and pop culture. Let's explore, analyze, and celebrate the games and stories that define our culture!
+              <p className=" text-[#000000] text-lg leading-8 mb-36 font-semibold font-Quicksand">
+                <b className="text-5xl font-bold">S</b>tep into the immersive grounds of <i>GMRseat</i>, 
+                your vehicle for exploring content that's for the community, by the community! We dive deep into the latest game releases, related
+                pop culture content, and plenty more. Catering to the sweaty gamers or occasional players, GMR offers insight true to our brand via blogs, videos and podcasts. 
+                We're more than a gaming platform, we're a growing community shaping the gaming culture. 
+                Our mission? To provide a podium for our community of gamers, connecting and promoting <i> gaming content </i> submitted by you all, here at GMR. 
+                We spotlight known content creators and podcasters, offering a stage to both seasoned and emerging voices. 
+                Journey with us and together lets breakdown and applaud the games and narratives shaping our world!
               </p>
             </div>
           </div>
@@ -56,6 +53,5 @@ export default function About () {
       </div>
       <Footer/>
     </div>
-  )
+  );
 };
-

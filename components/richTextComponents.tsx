@@ -24,7 +24,7 @@ export const RichTextComponents = {
         <div className="relative w-full h-full mx-auto flex justify-center" >
           <iframe className="h-full w-full" src={url}></iframe>
         </div>
-      )
+      );
     }
   },
   list: {
@@ -54,27 +54,22 @@ export const RichTextComponents = {
       <p className="py-5 text-[#292727] text-base leading-8 font-medium font-Quicksand px-20 ">{children}</p>
     ),
     blockquote: ({children}: any) => (
-      <blockquote className="border-x-[#992715de] border-l-4 pl-40 pr-0 my-5 text-base font-Quicksand tracking-tighter font-bold sm:my-0 sm:pl-0 sm:flex sm:justify-center">
+      <blockquote className="border-x-[#992715de] border-l-4 pl-40 pr-0 my-5 text-base 
+        font-Quicksand tracking-tighter font-bold sm:my-0 sm:pl-0 sm:flex sm:justify-center">
         <p className='border-b-[#992715de] pt-5 px-0 w-fit border-b-2 '>{children}</p>
       </blockquote>
     ),
-    
   },
   marks: {
     link: ({children, value}: any) => {
       const rel = !value.href.startsWith("/") ? "noreferrer noopener" : undefined;
       return (
-        <Link
-          className=" underline text-[#192de4] transition ease-in-out decoration-[#ffffff00] hover:shadow-md hover:decoration-[#992715de]"
-          href={value.href}
-          rel={rel}>
-
+        <Link href={value.href} rel={rel}
+          className="underline text-[#192de4] transition ease-in-out 
+          decoration-[#ffffff00] hover:shadow-md hover:decoration-[#992715de]">
           {children}
         </Link>
       );
     },
   },
-
-
-}
-
+};

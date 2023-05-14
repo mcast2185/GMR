@@ -1,11 +1,9 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { groq } from 'next-sanity';
+
 import { client } from 'lib/sanity.client';
 import BlogList from './blogList';
 import { Post } from 'typings';
-
 
 type Props = {
   posts: Post[];
@@ -13,12 +11,11 @@ type Props = {
 
 
 const ClientSideFetch = ({posts}: Props) => {
-
   return (
     <div>
       <BlogList posts={posts}/>
     </div>
-  )
+  );
 };
 
 export async function getStaticProps() {
@@ -28,15 +25,14 @@ export async function getStaticProps() {
       author->,
       categories[]->,
     } | order(_createdAt desc)
-  `)
+  `);
 
   return {
     props: {
       posts
     }
-  }
-
-}
+  };
+};
 
 
 export default ClientSideFetch;

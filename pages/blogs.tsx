@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
+import Head from "next/head";
 
-import "../styles/globals.css";
 import Header from "../components/header";
 import Banner from "../components/banner";
-import Mouse from "../components/mouse";
 import Footer from "../components/footer";
 import BlogList from "components/blogList";
 import { client } from "lib/sanity.client";
 import { Post } from '../typings.d';
-import Head from "next/head";
+import FloatButtonComp from "components/floatButton";
+
+import "../styles/globals.css";
 
 type Props = {
   posts: Post[];
@@ -25,7 +26,7 @@ const Blogs = ({posts}: Props) => {
         <meta name="description" content="archive page of every blog posts" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Mouse/> */}
+      <FloatButtonComp/>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
@@ -44,16 +45,14 @@ const Blogs = ({posts}: Props) => {
             </div>
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 
-            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-3 ">
-    
+            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-3">
             <BlogList posts={posts}/>
           </div>
         </article> 
       </div>
       <Footer/>
     </div>
-    
-  )
+  );
 };
 
 export async function getStaticProps() {
@@ -63,14 +62,14 @@ export async function getStaticProps() {
       author->,
       categories[]->,
     } | order(_createdAt desc)
-  `)
+  `);
 
   return {
     props: {
       posts
     }
-  }
+  };
+};
 
-}
 
 export default Blogs;

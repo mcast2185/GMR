@@ -1,14 +1,16 @@
-"use client"
+"use client";
 
-import "../styles/globals.css";
+import Head from "next/head";
+
 import Header from "../components/header";
 import Banner from "../components/banner";
-import Mouse from "../components/mouse";
 import Footer from "../components/footer";
 import { client } from "lib/sanity.client";
 import { Brand } from '../typings';
 import BrandList from "components/brandList";
-import Head from "next/head";
+import FloatButtonComp from "components/floatButton";
+
+import "../styles/globals.css";
 
 type Props = {
   brand: Brand[];
@@ -21,10 +23,12 @@ const Brand = ({brand}: Props) => {
         <title>
           GMRseat Brand Products
         </title>
-        <meta name="description" content="catalog of all GMRseat related products sold" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="catalog of all GMRseat related products sold"/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
-      {/* <Mouse/> */}
+      <div className="relative">
+        <FloatButtonComp/>
+      </div>
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
@@ -43,15 +47,14 @@ const Brand = ({brand}: Props) => {
             </div>
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 
-            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-3 ">
+            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-3">
             <BrandList brand={brand}/>
           </div>
         </article> 
       </div>
       <Footer/>
     </div>
-    
-  )
+  );
 };
 
 export async function getStaticProps() {
@@ -62,14 +65,14 @@ export async function getStaticProps() {
       description,
       tags[]->,
     } | order(_createdAt desc)
-  `)
+  `);
 
   return {
     props: {
       brand
     }
-  }
+  };
+};
 
-}
 
 export default Brand;

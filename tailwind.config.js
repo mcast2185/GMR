@@ -31,8 +31,7 @@ module.exports = {
     require('@neojp/tailwindcss-box-sizing-utilities')
   ],
   corePlugins: {
-     boxSizing: false,
-     preflight: false,
-    }
-}
-
+    boxSizing: false,
+    preflight: false,
+  }
+};

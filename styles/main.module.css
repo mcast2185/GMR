@@ -1,5 +1,14 @@
+:not(svg) {
+  transform-origin: initial !important;
+}
+
 #scroll::-webkit-scrollbar{
     display: none;
+}
+
+.html-selector {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .about {
@@ -12,20 +21,18 @@
   background-image: url("../public/bgZelda.png");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .blogs {
   background-image: url("../public/snake.png");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
 .brand {
   background-image: url("../public/leon.png");
   background-repeat: no-repeat;
   background-position: bottom;
-
 }
 
 .media {
@@ -39,15 +46,12 @@
   background-image: url("../public/GMRBG.png");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 #tiktok {
   width: 390;
   max-width: 670;
 }
-
-
 
 /* mouse pointer css */
 .main-cursor,
@@ -62,8 +66,6 @@
   transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
   animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
   mix-blend-mode: difference;
-  
-
 }
 
 .main-cursor-background {
@@ -71,7 +73,6 @@
   height: 30px;
   background: transparent;
   border-radius: 50%;
-  
 }
 
 .secondary-cursor {
@@ -88,18 +89,19 @@
   border: 1px solid #fff;
   position: relative;
 }
+
 .cursor-background::after, 
 .cursor-background::before {
-    content: "";
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: white;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .cursor-background::before {
@@ -110,28 +112,26 @@
   right: 10px;
 }
 
-
 .slider-drag
 .cursor-background {
-    animation: scaleUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
-    bgUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: scaleUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
+  bgUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .slider-drag .cursor-background::after {
-      animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
-        translateRightDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
+    translateRightDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .slider-drag .cursor-background::before {
-      animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
-        translateLeftDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
+    translateLeftDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 
 .slider-drag .main-cursor {
-    animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 /*  */
-
 
 
 @keyframes fadeIn {

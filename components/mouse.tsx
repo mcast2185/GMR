@@ -1,6 +1,6 @@
-"use client"
-import React, {useEffect, useRef} from 'react';
+"use client";
 
+import React, {useEffect, useRef} from 'react';
 
 
 const Mouse = () => {
@@ -14,7 +14,7 @@ const Mouse = () => {
     distanceX: 0,
     distanceY: 0,
     key: -1
-  })
+  });
 
   useEffect(() => {
     document.addEventListener("mousemove", event => {
@@ -61,10 +61,10 @@ const Mouse = () => {
           positionRef!.current!.destinationX += distanceX;
           positionRef!.current!.destinationY += distanceY;
         }
-      }
+      };
 
-      secondCursor!.current!.style!.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`
-    }
+      secondCursor!.current!.style!.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+    };
     followMouse();
   }, []);
 
@@ -72,10 +72,10 @@ const Mouse = () => {
     <React.StrictMode>
       <div>
         <div className="main-cursor " ref={Cursor}>
-          <div className="main-cursor-background"></div>
+          <div className="main-cursor-background"/>
         </div>
         <div className="secondary-cursor" ref={secondCursor}>
-          <div className="cursor-background"></div>
+          <div className="cursor-background"/>
         </div>
       </div>
     </React.StrictMode>
