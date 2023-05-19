@@ -5413,6 +5413,11 @@ next-sanity@^4.1.2:
     "@sanity/webhook" "^2.0.0"
     groq "^3.0.0"
 
+next-themes@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.2.1.tgz"
+  integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
+
 next@^13.2.4:
   version "13.4.2"
   resolved "https://registry.npmjs.org/next/-/next-13.4.2.tgz"

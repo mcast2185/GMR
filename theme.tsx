@@ -3,7 +3,7 @@ import { buildLegacyTheme, StudioTheme } from "sanity";
 
 const props = {
   "--my-white": "#fff",
-  "--my-black": "#1a1a1a",
+  "--my-black": "#000000",
   "--my-Gold": "#F7AB0A",
   "--my-red": "#db4437",
   "--my-yellow": "#f4b400",

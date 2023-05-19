@@ -29,9 +29,6 @@ function BrandList({brand}: Props) {
     else accessories.push(item);
   });
 
-
-
-
   return (
     <div className="blogList">
       <hr className="border-[#992715de] mb-10"/>
@@ -41,7 +38,7 @@ function BrandList({brand}: Props) {
           [GMR] Gear:
         </h1>
       </header>
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full cursor-default">
         <div id="scroll" className="flex flex-row overflow-y-scroll overscroll-x-contain 
           md:grid-cols-2 pl-6 gap-14 gap-y-20 pb-24">
           {hoodies.map((item) => (

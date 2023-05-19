@@ -29,7 +29,7 @@ const Carousel = () => {
 
   if (isLoaded == true) {
     return (
-      <div className="container">
+      <div className=" container">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -152,7 +152,7 @@ const Carousel = () => {
               </div>
           </SwiperSlide>
 
-          <div className="slider-controller">
+          <div className="slider-controller ">
             <div className="flex h-14 w-28 items-center content-center" >
               <div className="swiper-pagination"></div>
             </div>

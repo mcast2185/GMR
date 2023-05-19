@@ -6,9 +6,15 @@
     display: none;
 }
 
-.html-selector {
+/* .html-selector {
   scroll-behavior: smooth;
   overflow-x: hidden;
+} */
+
+.home {
+  background-image: url("../public/GMRhome.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about {
@@ -36,17 +42,13 @@
 }
 
 .media {
-  background-image: url("../public/chief.png");
+  background-image: url("../public/GMRhome.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+  background-size: 1200px;
+  background-position: center;
+  background-position-x: right;
 }
 
-.login {
-  background-image: url("../public/GMRBG.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 #tiktok {
   width: 390;
@@ -132,6 +134,13 @@
   animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
 }
 /*  */
+
+/* @media only screen and (max-width: 850px) {
+.main-cursor,
+.secondary-cursor {
+  display: none;
+}
+} */
 
 
 @keyframes fadeIn {

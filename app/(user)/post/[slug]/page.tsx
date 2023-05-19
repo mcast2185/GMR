@@ -54,7 +54,7 @@ async function Post({params: {slug}}: Props) {
   const securePost = posts[0];
 
   return (
-    <div>
+    <div className="max-w-5xl h-fit flex flex-col">
       <Head>
         <title>
           {`${securePost.title}`}

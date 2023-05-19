@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { Carousel} from 'antd';
 import React, { useState, useEffect } from 'react';
-import type { RadioChangeEvent } from 'antd';
-import type { DotPosition } from 'antd/es/carousel';
 
 import FloatButtonComp from 'components/floatButton';
 import Header from '../components/header';

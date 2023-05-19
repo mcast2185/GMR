@@ -1,18 +1,12 @@
 import { groq } from 'next-sanity';
-import { PreviewSuspense } from 'next-sanity/preview';
-import { previewData } from 'next/headers';
 
-import Carousel from 'components/carousel';
-import PreviewBlogList from '../../components/previewBlogList';
-import SampleContent from 'components/sampleContent';
+import HomeBodyContent from 'components/homeBodyContent';
 import Newsletter from 'components/newsletter';
 import Footer from 'components/footer';
-import ClientSideFetch from '../../components/clientSideFetch';
 import { client } from 'lib/sanity.client';
 import { Post } from 'typings';
-import FloatButtonComp from '../../components/floatButton';
-import Head from 'next/head';
 
+import "../../styles/globals.css";
 
 const query = groq`
   *[_type == "post"]{
@@ -23,20 +17,7 @@ const query = groq`
 `;
 
 export const revalidate = 60;
-export default async function Home () {
-  if (previewData()) {
-    return (
-      <PreviewSuspense fallback={
-        <div role="status">
-          <p className="text-center text-lg animate-pulse text-[#992715de]">
-            Just a moment...
-          </p>
-        </div>}>
-        <PreviewBlogList query={query}/>
-      </PreviewSuspense>
-    )
-  };
-
+export default async function Home() {
   const posts: Post[] = await client.fetch(`
     *[_type == "post"]{
       ...,
@@ -45,23 +26,11 @@ export default async function Home () {
     } | order(_createdAt desc)
   `);
 
-
   return (
     <div>
-      <Head>
-        <title>
-          GMRseat, Where Gaming Is The Culture
-        </title>
-        <meta name="description" content="GMRseat home page" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Carousel/>
-      <SampleContent/>
-      <ClientSideFetch posts={posts}/>
+      <HomeBodyContent posts={posts}/>
       <Newsletter/>
       <Footer/>
     </div>
-  )
+  );
 };
-
-

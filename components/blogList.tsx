@@ -35,7 +35,7 @@ function BlogList({posts}: Props) {
           Blogs:
         </h1>
       </header>
-      <div className="grid grid-cols-1 
+      <div className="grid grid-cols-1
         md:grid-cols-2 px-8 gap-10 gap-y-12 pb-24">
         {filteredPosts.map((post) => (
           <ClientSideRoute key={post._id} 

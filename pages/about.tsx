@@ -24,7 +24,7 @@ export default function About () {
         <article className="px-10 pb-10">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
-              <section className="p-4 bg-transparent w-full">
+              <section className="p-4  w-full">
                 <div className="flex flex-col md:flex-row justify-between gap-y-5">
                   <div>
                     <h1 className="text-6xl font-extrabold font-MontserratAlternates">
