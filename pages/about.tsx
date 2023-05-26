@@ -27,7 +27,7 @@ export default function About () {
               <section className="p-4 bg-transparent w-full">
                 <div className="flex flex-col md:flex-row justify-between gap-y-5">
                   <div>
-                    <h1 className="text-6xl dark:text-white font-extrabold font-MontserratAlternates">
+                    <h1 className="text-xl md:text-6xl dark:text-white font-extrabold font-MontserratAlternates">
                       About
                     </h1>
                   </div>
@@ -36,10 +36,10 @@ export default function About () {
             </div>
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 scale-90 md:scale-100
-            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-10" >
-            <div className="mt-16 mb-16 px-20" >
-              <p className=" text-[#000000] text-lg dark:text-white leading-8 mb-36 font-semibold font-Quicksand">
-                <b className="text-5xl font-bold">S</b>tep into the immersive grounds of <i>GMRseat</i>, 
+            bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-2 md:px-10" >
+            <div className="mt-3 md:mt-16 mb-3 md:mb-16 px-4 md:px-20" >
+              <p className=" text-[#000000] text-sm md:text-lg dark:text-white leading-8 mb-10 md:mb-36 font-semibold font-Quicksand">
+                <b className="text-xl md:text-5xl font-bold">S</b>tep into the immersive grounds of <i>GMRseat</i>, 
                 your vehicle for exploring content that's for the community, by the community! We dive deep into the latest game releases, related
                 pop culture content, and plenty more. Catering to the sweaty gamers or occasional players, GMR offers insight true to our brand via blogs, videos and podcasts. 
                 We're more than a gaming platform, we're a growing community shaping the gaming culture. 

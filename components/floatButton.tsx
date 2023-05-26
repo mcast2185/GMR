@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { FloatButton } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBlog, faContactCard, faNewspaper, faMoon, faSun} from "@fortawesome/free-solid-svg-icons"
+import {faBlog, faNewspaper, faMoon, faSun} from "@fortawesome/free-solid-svg-icons"
 import Link from 'next/link';
 
 const FloatButtonComp: React.FC = () => {
@@ -26,10 +26,10 @@ const FloatButtonComp: React.FC = () => {
       <Link href={"/blogs"}>
       <FloatButton icon={<FontAwesomeIcon icon={faBlog}/>} className="mb-[16px]"/>
       </Link>
-        {currentTheme === 'dark' ? (
-          <FloatButton onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} icon={<FontAwesomeIcon icon={faSun}/>} className="mb-[16px]"/>
-          ): (  
+        {currentTheme === 'light' ? (
           <FloatButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} icon={<FontAwesomeIcon icon={faMoon}/>} className="mb-[16px]"/>
+          ): (  
+          <FloatButton onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} icon={<FontAwesomeIcon icon={faSun}/>} className="mb-[16px]"/>
         )}
 
       <Link href={"/media"}>

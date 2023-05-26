@@ -43,10 +43,11 @@ export default function Media () {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <FloatButtonComp/>
-      <div className="max-w-5xl mx-auto">
+      <div className="flex h-full w-full">
+      <div className="max-w-5xl mx-auto py-4">
         <Header/>
         <Banner/>
-        <div className="flex justify-center overflow-hidden scale-90 md:scale-100">
+        <div className="flex justify-center overflow-hidden">
           <Link id='mainImg' href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
             <Image src={MANDO} alt="The last of Us" id="mando"
               className="object-cover rounded-sm transition-translate duration-500 ease-in-out"/>
@@ -57,7 +58,7 @@ export default function Media () {
           </h1>
         </div>
         <div className="flex flex-col mt-10">
-          <div className="flex flex-row justify-center items-center mb-10 scale-90 md:scale-100">
+          <div className="flex flex-row justify-center items-center mb-10">
             <div className="flex justify-center pr-6 overflow-hidden cursor-default">
               <Link href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
                 <Image src={LAST} alt="The last of Us" 
@@ -176,7 +177,7 @@ export default function Media () {
                 </iframe> 
               </div>
             </div>
-            <div className="flex flex-col h-full">
+            <div className="md:flex flex-col h-full hidden">
               <div className="flex justify-center pr-3 pl-3 overflow-hidden pt-5 h-full cursor-pointer">
                 <Link href="https://www.youtube.com/watch?v=Way9Dexny3w" 
                   aria-details='Dune: Part 2' target="_blank">
@@ -197,7 +198,7 @@ export default function Media () {
             text-2xl font-MontserratAlternates mb-8 mt-8">
             GMR Featured Content:
           </h1>
-          <section className="flex w-full mb-36">
+          <section className="flex w-full mb-20 md:mb-36">
             <figure>
               <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen={false} title="YouTube video player" width="672" height="350" src="https://www.youtube.com/embed/psZPmj82Prw"
@@ -206,6 +207,7 @@ export default function Media () {
             </figure>
           </section>
         </div>
+      </div>
       </div>
       <Footer/>
     </div>

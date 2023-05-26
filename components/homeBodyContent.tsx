@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useInView} from "framer-motion";
@@ -26,9 +26,11 @@ import CAPCOM from "../public/capcom.png";
 import DCU from "../public/dcu.png";
 import FloatButtonComp from './floatButton';
 
+// GOOGLE_CLIENT_ID
 
 import "../styles/component.css";
 import BlogList from './blogList';
+import { GoogleAdSense } from 'nextjs-google-adsense';
 
 type Props = {
   posts: Post[];
@@ -42,22 +44,31 @@ type Props = {
 const HomeBodyContent = ({posts}: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
+  let carouselContainer = <Carousel/>
+
+  useEffect(() => {
+
+    if (window.innerWidth < 850) {
+      carouselContainer = <></>
+    }
+
+  }, [])
 
   return (
     <div>
-      <div className="md:scale-100"> 
-      <Carousel/>
+      <div > 
+      {carouselContainer}
       </div>
       <hr className="border-[#992715de] mb-10"/>
       <FloatButtonComp/>
-      <main className="w-[600px] md:w-full mx-auto md:mx-0">       
-        <div className="flex flex-row -gap-2 justify-between" >
-          <div className="flex flex-col px-2 md:px-4 py-5 md:py-0 shrink md:shrink-0 w-[580px] md:w-[720px] justify-between cursor-default bg-[#bab8b76c] dark:bg-opacity-10 shadow-md">
-            <figure id="figure" className="px-4">
+      <main className="w-[500px] md:w-full mx-1 md:mx-0 scale-90 md:scale-100">       
+        <div className="flex flex-row  justify-between" >
+          <div className="flex flex-col px-1 md:px-4 py-10 md:py-0 shrink md:shrink-0 w-[500px] md:w-[720px] justify-between cursor-default bg-[#bab8b76c] dark:bg-opacity-10 shadow-md">
+            <figure id="figure" className="md:px-4">
               <iframe src="https://www.youtube.com/embed/KvQ25NmL1-c?start=68"  
                 allowFullScreen={false} height={350} width={660} title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className="youtubeVideo shrink md:shrink-0 scale-[.8] md:scale-100 w-[600px] md:w-[660px] pt-3">
+                className="youtubeVideo shrink md:shrink-0 scale-[.8] md:scale-100 w-[500px] md:w-[660px] pt-3">
               </iframe>
             </figure>
             <div className="scale-90 md:scale-100 h-auto max-w-xl md:max-w-[750px] mx-12 md:mx-10 mb-5 md:mb-0 flex justify-center overflow-x-clip">
@@ -66,7 +77,7 @@ const HomeBodyContent = ({posts}: Props) => {
                   space-y-2 pr-4 font-RubikMonoOne stroke-[18px] stroke-black pl-0 -z-10 absolute bottom-[-15px]">
                   <span className="flex justify-center items-center mt-4"><i><span className="text-white absolute mix-blend-difference opacity-90 ">GMR</span><div className='flex justify-center items-center mt-[190px] '><span className="stroke-[15px] text-5xl relative text-white mix-blend-difference stroke-black hover:stroke-black z-2 transition-transform duration-800 ease-in-out">seat</span><span className="stroke-[18px] text-5xl absolute text-black stroke-white hover:text-transparent hover:stroke-black z-30 transition-transform duration-800 ease-in-out">seat</span></div></i></span>
                 </h1>
-                <div className="flex flex-row justify-center items-center mb-4 mt-4 md:mt-2 md:mb-2 h-[150px] md:h-[300px] opacity-80">
+                <div className="flex flex-row justify-center items-center py-3 md:py-1 mb-4 mt-4 md:mt-2 md:mb-2 h-[150px] md:h-[300px] opacity-80">
                   <div className="flex justify-center pr-6 overflow-hidden cursor-default">
                     <Link href="https://www.youtube.com/watch?v=SwANQTAImGc">
                       <Image src={PS} alt="The last of Us" 
@@ -248,7 +259,7 @@ const HomeBodyContent = ({posts}: Props) => {
           <div className="border-r-2 border-opacity-40 border-black dark:border-white ">
           <section ref={ref} className="mb-2 md:mb-8 py-5 md:py-0">
             <div className="flex flex-col md:flex-row w-full relative shrink md:shrink-0 mx-auto md:mx-0">
-              <div className="mb-2 md:mb-5 pr-3 md:pt-8 flex justify-between w-[600px] md:w-[600px] scale-75 md:scale-100" >
+              <div className="mb-2 md:mb-5 pr-3 md:pt-8 flex justify-between w-[500px] md:w-[600px] scale-75 md:scale-100" >
                 <div className="flex justify-center mr-3 overflow-hidden border-t-2 border-black scale-105">
                   <section className="grid clearfix" id="grid" style={{
                     transform: isInView ? "none" : "translateX(-20px)",
@@ -316,16 +327,16 @@ const HomeBodyContent = ({posts}: Props) => {
                   </section>
                 </div> 
               </div>
-              <div className=" mb-6 md:mb-0 px-10 pt-1 flex md:flex-none justify-between w-[600px] md:w-auto ">
+              <div className=" mb-6 md:mb-0 px-10 pt-1 flex md:flex-none justify-between w-[500px] md:w-auto ">
                 <section id="flash-parent-tag" style={{
                   transform: isInView ? "none" : "translateY(-20px)",
                   opacity: isInView ? 1 : 0,
                   transition: "all 3.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                   <Link target="_blank" href="http://localhost:3000/post/the-flash-flashpoints-moral-dilemma">
                     <figure id="flash-wrapper" className="flex mt-[25px] h-[250px] md:h-[220px] w-[500px] md:w-[390px]">
-                      <Image className="h-[250px] md:h-[220px] w-[500px] md:w-[390px] img-transform" 
+                      <Image className="h-[250px] md:h-[220px] w-[300px] md:w-[390px] img-transform" 
                         id="flash" src={FLASH} alt="Flash the movie"/>
-                      <Image className="h-[250px] md:h-[220px] w-[500px] md:w-[390px] img-effect" 
+                      <Image className="h-[250px] md:h-[220px] w-[300px] md:w-[390px] img-effect" 
                         id="flash" src={FLASH2} alt="Flash the movie"/>
                       <figcaption id="flash-content">
                         <h3 id="prompt-one"><i>"The Flash"</i> new trailer release</h3>
@@ -341,23 +352,23 @@ const HomeBodyContent = ({posts}: Props) => {
             md:text-2xl text-xl font-MontserratAlternates py-6 md:py-0 mb-8 md:mb-6">
             GMR Exclusive Content:
           </h1>
-          <section className="mb-2 py-5 px-10">
+          <section className="mb-2 py-5 px-1 md:px-10">
             <div className="flex w-full flex-row relative shrink md:shrink-0">
               <figure>
                 <iframe src="https://www.youtube.com/embed/psZPmj82Prw" 
                   allowFullScreen={false} width="672" height="350" title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
-                  className="h-64 w-[500px] md:w-[670px] md:h-[350px]">
+                  className="h-64 w-[475px] md:w-[670px] md:h-[350px]">
                 </iframe>
               </figure>
               <div className="pl-2">
 
-              {/* <div className="h-20 w-12 bg-black"></div> */}
+              {/* <GoogleAdSense publisherId={}/> */}
 
               </div>
             </div>
           </section>
-          </div>
+        </div>
 
       </main>
       <div className="flex flex-col m-0 p-0" >
