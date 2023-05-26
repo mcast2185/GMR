@@ -6,16 +6,20 @@
     display: none;
 }
 
-/* .html-selector {
+html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-} */
+} 
 
+/* Home seciton */
 .home {
   background-image: url("../public/GMRhome.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+/*  */
 
 .about {
   background-image: url("../public/kratos.png");
@@ -135,12 +139,20 @@
 }
 /*  */
 
-/* @media only screen and (max-width: 850px) {
-.main-cursor,
-.secondary-cursor {
+@media only screen and (max-width: 850px) {
+
+.floatButton {
   display: none;
+  width: 0;
+  height: 0;
 }
-} */
+
+.quickTopics {
+  display: none;
+  width: 0;
+  height: 0;
+}
+}
 
 
 @keyframes fadeIn {

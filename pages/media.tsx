@@ -46,7 +46,7 @@ export default function Media () {
       <div className="max-w-5xl mx-auto">
         <Header/>
         <Banner/>
-        <div className="flex justify-center overflow-hidden">
+        <div className="flex justify-center overflow-hidden scale-90 md:scale-100">
           <Link id='mainImg' href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
             <Image src={MANDO} alt="The last of Us" id="mando"
               className="object-cover rounded-sm transition-translate duration-500 ease-in-out"/>
@@ -57,7 +57,7 @@ export default function Media () {
           </h1>
         </div>
         <div className="flex flex-col mt-10">
-          <div className="flex flex-row justify-center items-center mb-10">
+          <div className="flex flex-row justify-center items-center mb-10 scale-90 md:scale-100">
             <div className="flex justify-center pr-6 overflow-hidden cursor-default">
               <Link href="https://podcasts.apple.com/us/podcast/episode-9-look-for-the-light/id1660320068?i=1000603849713">
                 <Image src={LAST} alt="The last of Us" 
@@ -108,7 +108,7 @@ export default function Media () {
               allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
             </iframe>
           </div>
-          <div className=" flex flex-row w-full">
+          <div className=" flex flex-col md:flex-row w-[600px] md:w-full scale-90 md:scale-100 md:mr-0 mr-16">
             <div className="flex flex-col justify-start pr-5 ml-[40px] items-center w-[580px]">
               <Carousel autoplay autoplaySpeed={3000} effect="fade" className="w-[580px] h-[250px] mb-5">
                 <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
@@ -200,7 +200,8 @@ export default function Media () {
           <section className="flex w-full mb-36">
             <figure>
               <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen={false} title="YouTube video player" width="672" height="350" src="https://www.youtube.com/embed/psZPmj82Prw">
+                allowFullScreen={false} title="YouTube video player" width="672" height="350" src="https://www.youtube.com/embed/psZPmj82Prw"
+                className="h-64 w-[500px] md:w-[670px] md:h-[350px]">
               </iframe>
             </figure>
           </section>

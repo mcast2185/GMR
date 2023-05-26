@@ -9,7 +9,7 @@ const FloatButtonComp: React.FC = () => {
   const { theme, setTheme } = useTheme();
   return (
   <>
-    <FloatButton.Group shape="circle" style={{ left: 24, top: 55 }}>
+    <FloatButton.Group shape="circle" style={{ left: 24, top: 55 }} className="floatButton">
       <Link href={"/blogs"}>
       <FloatButton icon={<FontAwesomeIcon icon={faBlog}/>} className="mb-[16px]"/>
       </Link>

@@ -72,7 +72,7 @@ export default function Contact ({post}: Props) {
               </section>
             </div>
           </section>
-          <div className="border-r-black border-l-black border border-opacity-10 
+          <div className="border-r-black border-l-black border border-opacity-10 scale-90 md:scale-100
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default">
             <div className=" px-10">
               <p className="mt-16 text-[#000000] text-xl leading-8 font-semibold font-Quicksand px-10">

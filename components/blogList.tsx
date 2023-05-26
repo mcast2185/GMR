@@ -36,11 +36,11 @@ function BlogList({posts}: Props) {
         </h1>
       </header>
       <div className="grid grid-cols-1
-        md:grid-cols-2 px-8 gap-10 gap-y-12 pb-24">
+        md:grid-cols-2 px-10 pl-0 gap-10 gap-y-12 pb-24">
         {filteredPosts.map((post) => (
           <ClientSideRoute key={post._id} 
             route={`/post/${post.slug.current}`}>
-            <article key={post._id}  className="flex flex-col overflow-hidden">
+            <article key={post._id}  className="flex flex-col overflow-hidden scale-90 md:scale-100">
               <figure>
                 <section className="relative w-full h-80 
                   hover:scale-105 transition-transform duration-200 ease-out">

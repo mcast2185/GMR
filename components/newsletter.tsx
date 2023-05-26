@@ -29,9 +29,9 @@ const Newsletter: React.FC = () => {
 
   return (
     <div className="bg-gray-800 text-[#d9d9d9] flex mb-10 mt-10
-      justify-center items-center mr-2 text-base font-Quicksand rounded-md shadow-lg overflow-hidden">
+      justify-center items-center mr-2 text-xs md:text-base font-Quicksand rounded-md shadow-lg overflow-hidden">
       <div className="p-4 md:p-8 flex flex-col justify-center items-center">
-        <h2 className="text-6xl font-MontserratAlternates md:text-2xl font-bold mb-4">
+        <h2 className="text-2xl font-MontserratAlternates md:text-2xl font-bold mb-4">
           [GMR] Newsletter
         </h2>
         <p className="mb-4">
@@ -69,7 +69,7 @@ const Newsletter: React.FC = () => {
           </button>
           {result ? <Result/> : null}
         </form>
-        <p className="text-sm text-[#868686]">
+        <p className="text-xs md:text-sm text-[#868686]">
           We respect your privacy and will never share your information.
         </p>
       </div>

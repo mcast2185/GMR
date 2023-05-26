@@ -35,7 +35,7 @@ export default function About () {
               </section>
             </div>
           </section>
-          <div className="border-r-black border-l-black border border-opacity-10 
+          <div className="border-r-black border-l-black border border-opacity-10 scale-90 md:scale-100
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-10" >
             <div className="mt-16 mb-16 px-20" >
               <p className=" text-[#000000] text-lg leading-8 mb-36 font-semibold font-Quicksand">

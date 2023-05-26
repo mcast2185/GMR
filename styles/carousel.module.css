@@ -1,6 +1,7 @@
 .container {
   max-width: 350px;
   padding: 0rem 21rem;
+
 }
 
 .swiper {
@@ -134,10 +135,8 @@
   width: 100%;
 }
 
-/* @media only screen and (max-width: 850px) {
-  .swiper,
-  .swiper-wrapper,
-  .swiper-container {
+@media only screen and (max-width: 850px) {
+  .container {
     display: none;
   }
-} */
+}

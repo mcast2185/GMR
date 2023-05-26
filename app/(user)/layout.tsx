@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="min-w-full flex min-h-full">
         <Mouse/>
         <div className="mx-auto">
-          <div className="max-w-5xl h-fit flex flex-col">
+          <div className="max-w-[600px] md:max-w-5xl h-fit flex flex-col">
             <Header/>
             <Banner/>
           </div>

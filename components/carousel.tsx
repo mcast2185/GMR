@@ -29,7 +29,7 @@ const Carousel = () => {
 
   if (isLoaded == true) {
     return (
-      <div className=" container">
+      <div className="container">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
