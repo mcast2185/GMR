@@ -21,28 +21,36 @@ html {
 
 /*  */
 
+
 .about {
   background-image: url("../public/kratos.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: bottom;
+  background-position-x: right;
 }
+
 
 .contact {
   background-image: url("../public/bgZelda.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1200px;
 }
 
 .blogs {
   background-image: url("../public/snake.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1200px;
+  background-position: center;
+  background-position-x: right;
 }
 
 .brand {
   background-image: url("../public/leon.png");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: 1200px;
+  background-position-x: left;
 }
 
 .media {

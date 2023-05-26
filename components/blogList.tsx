@@ -30,7 +30,7 @@ function BlogList({posts}: Props) {
   return (
     <div className="blogList">
       <header>
-        <h1 className="text-black underline decoration-[#992715de] font-bold 
+        <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold 
           text-2xl font-MontserratAlternates m-2 mt-1 pb-4">
           Blogs:
         </h1>

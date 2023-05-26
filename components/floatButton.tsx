@@ -1,20 +1,36 @@
-import React from 'react';
+"use client"
+
+import React, { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 import { FloatButton } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBlog, faContactCard, faNewspaper, faMoon} from "@fortawesome/free-solid-svg-icons"
-import { useTheme } from 'next-themes';
+import {faBlog, faContactCard, faNewspaper, faMoon, faSun} from "@fortawesome/free-solid-svg-icons"
 import Link from 'next/link';
 
 const FloatButtonComp: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true)
+  }, []);
+
+  if (!mounted) return null;
+
+  const currentTheme = theme === 'system' ? 'systemTheme' : theme;
+
+
   return (
   <>
     <FloatButton.Group shape="circle" style={{ left: 24, top: 55 }} className="floatButton">
       <Link href={"/blogs"}>
       <FloatButton icon={<FontAwesomeIcon icon={faBlog}/>} className="mb-[16px]"/>
       </Link>
-
-      <FloatButton onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} icon={<FontAwesomeIcon icon={faMoon}/>} className="mb-[16px]"/>
+        {currentTheme === 'dark' ? (
+          <FloatButton onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} icon={<FontAwesomeIcon icon={faSun}/>} className="mb-[16px]"/>
+          ): (  
+          <FloatButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} icon={<FontAwesomeIcon icon={faMoon}/>} className="mb-[16px]"/>
+        )}
 
       <Link href={"/media"}>
       <FloatButton icon={<FontAwesomeIcon icon={faNewspaper}/>} className="mb-[16px]"/>

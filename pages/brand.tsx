@@ -38,7 +38,7 @@ const Brand = ({brand}: Props) => {
               <section className="p-4 bg-transparent w-full">
                 <div className="flex flex-col md:flex-row justify-between gap-y-5">
                   <div>
-                    <h1 className="text-6xl font-extrabold font-MontserratAlternates">
+                    <h1 className="text-6xl dark:text-white font-extrabold font-MontserratAlternates">
                       [GMR] Brand
                     </h1>
                   </div>

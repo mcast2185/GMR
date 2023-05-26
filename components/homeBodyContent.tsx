@@ -45,19 +45,19 @@ const HomeBodyContent = ({posts}: Props) => {
 
   return (
     <div>
-      <div className="scale-75 md:scale-100"> 
+      <div className="md:scale-100"> 
       <Carousel/>
       </div>
       <hr className="border-[#992715de] mb-10"/>
       <FloatButtonComp/>
-      <main className="w-[600px] md:w-full">       
+      <main className="w-[600px] md:w-full mx-auto md:mx-0">       
         <div className="flex flex-row -gap-2 justify-between" >
-          <div className="flex flex-col px-4 py-5 md:py-0 shrink md:shrink-0 w-[600px] md:w-[720px] justify-between cursor-default bg-[#bab8b76c] dark:bg-opacity-30 shadow-md">
-            <figure id="figure">
+          <div className="flex flex-col px-2 md:px-4 py-5 md:py-0 shrink md:shrink-0 w-[580px] md:w-[720px] justify-between cursor-default bg-[#bab8b76c] dark:bg-opacity-10 shadow-md">
+            <figure id="figure" className="px-4">
               <iframe src="https://www.youtube.com/embed/KvQ25NmL1-c?start=68"  
                 allowFullScreen={false} height={350} width={660} title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className="youtubeVideo shrink md:shrink-0 scale-[.8] md:scale-100 w-[600px] md:w-[660px]">
+                className="youtubeVideo shrink md:shrink-0 scale-[.8] md:scale-100 w-[600px] md:w-[660px] pt-3">
               </iframe>
             </figure>
             <div className="scale-90 md:scale-100 h-auto max-w-xl md:max-w-[750px] mx-12 md:mx-10 mb-5 md:mb-0 flex justify-center overflow-x-clip">
@@ -66,38 +66,38 @@ const HomeBodyContent = ({posts}: Props) => {
                   space-y-2 pr-4 font-RubikMonoOne stroke-[18px] stroke-black pl-0 -z-10 absolute bottom-[-15px]">
                   <span className="flex justify-center items-center mt-4"><i><span className="text-white absolute mix-blend-difference opacity-90 ">GMR</span><div className='flex justify-center items-center mt-[190px] '><span className="stroke-[15px] text-5xl relative text-white mix-blend-difference stroke-black hover:stroke-black z-2 transition-transform duration-800 ease-in-out">seat</span><span className="stroke-[18px] text-5xl absolute text-black stroke-white hover:text-transparent hover:stroke-black z-30 transition-transform duration-800 ease-in-out">seat</span></div></i></span>
                 </h1>
-          <div className="flex flex-row justify-center items-center mb-4 mt-4 md:mt-2 md:mb-2 h-[150px] md:h-[300px]">
-            <div className="flex justify-center pr-6 overflow-hidden cursor-default">
-              <Link href="https://www.youtube.com/watch?v=SwANQTAImGc">
-                <Image src={PS} alt="The last of Us" 
-                  className="h-64 w-52 object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
-              </Link>
-              <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
-                bg-opacity-80 text-stone-50 mr-2 text-base font-Quicksand absolute">
-                The Last of Us Finale
-              </h1>
-            </div>
-            <div className="flex justify-center pr-6 overflow-hidden cursor-default">
-              <Link href="http://localhost:3000/post/the-flash-flashpoints-moral-dilemma">
-                <Image src={DCU} alt="DCU" width={200} 
-                  className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
-              </Link>
-              <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
-                bg-opacity-80 text-stone-50 mr-2 text-base font-Quicksand absolute">
-                James Gunns DCU
-              </h1>
-            </div>
-            <div className="flex justify-center pr-6 overflow-hidden cursor-default">
-              <Link href="https://www.youtube.com/watch?v=GsTU5tTCSkQ">
-                <Image src={CAPCOM} alt="Capcom Spotlight" width={200} 
-                  className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
-              </Link>
-              <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
-                bg-opacity-80 text-stone-50 mr-2 text-base font-Quicksand absolute">
-                Capcom Spotlight
-              </h1>
-            </div>
-          </div>
+                <div className="flex flex-row justify-center items-center mb-4 mt-4 md:mt-2 md:mb-2 h-[150px] md:h-[300px] opacity-80">
+                  <div className="flex justify-center pr-6 overflow-hidden cursor-default">
+                    <Link href="https://www.youtube.com/watch?v=SwANQTAImGc">
+                      <Image src={PS} alt="The last of Us" 
+                        className="h-64 w-52 object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
+                    </Link>
+                    <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
+                      bg-opacity-80 text-stone-50 mr-2 text-base font-Quicksand absolute">
+                      Playstation Showcase
+                    </h1>
+                  </div>
+                  <div className="flex justify-center pr-6 overflow-hidden cursor-default">
+                    <Link href="http://localhost:3000/post/the-flash-flashpoints-moral-dilemma">
+                      <Image src={DCU} alt="DCU" width={200} 
+                        className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
+                    </Link>
+                    <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
+                      bg-opacity-80 text-stone-50 mr-2 text-base font-Quicksand absolute">
+                      DCU
+                    </h1>
+                  </div>
+                  <div className="flex justify-center pr-6 overflow-hidden cursor-default">
+                    <Link href="https://www.youtube.com/watch?v=GsTU5tTCSkQ">
+                      <Image src={CAPCOM} alt="Capcom Spotlight" width={200} 
+                        className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
+                    </Link>
+                    <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
+                      bg-opacity-80 text-stone-50 mr-2 text-base font-Quicksand absolute">
+                      Capcom Spotlight
+                    </h1>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="h-64 md:h-80 max-w-xl md:max-w-2xl px-4 mt-2 md:mt-4 pb-5">
@@ -119,7 +119,7 @@ const HomeBodyContent = ({posts}: Props) => {
           <section className="quickTopics">
             <div className="flex flex-col items-center content-center mb-1 -px-4
               bg-[#7d7d7d6c] shadow-md w-80 h-auto overflow-scroll font-Quicksand">
-              <h1 className='text-3xl mt-2 text-stone-50 
+              <h1 className='text-3xl mt-2 text-black dark:text-white
                 font-semibold decoration-white font-Megrim'>
                 Top Picks:
               </h1>
@@ -133,13 +133,13 @@ const HomeBodyContent = ({posts}: Props) => {
                     </Link>
                     <div className="flex flex-col p-2 px-2">
                       <h3 className='font-bold text-white text-sm'>
-                        Title: God of War Ragnarok
+                        <span className="text-slate-900 dark:text-slate-200"><b>Title:</b></span> God of War Ragnarok
                       </h3>
                       <p className='font-medium text-xs text-white'>
-                        <b>Developer:</b> SCE Santa Monica
+                        <span className="text-slate-900 dark:text-slate-200"><b>Developer:</b></span> SCE Santa Monica
                       </p>
                       <p className='font-medium text-xs text-white'>
-                        <b>Genre(s):</b> Open-World, Action Adventure
+                        <span className="text-slate-900 dark:text-slate-200"><b>Genre(s):</b></span> Open-World, Action Adventure
                       </p>
                     </div>
                   </div>
@@ -156,13 +156,13 @@ const HomeBodyContent = ({posts}: Props) => {
                     </Link>
                     <div className="flex flex-col px-2 pt-2" >
                       <h3 className='font-bold text-sm text-white'>
-                        Title: Elden Ring
+                        <span className="text-slate-900 dark:text-slate-200"><b>Title:</b></span> Elden Ring
                       </h3>
                       <p className='font-medium text-xs text-white'>
-                        <b>Developer:</b> From Software
+                        <span className="text-slate-900 dark:text-slate-200"><b>Developer:</b></span> From Software
                       </p>
                       <p className='font-medium text-xs text-white'>
-                        <b>Genre(s):</b> Role-Playing, Action RPG
+                        <span className="text-slate-900 dark:text-slate-200"><b>Genre(s):</b></span> Role-Playing, Action RPG
                       </p>
                     </div>
                   </div>
@@ -179,13 +179,13 @@ const HomeBodyContent = ({posts}: Props) => {
                     </Link>
                     <div className="flex flex-col px-4 pt-2" >
                       <h3 className='font-bold text-sm text-white'>
-                        Title: Resident Evil 4 Remake
+                        <span className="text-slate-900 dark:text-slate-200"><b>Title:</b></span> Resident Evil 4 Remake
                       </h3>
                       <p className='font-medium text-xs text-white'>
-                        <b>Developer:</b> Capcom
+                        <span className="text-slate-900 dark:text-slate-200"><b>Developer:</b></span> Capcom
                       </p>
                       <p className='font-medium text-xs text-white'>
-                        <b>Genre(s):</b> Survival
+                        <span className="text-slate-900 dark:text-slate-200"><b>Genre(s):</b></span> Survival
                       </p>
                     </div>
                   </div>
@@ -202,13 +202,13 @@ const HomeBodyContent = ({posts}: Props) => {
                     </Link>
                     <div className="flex flex-col px-2 pt-2" >
                       <h3 className='font-bold text-sm text-white'>
-                        Title: Mario+Rabbids Sparks of Hope
+                        <span className="text-slate-900 dark:text-slate-200"><b>Title:</b></span> Mario+Rabbids Sparks of Hope
                       </h3>
                       <p className='font-medium text-xs text-white'>
-                        <b>Developer:</b> Ubisoft Paris, Ubisoft Milan
+                        <span className="text-slate-900 dark:text-slate-200"><b>Developer:</b></span> Ubisoft Paris, Ubisoft Milan
                       </p>
                       <p className='font-medium text-xs text-white'>
-                        <b>Genre(s):</b> Strategy, Turn-Based
+                        <span className="text-slate-900 dark:text-slate-200"><b>Genre(s):</b></span> Strategy, Turn-Based
                       </p>
                     </div>
                   </div>
@@ -225,13 +225,13 @@ const HomeBodyContent = ({posts}: Props) => {
                     </Link>
                     <div className="flex flex-col px-4 pt-2" >
                       <h3 className='font-bold text-sm text-white'>
-                        Title: Persona 5 Royal
+                        <span className="text-slate-900 dark:text-slate-200"><b>Title:</b></span> Persona 5 Royal
                       </h3>
                       <p className='font-medium text-xs text-white'>
-                        <b>Developer:</b> Atlus
+                        <span className="text-slate-900 dark:text-slate-200"><b>Developer:</b></span> Atlus
                       </p>
                       <p className='font-medium text-xs text-white'>
-                        <b>Genre(s):</b> Role-Playing, Japanese-Style
+                        <span className="text-slate-900 dark:text-slate-200"><b>Genre(s):</b></span> Role-Playing, Japanese-Style
                       </p>
                     </div>
                   </div>
@@ -241,10 +241,11 @@ const HomeBodyContent = ({posts}: Props) => {
             </div>
           </section>
           </div>
-          <h1 className="text-black underline decoration-[#992715de] font-bold px-2
+          <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold px-2
             md:text-2xl text-xl font-MontserratAlternates py-3 md:py-0 mb-2 md:mb-6">
             Related:
           </h1>
+          <div className="border-r-2 border-opacity-40 border-black dark:border-white ">
           <section ref={ref} className="mb-2 md:mb-8 py-5 md:py-0">
             <div className="flex flex-col md:flex-row w-full relative shrink md:shrink-0 mx-auto md:mx-0">
               <div className="mb-2 md:mb-5 pr-3 md:pt-8 flex justify-between w-[600px] md:w-[600px] scale-75 md:scale-100" >
@@ -336,11 +337,11 @@ const HomeBodyContent = ({posts}: Props) => {
               </div>
             </div>
           </section>
-          <h1 className="text-black underline decoration-[#992715de] font-bold px-2
+          <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold px-2
             md:text-2xl text-xl font-MontserratAlternates py-6 md:py-0 mb-8 md:mb-6">
             GMR Exclusive Content:
           </h1>
-          <section className="mb-8 py-5 px-10">
+          <section className="mb-2 py-5 px-10">
             <div className="flex w-full flex-row relative shrink md:shrink-0">
               <figure>
                 <iframe src="https://www.youtube.com/embed/psZPmj82Prw" 
@@ -356,7 +357,8 @@ const HomeBodyContent = ({posts}: Props) => {
               </div>
             </div>
           </section>
-        {/* </div> */}
+          </div>
+
       </main>
       <div className="flex flex-col m-0 p-0" >
         <div className="h-auto w-full flex justify-end" >
@@ -365,8 +367,9 @@ const HomeBodyContent = ({posts}: Props) => {
         </div>
       </div>
       <hr className="border-[#992715de] mb-10"/>
+      <div className="bg-[#bab8b76c] dark:bg-opacity-10 shadow-md px-2 py-2">
       <BlogList posts={posts}/>
-      {/* </div> */}
+      </div>
     </div>
   );
 };

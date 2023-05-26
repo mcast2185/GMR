@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import Header from '../components/header';
 import Banner from '../components/banner';
-import Footer from 'components/footer';
+import Footer from '../components/footer';
 import FloatButtonComp from 'components/floatButton';
 
 import "../styles/globals.css";
@@ -24,10 +24,10 @@ export default function About () {
         <article className="px-10 pb-10">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
-              <section className="p-4  w-full">
+              <section className="p-4 bg-transparent w-full">
                 <div className="flex flex-col md:flex-row justify-between gap-y-5">
                   <div>
-                    <h1 className="text-6xl font-extrabold font-MontserratAlternates">
+                    <h1 className="text-6xl dark:text-white font-extrabold font-MontserratAlternates">
                       About
                     </h1>
                   </div>
@@ -38,7 +38,7 @@ export default function About () {
           <div className="border-r-black border-l-black border border-opacity-10 scale-90 md:scale-100
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-10" >
             <div className="mt-16 mb-16 px-20" >
-              <p className=" text-[#000000] text-lg leading-8 mb-36 font-semibold font-Quicksand">
+              <p className=" text-[#000000] text-lg dark:text-white leading-8 mb-36 font-semibold font-Quicksand">
                 <b className="text-5xl font-bold">S</b>tep into the immersive grounds of <i>GMRseat</i>, 
                 your vehicle for exploring content that's for the community, by the community! We dive deep into the latest game releases, related
                 pop culture content, and plenty more. Catering to the sweaty gamers or occasional players, GMR offers insight true to our brand via blogs, videos and podcasts. 
