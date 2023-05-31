@@ -9,7 +9,6 @@ import { Post } from '../../../../typings';
 import urlFor from '../../../../lib/urlFor';
 import CommentForm from '../../../../components/commentForm';
 import Head from 'next/head';
-import FloatButtonComp from 'components/floatButton';
 
 
 type Props = {

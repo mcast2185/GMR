@@ -13,7 +13,7 @@ const Navigation = () => {
       <div className=" shrink md:shrink-0 flex flex-row justify-center w-full pl-2 content-box">
         <SocialMediaIcons/>
       </div>
-      <div className="flex flex-row justify-center w-full space-x-2 m-0">
+      <div className="flex flex-row justify-center w-full space-x-2 m-0 scale-90 md:scale-100">
        <Link href="/">
         <h1 className="text-sm md:text-lg text-black dark:text-white 
           font-MontserratAlternates font-normal hover:font-medium hover:scale-105 

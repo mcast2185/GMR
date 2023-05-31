@@ -29,10 +29,10 @@ const Brand = ({brand}: Props) => {
       <div className="relative">
         <FloatButtonComp/>
       </div>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[460px] md:max-w-5xl mx-0 md:mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-10 pb-5">
+        <article className="px-2 md:px-10 pb-10">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
               <section className="p-4 bg-transparent w-full">

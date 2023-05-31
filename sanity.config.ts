@@ -10,14 +10,14 @@ import {schemaTypes} from "./schemas/schema";
 import {getDefaultDocumentNode} from './structure';
 
 const dataset= process.env.NEXT_PUBLIC_SANITY_DATASET!;
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
+const projectId = String(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
 
 
 export default defineConfig({
   basePath: "/studio",
   name: 'GMRseat',
   title: 'GMRseat',
-  projectId,
+  projectId: projectId,
   dataset,
   plugins: [deskTool({
     defaultDocumentNode: getDefaultDocumentNode

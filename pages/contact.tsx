@@ -55,10 +55,10 @@ export default function Contact ({post}: Props) {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <FloatButtonComp/>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[460px] md:max-w-5xl mx-0 md:mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-10 pb-10">
+        <article className="px-2 md:px-10 pb-10">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
               <section className="p-4 bg-transparent w-full">
@@ -132,6 +132,7 @@ export default function Contact ({post}: Props) {
                     Email us below!
                   </h4>
                   <hr className="py-3 mt-2" />
+                  <div className="pr-12 md:pr-0">
                   <input type="hidden"
                     {...register("_id")}
                     name="_id"
@@ -197,6 +198,7 @@ export default function Contact ({post}: Props) {
                     text-[#992715de] font-bold
                     py-2 px-4 rounded
                     cursor-pointer"/>
+                    </div>
                 </form>
               )}
             </div>

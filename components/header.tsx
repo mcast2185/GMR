@@ -14,7 +14,8 @@ const Header = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
+    setTheme("light");
   }, []);
 
   if (!mounted) return null;
@@ -30,7 +31,7 @@ const Header = () => {
               <Image className="rounded-full" priority
                 width={150} height={150} src={GMRDark} alt="logo"/>
                 ): 
-              <Image className="rounded-full" priority
+              <Image className="rounded-full"
                 width={150} height={150} src={GMRLight} alt="logo"/>
             }
           </Link>

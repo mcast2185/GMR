@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 h-36 flex absolute w-full left-0">
+    <footer className="bg-gray-800 dark:bg-[#3a3a3a6c] h-36 flex absolute w-[460px] md:w-full left-0">
       <div className="container mx-auto px-6 py-4 flex flex-col justify-center">
         <div className="flex justify-center group group-[text-white]">
           <div className='flex flex-row justify-center m-0 p-0 h-8 items-center text-white relative '>

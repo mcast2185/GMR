@@ -18,10 +18,10 @@ export default function About () {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <FloatButtonComp/>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[460px] md:max-w-5xl mx-0 md:mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-10 pb-10">
+        <article className="px-2 md:px-10 pb-10">
           <section className="space-y-1 border-transparent text-black">
             <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
               <section className="p-4 bg-transparent w-full">
@@ -37,7 +37,7 @@ export default function About () {
           </section>
           <div className="border-r-black border-l-black border border-opacity-10 scale-90 md:scale-100
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-2 md:px-10" >
-            <div className="mt-3 md:mt-16 mb-3 md:mb-16 px-4 md:px-20" >
+            <div className="mt-3 md:mt-16 mb-3 md:mb-16 px-2 md:px-20" >
               <p className=" text-[#000000] text-sm md:text-lg dark:text-white leading-8 mb-10 md:mb-36 font-semibold font-Quicksand">
                 <b className="text-xl md:text-5xl font-bold">S</b>tep into the immersive grounds of <i>GMRseat</i>, 
                 your vehicle for exploring content that's for the community, by the community! We dive deep into the latest game releases, related

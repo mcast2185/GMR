@@ -24,16 +24,15 @@ const FloatButtonComp: React.FC = () => {
   <>
     <FloatButton.Group shape="circle" style={{ left: 24, top: 55 }} className="floatButton">
       <Link href={"/blogs"}>
-      <FloatButton icon={<FontAwesomeIcon icon={faBlog}/>} className="mb-[16px]"/>
+        <FloatButton icon={<FontAwesomeIcon icon={faBlog}/>} className="mb-[16px]"/>
       </Link>
-        {currentTheme === 'light' ? (
-          <FloatButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} icon={<FontAwesomeIcon icon={faMoon}/>} className="mb-[16px]"/>
-          ): (  
-          <FloatButton onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} icon={<FontAwesomeIcon icon={faSun}/>} className="mb-[16px]"/>
-        )}
-
+      {currentTheme === 'dark' ? (
+        <FloatButton onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} icon={<FontAwesomeIcon icon={faSun}/>} className="mb-[16px]"/>
+        ): (  
+        <FloatButton onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} icon={<FontAwesomeIcon icon={faMoon}/>} className="mb-[16px]"/>
+      )}  
       <Link href={"/media"}>
-      <FloatButton icon={<FontAwesomeIcon icon={faNewspaper}/>} className="mb-[16px]"/>
+        <FloatButton icon={<FontAwesomeIcon icon={faNewspaper}/>} className="mb-[16px]"/>
       </Link>
       <FloatButton.BackTop visibilityHeight={0} />
     </FloatButton.Group>

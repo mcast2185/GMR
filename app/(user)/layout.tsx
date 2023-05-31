@@ -8,6 +8,7 @@ import "../../styles/globals.css";
 import Providers from 'app/providers';
 import FloatButtonComp from 'components/floatButton';
 import Helper from 'components/helpButton';
+import ScrollingBanner from 'components/scrollingBanner';
 
 
 export default function RootLayout({
@@ -18,13 +19,14 @@ export default function RootLayout({
   return (
     <html>
       <Head/>
-        <body className="min-w-[500px] md:min-w-full flex min-h-full ">
+        <body className="min-w-[460px] md:min-w-full flex min-h-full overflow-hidden">
           <Providers>
             <Mouse/>
             <FloatButtonComp/>
             <Helper/>
             <div className="mx-auto">
-              <div className="max-w-[500px] md:max-w-5xl h-fit flex flex-col">
+              <ScrollingBanner/>
+              <div className="max-w-[460px] md:max-w-5xl h-fit flex flex-col">
                 <Header/>
                 <Banner/>
               </div>

@@ -28,7 +28,7 @@ const Newsletter: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-800 text-[#d9d9d9] flex mb-10 mt-10
+    <div className="bg-gray-800 dark:bg-[#3a3a3a6c] text-[#d9d9d9] flex mb-10 mt-10
       justify-center items-center mr-2 text-xs md:text-base font-Quicksand rounded-md shadow-lg overflow-hidden">
       <div className="p-4 md:p-8 flex flex-col justify-center items-center">
         <h2 className="text-2xl font-MontserratAlternates md:text-2xl font-bold mb-4">

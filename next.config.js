@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  projectId: String(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID),
   experimental: {
     appDir: true,
   },
-  headers: [
-    {
-      key: 'Cache-Control',
-      value: 'public, max-age=31536000, stale-while-revalidate',
-    },
-  ],
+
   images: {
     domains: ["https://cdn.sanity.io/", "cdn.sanity.io"]
   },
