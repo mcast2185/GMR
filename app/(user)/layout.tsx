@@ -25,7 +25,6 @@ export default function RootLayout({
             <FloatButtonComp/>
             <Helper/>
             <div className="mx-auto">
-              <ScrollingBanner/>
               <div className="max-w-[460px] md:max-w-5xl h-fit flex flex-col">
                 <Header/>
                 <Banner/>

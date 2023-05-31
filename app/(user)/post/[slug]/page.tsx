@@ -53,7 +53,7 @@ async function Post({params: {slug}}: Props) {
   const securePost = posts[0];
 
   return (
-    <div className="max-w-5xl h-fit flex flex-col">
+    <div className=" max-w-full md:max-w-5xl h-fit flex flex-col">
       <Head>
         <title>
           {`${securePost.title}`}
@@ -61,7 +61,7 @@ async function Post({params: {slug}}: Props) {
         <meta name="description" content={`${securePost.description}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <article className="px-10 pb-10">
+      <article className="px-1 md:px-10 pb-10">
         <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
             <figure>

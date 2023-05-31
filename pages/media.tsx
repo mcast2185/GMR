@@ -9,6 +9,7 @@ import Header from '../components/header';
 import Banner from '../components/banner';
 import MANDO from '../public/mando.png';
 import LAST from '../public/lastofus.png';
+import MGS from '../public/mgs3.png';
 import DCU from '../public/dcu.png';
 import CAPCOM from '../public/capcom.png';
 import GALAXY from '../public/Galaxy.png';
@@ -44,7 +45,7 @@ export default function Media () {
       </Head>
       <FloatButtonComp/>
       <div className="flex h-full w-full">
-        <div className="max-w-5xl mx-auto py-4">
+        <div className="max-w-full py-1 md:max-w-5xl md:mx-auto md:py-4">
           <Header/>
           <Banner/>
           <div className="flex justify-center overflow-hidden">
@@ -205,6 +206,18 @@ export default function Media () {
                   className="h-64 w-[500px] md:w-[670px] md:h-[350px]">
                 </iframe>
               </figure>
+
+
+              <div className="flex justify-center pr-6 overflow-hidden cursor-default">
+                <Link href="/podcasts">
+                  <Image src={MGS} alt="Metal Gear Solid 3" width={200} 
+                    className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
+                </Link>
+                <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
+                  bg-opacity-80 text-stone-50 mr-2 text-sm font-Quicksand absolute">
+                  Metal Gear Solid 3
+                </h1>
+              </div>
             </section>
           </div>
         </div>

@@ -37,24 +37,24 @@ export const RichTextComponents = {
   },
   block: {
     h1: ({children}: any) => (
-      <h1 className="text-5xl px-10 font-AlegreyaSans underline decoration-[#992715de] text-[#333333] py-8 font-bold">{children}</h1>
+      <h1 className="text-5xl px-10 font-AlegreyaSans underline decoration-[#992715de] dark:text-white text-[#333333] py-8 font-bold">{children}</h1>
     ),
     h2: ({children}: any) => (
-      <h2 className="text-4xl px-10 font-AlegreyaSans underline decoration-[#992715de] text-[#333333] py-10 font-bold">{children}</h2>
+      <h2 className="text-4xl px-10 font-AlegreyaSans underline decoration-[#992715de] dark:text-white text-[#333333] py-10 font-bold">{children}</h2>
     ),
     h3: ({children}: any) => (
-      <h3 className="text-3xl px-10 font-AlegreyaSans underline decoration-[#992715de] text-[#333333] py-10 font-bold">{children}</h3>
+      <h3 className="text-3xl px-10 font-AlegreyaSans underline decoration-[#992715de] dark:text-white text-[#333333] py-10 font-bold">{children}</h3>
     ),
     h4: ({children}: any) => (
       <div className="flex items-center h-20" >
-        <h4 className="text-lg px-10 font-JuliusSansOne decoration-[#992715de] text-[#333333b8] pb-20 font-bold">{children}</h4>
+        <h4 className="text-lg px-10 font-JuliusSansOne decoration-[#992715de] dark:text-white text-[#333333b8] pb-20 font-bold">{children}</h4>
       </div>
     ),
     p: ({children}: any) => (
-      <p className="py-5 text-[#292727] text-base leading-8 font-medium font-Quicksand px-20 ">{children}</p>
+      <p className="py-5 text-[#292727] dark:text-white text-base leading-8 font-medium font-Quicksand px-20 ">{children}</p>
     ),
     blockquote: ({children}: any) => (
-      <blockquote className="border-x-[#992715de] border-l-4 pl-40 pr-0 my-5 text-base 
+      <blockquote className="border-x-[#992715de] border-l-4 pl-40 pr-0 my-5 text-base dark:text-white
         font-Quicksand tracking-tighter font-bold sm:my-0 sm:pl-0 sm:flex sm:justify-center">
         <p className='border-b-[#992715de] pt-5 px-0 w-fit border-b-2 '>{children}</p>
       </blockquote>
