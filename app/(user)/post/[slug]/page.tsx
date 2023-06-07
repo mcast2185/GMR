@@ -137,9 +137,9 @@ async function Post({params: {slug}}: Props) {
           {securePost.body.map((el: any) => {
             if (el.url){
               return (
-                <div className="flex justify-center w-[400px] md:w-full p-2 cursor-pointer">
+                <div className="flex justify-center w-[250px] h-[200px] md:w-full md:h-full p-2 cursor-pointer">
                   <a id="youtube_hyperlink">
-                    <iframe className="object-contain md:w-[500px] md:h-[350px] w-[350px] h-[250px]" height={600} 
+                    <iframe className="object-contain md:w-[500px] md:h-[350px] w-[250px] h-[200px]" height={600} 
                       width={850} src={el.url}>
                     </iframe>
                   </a>

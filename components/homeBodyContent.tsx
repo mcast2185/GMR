@@ -24,6 +24,7 @@ import FLASH from '../public/flash.png';
 import FLASH2 from '../public/flash2.png';
 import CAPCOM from "../public/capcom.png";
 import SPIDEY from "../public/spidey.png";
+import WAR from "../public/warworld.png";
 import FloatButtonComp from './floatButton';
 
 // GOOGLE_CLIENT_ID
@@ -352,7 +353,7 @@ const HomeBodyContent = ({posts}: Props) => {
             GMR Exclusive Content:
           </h1>
           <section className="mb-2 py-5 px-1 md:px-10">
-            <div className="flex w-full flex-row relative shrink md:shrink-0">
+            <div className="flex w-full md:flex-row flex-col relative shrink md:shrink-0">
               <figure>
                 <iframe src="https://www.youtube.com/embed/psZPmj82Prw" 
                   allowFullScreen={false} width="672" height="350" title="YouTube video player"
@@ -363,7 +364,22 @@ const HomeBodyContent = ({posts}: Props) => {
               <div className="">
 
               {/* <GoogleAdSense publisherId={}/> */}
-
+                <div className="md:flex flex-col h-full hidden">
+                  <div className="flex justify-center pr-3 pl-3 overflow-hidden pt-5 h-full cursor-pointer  md:w-[320px] w-[150px]">
+                    <Link href="https://www.youtube.com/watch?v=IPDLodUE9gg" 
+                      aria-details='Justice League: Warworld' target="_blank">
+                      <Image src={WAR} width={320} height={600} alt="Justice League: Warworld" 
+                        className="object-cover rounded-sm transition-translate duration-500 ease-in-out hover:brightness-50 md:w-[320px] w-[150px] "/>
+                    </Link>
+                  <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
+                    duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[350px]">
+                  <Link href="https://www.youtube.com/watch?v=IPDLodUE9gg" 
+                    aria-details='Justice League: Warworld' target="_blank">
+                      Watch the trailer here
+                    </Link>
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
