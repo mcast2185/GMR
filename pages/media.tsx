@@ -45,7 +45,7 @@ export default function Media () {
       </Head>
       <FloatButtonComp/>
       <div className="flex h-full w-full">
-        <div className="max-w-full py-1 md:max-w-5xl md:mx-auto md:py-4">
+        <div className="max-w-5xl mx-auto py-4">
           <Header/>
           <Banner/>
           <div className="flex justify-center overflow-hidden">
@@ -71,7 +71,7 @@ export default function Media () {
                 </h1>
               </div>
               <div className="flex justify-center pr-6 overflow-hidden cursor-default">
-                <Link href="/podcasts">
+                <Link href="https://gmrseat.com/post/the-flash-flashpoints-moral-dilemma">
                   <Image src={DCU} alt="DCU" width={200} 
                     className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
                 </Link>
@@ -92,7 +92,7 @@ export default function Media () {
               </div>
             </div>
             <hr className="border-[#992715de] mb-5"/>
-            <h1 className="text-black underline decoration-[#992715de] font-bold 
+            <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold 
               text-2xl font-MontserratAlternates mb-8 mt-8">
               Trending:
             </h1>
@@ -124,7 +124,7 @@ export default function Media () {
                     </h3>
                   </div>
                   <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
-                    <Link href="http://localhost:3000/post/the-legend-of-zelda-tears-of-the-kingdom" 
+                    <Link href="https://gmrseat.com/post/the-legend-of-zelda-tears-of-the-kingdom" 
                       aria-details='The Legend of Zelda: Tears of the Kingdom' target="_blank">
                       <Image src={KINGDOM} width={580} height={250} alt="The Legend of Zelda: Tears of the Kingdom"/>
                     </Link>
@@ -134,7 +134,7 @@ export default function Media () {
                     </h3>
                   </div>
                   <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
-                    <Link href="http://localhost:3000/post/apex-legends-season-17-arsenal" 
+                    <Link href="https://gmrseat.com/post/apex-legends-season-17-arsenal" 
                       aria-details='Apex Legends Season 17: Arsenal' target="_blank">
                       <Image src={APEX} width={580} height={250} alt="Apex Legends Season 17: Arsenal"/>
                     </Link>
@@ -144,7 +144,7 @@ export default function Media () {
                     </h3>
                   </div>
                   <div className="flex justify-center pr-6 overflow-hidden w-[580px] h-[250px] cursor-pointer">
-                    <Link href="http://localhost:3000/post/ted-lasso-season-3" 
+                    <Link href="https://gmrseat.com/post/ted-lasso-season-3" 
                       aria-details='Ted Lasso Season 3' target="_blank">
                       <Image src={TED} width={580} height={250} alt="Ted Lasso Season 3"/>
                     </Link>
@@ -195,7 +195,7 @@ export default function Media () {
                 </div>
               </div>
             </div>
-            <h1 className="text-black underline decoration-[#992715de] font-bold 
+            <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold 
               text-2xl font-MontserratAlternates mb-8 mt-8">
               GMR Featured Content:
             </h1>
@@ -222,7 +222,7 @@ export default function Media () {
           </div>
         </div>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 };

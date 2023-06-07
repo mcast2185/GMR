@@ -88,7 +88,7 @@ const HomeBodyContent = ({posts}: Props) => {
                     </h1>
                   </div>
                   <div className="flex justify-center pr-2 md:pr-6 overflow-hidden cursor-default">
-                    <Link href="http://localhost:3000/post/marvel-s-spider-man-2">
+                    <Link href="https://gmrseat.com/post/marvel-s-spider-man-2">
                       <Image src={SPIDEY} alt="Marvel's spider-man 2" width={200} 
                         className="h-64 w-56 object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
                     </Link>
@@ -331,7 +331,7 @@ const HomeBodyContent = ({posts}: Props) => {
                   transform: isInView ? "none" : "translateY(-20px)",
                   opacity: isInView ? 1 : 0,
                   transition: "all 3.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
-                  <Link target="_blank" href="http://localhost:3000/post/the-flash-flashpoints-moral-dilemma">
+                  <Link target="_blank" href="https://gmrseat.com/post/the-flash-flashpoints-moral-dilemma">
                     <figure id="flash-wrapper" className="flex mt-[25px] h-[250px] md:h-[220px] w-[390px]">
                       <Image className="h-[250px] md:h-[220px] w-[390px] img-transform" 
                         id="flash" src={FLASH} alt="Flash the movie"/>

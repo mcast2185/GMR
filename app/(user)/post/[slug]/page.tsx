@@ -53,7 +53,7 @@ async function Post({params: {slug}}: Props) {
   const securePost = posts[0];
 
   return (
-    <div className=" max-w-full md:max-w-5xl h-fit flex flex-col">
+    <div className=" scale-[.7] md:scale-100 max-w-[600px] md:max-w-5xl h-fit flex flex-col">
       <Head>
         <title>
           {`${securePost.title}`}
@@ -65,7 +65,7 @@ async function Post({params: {slug}}: Props) {
         <section className="space-y-1 border-[#992715de] text-white">
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
             <figure>
-              <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-10 p-2 border-box">
+              <div className="absolute top-0 w-full h-full opacity-20 blur-sm px-2 pr-[5rem] md:pr-0 md:px-10 p-2 border-box">
                 <Image
                   className='object-cover object-left lg:object-center'
                   src={urlFor(securePost!.mainImage).url()}
@@ -74,7 +74,7 @@ async function Post({params: {slug}}: Props) {
                 /> 
               </div>
             </figure>
-            <div className="p-4 bg-[#ba3627] w-full" 
+            <div className="p-1 md:p-4 bg-[#ba3627] w-[600px] md:w-full" 
               aria-details='Section that categorizes and provides detail to post'>
               <div className="flex flex-col md:flex-row justify-between gap-y-5">
                 <div>
@@ -91,7 +91,7 @@ async function Post({params: {slug}}: Props) {
                 </div>
                 <div className='flex mt-16 w-52 mb-0 pt-3 justify-center'>
                   <div className="flex flex-col items-center 
-                    justify-center content-center w-52 h-24 pt-15" >
+                    justify-center content-center md:w-52 h-24 pt-15" >
                     <figure>
                       <Image
                         className='rounded-full'
@@ -100,7 +100,7 @@ async function Post({params: {slug}}: Props) {
                         height={80}
                         width={90}
                       /> 
-                      <div className='w-52 '>
+                      <div className='md:w-52 '>
                         <h3 className="text-lg font-Quicksand font-bold flex flex-row ml-8" aria-details='Post author name'>
                           {securePost.author.name}
                         </h3>
@@ -119,7 +119,7 @@ async function Post({params: {slug}}: Props) {
                 </div>
               </div>
               <div>
-                <div className="h-14 w-44 pl-3 mt-0 flex justify-start">
+                <div className="h-14 md:w-44 pl-3 mt-0 flex justify-start">
                 </div>
                 <h2 className="italic pt-5 underline decoration-white font-Quicksand font-bold" aria-details='Post desc'>
                   {securePost.description}
@@ -130,16 +130,16 @@ async function Post({params: {slug}}: Props) {
             </div>
           </div>
         </section>
-        <section className="border-r-black border-l-black border border-opacity-10 
+        <section className="border-r-black border-l-black border border-opacity-10 md:w-full w-[600px]
           bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default">
           <PortableText value={securePost.body} 
             components={RichTextComponents} aria-details='Portable text body render'/>
           {securePost.body.map((el: any) => {
             if (el.url){
               return (
-                <div className="flex justify-center w-full p-2 cursor-pointer">
+                <div className="flex justify-center w-[400px] md:w-full p-2 cursor-pointer">
                   <a id="youtube_hyperlink">
-                    <iframe className="object-contain" height={600} 
+                    <iframe className="object-contain md:w-[500px] md:h-[350px] w-[350px] h-[250px]" height={600} 
                       width={850} src={el.url}>
                     </iframe>
                   </a>
