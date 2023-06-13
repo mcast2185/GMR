@@ -38,6 +38,11 @@ export default {
       type: "url"
     },
     {
+      name: 'brandUrl',
+      title: "BrandURL",
+      type: "url"
+    },
+    {
       name: 'company',
       title: "Company",
       type: "string"

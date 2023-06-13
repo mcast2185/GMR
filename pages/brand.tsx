@@ -63,6 +63,7 @@ export async function getStaticProps() {
       ...,
       image,
       description,
+      url,
       tags[]->,
     } | order(_createdAt desc)
   `);

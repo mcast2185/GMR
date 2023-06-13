@@ -54,7 +54,7 @@ const HomeBodyContent = ({posts}: Props) => {
       <main className="w-[450px] md:w-full mx-1 md:mx-0  md:scale-100">       
         <div className="flex flex-row  justify-between" >
           <div className="flex flex-col px-1 md:px-4 py-4 md:py-0 shrink md:shrink-0 w-[450px] md:w-[720px] 
-            justify-between cursor-default bg-transparent md:bg-[#bab8b76c] dark:bg-opacity-10 md:shadow-md">
+            justify-between cursor-default bg-transparent md:bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 md:shadow-md">
             <figure id="figure" className="md:px-4">
               <iframe src="https://www.youtube.com/embed/SwANQTAImGc"  
                 allowFullScreen={false} height={350} width={660} title="YouTube video player"
@@ -287,7 +287,7 @@ const HomeBodyContent = ({posts}: Props) => {
                   <section className="grid clearfix" id="grid" style={{
                     transform: isInView ? "none" : "translateX(-15px)",
                     opacity: isInView ? 1 : 0,
-                    transition: "all 2.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
+                    transition: "all 2.75s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                     <Link href="/media" className="linktag">
                       <figure id="figure">
                           <Image src={KINDA} alt="Whats Good Games podcast"
@@ -308,7 +308,7 @@ const HomeBodyContent = ({posts}: Props) => {
                   <section className="grid clearfix" id="grid" style={{
                     transform: isInView ? "none" : "translateX(-10px)",
                     opacity: isInView ? 1 : 0,
-                    transition: "all 3.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
+                    transition: "all 3.75s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                     <Link href="/media" className="linktag "
                       data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                       <figure id="figure">
@@ -331,7 +331,7 @@ const HomeBodyContent = ({posts}: Props) => {
                 <section id="flash-parent-tag" style={{
                   transform: isInView ? "none" : "translateY(-20px)",
                   opacity: isInView ? 1 : 0,
-                  transition: "all 3.5s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
+                  transition: "all 3.75s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                   <Link target="_blank" href="https://gmrseat.com/post/the-flash-flashpoints-moral-dilemma">
                     <figure id="flash-wrapper" className="flex mt-[25px] h-[250px] md:h-[220px] w-[390px]">
                       <Image className="h-[250px] md:h-[220px] w-[390px] img-transform" 
@@ -371,12 +371,12 @@ const HomeBodyContent = ({posts}: Props) => {
                       <Image src={WAR} width={320} height={600} alt="Justice League: Warworld" 
                         className="object-cover rounded-sm transition-translate duration-500 ease-in-out hover:brightness-50 md:w-[320px] w-[150px] "/>
                     </Link>
-                  <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
-                    duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[350px]">
-                  <Link href="https://www.youtube.com/watch?v=IPDLodUE9gg" 
-                    aria-details='Justice League: Warworld' target="_blank">
-                      Watch the trailer here
-                    </Link>
+                    <h3 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
+                      duration-200 ease-in-out bg-opacity-60 text-stone-50 mr-2 text-2xl font-Quicksand absolute mt-[8rem]">
+                      <Link href="https://www.youtube.com/watch?v=IPDLodUE9gg" 
+                        aria-details='Justice League: Warworld' target="_blank">
+                          Watch the trailer here
+                      </Link>
                     </h3>
                   </div>
                 </div>

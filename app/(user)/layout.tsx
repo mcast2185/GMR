@@ -8,7 +8,7 @@ import "../../styles/globals.css";
 import Providers from 'app/providers';
 import FloatButtonComp from 'components/floatButton';
 import Helper from 'components/helpButton';
-import ScrollingBanner from 'components/scrollingBanner';
+
 
 
 export default function RootLayout({

@@ -11,7 +11,7 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
         S.view
           .component(Iframe)
           .options({
-            url: `${ "http://localhost:3000"}/api/preview`,
+            url: `${ "https://gmrseat.com"}/api/preview`,
             defaultSize: `desktop`,
             reload: {
               button: true,
