@@ -28,7 +28,7 @@ function BlogList({posts}: Props) {
   });
 
   return (
-    <div className="blogList">
+    <div className="blogList sm:mr-[65px]">
       <header>
         <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold 
           text-lg md:text-2xl font-MontserratAlternates m-2 mt-1 pb-4">

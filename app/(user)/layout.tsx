@@ -19,13 +19,13 @@ export default function RootLayout({
   return (
     <html>
       <Head/>
-        <body className="min-w-[460px] md:min-w-full flex min-h-full overflow-hidden">
+        <body className="sm:min-w-[390px] min-w-full flex min-h-full overflow-hidden sm:p-0 sm:m-0">
           <Providers>
             <Mouse/>
             <FloatButtonComp/>
             <Helper/>
             <div className="mx-auto">
-              <div className="max-w-[460px] md:max-w-5xl h-fit flex flex-col">
+              <div className="sm:max-w-[390px] max-w-5xl h-fit flex flex-col">
                 <Header/>
                 <Banner/>
               </div>

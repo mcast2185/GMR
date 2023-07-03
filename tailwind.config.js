@@ -9,6 +9,13 @@ module.exports = {
   ],
   darkMode: 'class', 
   theme: {
+    screens: {
+      '2xl': {'min': '1535px'},
+      'xl': {'min': '1279px'},
+      'lg': {'min': '1023px'},
+      'md': {'min': '767px'},
+      'sm': {'min': '340px','max': '500px'},
+    },
     extend: {
       fontFamily: {
         "MajorMonoDisplay": ['Major Mono Display', 'monospace'],

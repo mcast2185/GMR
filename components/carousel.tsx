@@ -7,9 +7,9 @@ import Image from 'next/image';
 
 import slide_image_1 from "../public/elden.png";
 import slide_image_2 from "../public/GOW.png";
-import slide_image_3 from "../public/horizon.png";
+import slide_image_3 from "../public/ffxvi.png";
 import slide_image_4 from "../public/remake.png";
-import slide_image_5 from "../public/Pokemon.png";
+import slide_image_5 from "../public/zelda.png";
 import slide_image_6 from "../public/hogwarts.png";
 
 import "../styles/globals.css";
@@ -29,7 +29,7 @@ const Carousel = () => {
 
   if (isLoaded == true) {
     return (
-      <div className="container pl-[2.7rem] px-0 md:px-[21rem] md:pl-[21rem]">
+      <div className="container sm:pl-[3rem] sm:pr-[3rem] md:px-[21rem] md:pl-[21rem] sm:mt-[3.5vh]">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -55,9 +55,9 @@ const Carousel = () => {
               <figure>
                 <Image priority src={slide_image_4} alt="Resident evil 4 remake rating of 4.7/5" 
                   className='img hover:scale-105 hover:brightness-75 duration-500 
-                  h-[250px] w-[180px] transition-transform ease-in-out object-contain overflow-hidden'/>
+                  h-[175px] w-[168px] transition-transform ease-in-out object-contain overflow-hidden'/>
                 <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-40 rounded-md absolute
-                  -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
+                   mr-2 md:ml-2 sm:ml-[.2] top-[140px] flex flex-row justify-center items-center md:scale-90 sm:scale-x-[.8] sm:scale-y-[.9]">
                   <p className="text-[#d3d3d3] text-base pl-1">
                   4.7/5: 
                   </p> 
@@ -104,15 +104,15 @@ const Carousel = () => {
           <SwiperSlide>
             <div className="flex justify-center">
               <figure>
-                <Image priority src={slide_image_3} alt="Horizon Forbidden West rating of 4/5" 
+                <Image priority src={slide_image_3} alt="Final Fantasy 16 rating of 4.2/5" 
                   className='img hover:scale-105 hover:brightness-75 h-[250px] w-[180px]
                   duration-500 transition-transform ease-in-out object-contain overflow-hidden'/>
-                <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[139px] rounded-md absolute
+                <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[156px] rounded-md absolute
                   -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
                   <p className="text-[#d3d3d3] text-base pl-2">
-                  4/5: 
+                  4.2/5: 
                   </p> 
-                  <span className="rating" aria-label='4 out of 5' role="img"/>
+                  <span className="rating" aria-label='4.2 out of 5' role="img"/>
                 </div> 
               </figure>
             </div>
@@ -121,15 +121,15 @@ const Carousel = () => {
           <SwiperSlide>
             <div className="flex justify-center">
               <figure>
-                <Image priority src={slide_image_5} alt="Pokemon Legends Arceus rating of 3.9/5" 
+                <Image priority src={slide_image_5} alt="Legend of Zelda: Tears of the Kingdom rating of 4.4/5" 
                   className='img hover:scale-105 hover:brightness-75 duration-500 h-[250px] w-[180px]
                   transition-transform ease-in-out object-contain overflow-hidden'/>
-                <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[138px] rounded-md absolute
+                <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[158px] rounded-md absolute
                   -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
                   <p className="text-[#d3d3d3] text-base pl-1">
-                  3.9/5: 
+                  4.4/5: 
                   </p> 
-                  <span className="rating" aria-label='3.9 out of 5' role="img"/>
+                  <span className="rating" aria-label='4.4 out of 5' role="img"/>
                 </div> 
               </figure>
               </div>

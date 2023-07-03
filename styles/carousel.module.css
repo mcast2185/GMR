@@ -1,19 +1,17 @@
 .container {
-  max-width: 350px;
-  padding: 0rem 21rem;
-
+  max-width: 290px;
 }
 
 .swiper {
-  height: 240px !important;
+  height: 225px !important;
 } 
 
 .swiper-wrapper {
-  height: 135px !important;
-  width: 176px !important;
+  height: 130px !important;
+  width: 165px !important;
   cursor: grab;
   transition-duration: 0ms;
-  transform: translate3d(-1464.06px, 0px, 0px);
+  transform: translate3d(-430.5px, 0px, 0px);
 }
 
 .swiper_container {
@@ -31,7 +29,7 @@
 }
 
 .swiper-3d {
-  perspective: 500px !important;
+  perspective: 340px !important;
 }
 
 .swiper-slide .img {
@@ -43,8 +41,8 @@
 }
 
 .img {
-  width: 250px !important;
-  height: 180px !important;
+  width: 168px !important;
+  height: 175px !important;
 }
 
 .swiper-slide-shadow-left,

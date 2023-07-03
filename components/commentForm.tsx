@@ -36,7 +36,7 @@ const CommentForm = ({post}: Props) => {
   };
 
   return (
-    <div>
+    <div className="sm:scale-95 sm:flex sm:flex-col sm:justify-center sm:mb-[5vh]">
       {submitted ? (
        <div className="flex 
         flex-col p-10 my-10 
@@ -129,8 +129,8 @@ const CommentForm = ({post}: Props) => {
       </form>
       )}
       <div className="flex flex-col 
-        p-5 my-5 max-w-2xl
-        mx-auto shadow-[#992715de]
+        md:p-5 sm:p-0 md:my-5 sm:mt-5 sm:mb-0 md:max-w-2xl
+        md:mx-auto sm:mr-[15px] shadow-[#992715de]
         shadow space-y-2">
         <h3 className="text-3xl">Comments</h3>
         <hr className="pb-2"/>

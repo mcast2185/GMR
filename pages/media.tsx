@@ -97,13 +97,13 @@ export default function Media () {
               Trending:
             </h1>
             <div className="flex flex-row justify-center items-center m-5">
-              <iframe src="https://embed.podcasts.apple.com/us/podcast/resident-evil-4-gameplay-preview/id1239568910?i=1000602655277"
+              <iframe src="https://embed.podcasts.apple.com/us/podcast/final-fantasy-xvi-review-kinda-funny-gamescast/id957171516?i=1000617854028"
                 allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
                 height="175" className="w-full max-w-md overflow-hidden bg-transparent" 
                 sandbox="allow-forms allow-popups allow-same-origin 
                 allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
               </iframe>
-              <iframe src="https://embed.podcasts.apple.com/us/podcast/giant-bombcast-778-young-elmo/id274450056?i=1000602210211"
+              <iframe src="https://embed.podcasts.apple.com/us/podcast/diablo-iv-with-jon-gabrus/id1466286684?i=1000617498868"
                 allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
                 height="175" className="w-full max-w-md overflow-hidden bg-transparent" 
                 sandbox="allow-forms allow-popups allow-same-origin 

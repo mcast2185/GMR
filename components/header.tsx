@@ -23,7 +23,7 @@ const Header = () => {
   const currentTheme = theme === 'system' ? 'systemTheme' : theme;
 
   return (
-    <header className="flex item-center justify-between space-x-2 font-bold px-8 py-2">
+    <header className="flex item-center justify-between space-x-2 font-bold sm:pr-8 sm:pl-0 md:px-8 sm:py-0 md:py-2">
       <div className="flex items-center">
         <figure>
           <Link href="/">
