@@ -7,6 +7,8 @@ export default function Head() {
       <meta name="twitter:description" content="GMRseat (Gamer seat) is an American entertainment media website reviewing and previewing the latest in video game and pop culture news."/>
       <meta name="twitter:site" content="@GMRseat"/>
       <meta name="twitter:title" content="[GMR]seat"/>
+      <meta name="tiktok:site" content="GMRxSeat"/>
+
       <meta name="Googlebot" content="index, archive"/>
       <meta property="og:url" content="https://www.gmrseat.com/"/>
       <meta name="HandheldFriendly" content="true"/>

@@ -364,21 +364,20 @@ const HomeBodyContent = ({posts}: Props) => {
             GMR Exclusive Content:
           </h1>
           <div className="flex flex-col">
-           
             <section className="mb-2 py-5 px-1 md:px-4">
               <div className="flex md:w-[700px] w-full md:flex-row flex-col sm:justify-center relative shrink md:shrink-0">
                 <figure className=" flex justify-center items-center flex-col">
-                  <iframe src="https://www.youtube.com/embed/5QE60SU8usQ" 
+                  <iframe src="https://www.youtube.com/embed/5NlTehkiPEY" 
                     allowFullScreen={false} width="672" height="350" title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
                     className="h-64 w-[400px] md:w-[670px] md:h-[350px] p-2">
                   </iframe>
                     <figcaption className="flex justify-center flex-row pb-1 bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 sm:w-[350px] w-[390px]">
                       <h3 className="flex justify-center">
-                        <Link href="https://www.youtube.com/@emergencyawesome"
+                        <Link href="https://www.youtube.com/@GMRseat"
                           className="text-2xl sm:text-xl font-extrabold font-MontserratAlternates text-white dark:text-black"
-                          aria-details='Emergency Awesome Youtubue Channel' target="_blank">
-                          <p className="text-black dark:text-white">Emergency Awesome</p> (@emergencyawesome)
+                          aria-details='GMRxSeat Youtubue Channel' target="_blank">
+                          <p className="text-black dark:text-white">GMRxSeat Content</p> (@GMRxSeat)
                         </Link>
                       </h3>
                     </figcaption>
@@ -386,23 +385,24 @@ const HomeBodyContent = ({posts}: Props) => {
 
 
                 {/* <GoogleAdSense publisherId={}/> */}
-                <figure className=" flex justify-center items-center flex-col md:pl-[75px] md:mb-6 object-contain">
-                  <Link href="https://www.youtube.com/@emergencyawesome"
-                    aria-details='Mortal Kombat blog' target="_blank">
-                    <Image alt="Mortal Combat" src={MK}
-                      className="sm:w-[340px] md:w-[300px] sm:h-[200px] md:h-[250px] sm:py-1 hover:scale-95 
-                      object-cover rounded-sm transition-translate duration-500 ease-in-out hover:brightness-50"/>
-                  </Link>
-                  <figcaption className="flex justify-center flex-row mt-3 bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 h-[55px] w-[200px]">
+                {/* <figure className=" flex justify-center items-center flex-col md:pl-[75px] md:mb-6 object-contain overflow-hidden overflow-y-hidden "> */}
+                  {/* https://www.tiktok.com/@gmrseat/video/7254974859539762475?is_from_webapp=1&sender_device=pc&web_id=7255720129916290561 */}
+                  {/* <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gmrseat/video/7254974859539762475" data-video-id="7254974859539762475" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@gmrseat" href="https://www.tiktok.com/@gmrseat?refer=embed">@gmrseat</a> <a title="finalfantasy" target="_blank" href="https://www.tiktok.com/tag/finalfantasy?refer=embed">#finalfantasy</a> <a title="finalfantasyxvi" target="_blank" href="https://www.tiktok.com/tag/finalfantasyxvi?refer=embed">#finalfantasyxvi</a> <a title="gaming" target="_blank" href="https://www.tiktok.com/tag/gaming?refer=embed">#gaming</a> <a title="gamer" target="_blank" href="https://www.tiktok.com/tag/gamer?refer=embed">#gamer</a> <a title="ffxvi" target="_blank" href="https://www.tiktok.com/tag/ffxvi?refer=embed">#ffxvi</a> <a title="gmrseat" target="_blank" href="https://www.tiktok.com/tag/gmrseat?refer=embed">#gmrseat</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ original sound - GMRseat" href="https://www.tiktok.com/music/original-sound-7254974894977387306?refer=embed">♬ original sound - GMRseat</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> */}
+                  {/* https://www.tiktok.com/@gmrseat/video/7255680512134597930?is_from_webapp=1&sender_device=pc&web_id=7255720129916290561 */}
+                  {/* <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gmrseat/video/7255680512134597930" data-video-id="7255680512134597930" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@gmrseat" href="https://www.tiktok.com/@gmrseat?refer=embed">@gmrseat</a> <a title="finalfantasy" target="_blank" href="https://www.tiktok.com/tag/finalfantasy?refer=embed">#finalfantasy</a> <a title="finalfantasyxvi" target="_blank" href="https://www.tiktok.com/tag/finalfantasyxvi?refer=embed">#finalfantasyxvi</a> <a title="ffxvi" target="_blank" href="https://www.tiktok.com/tag/ffxvi?refer=embed">#ffxvi</a> <a title="ff16" target="_blank" href="https://www.tiktok.com/tag/ff16?refer=embed">#ff16</a> <a title="gaming" target="_blank" href="https://www.tiktok.com/tag/gaming?refer=embed">#gaming</a> <a title="gamer" target="_blank" href="https://www.tiktok.com/tag/gamer?refer=embed">#gamer</a> <a title="game" target="_blank" href="https://www.tiktok.com/tag/game?refer=embed">#game</a> <a title="gmr" target="_blank" href="https://www.tiktok.com/tag/gmr?refer=embed">#gmr</a> <a title="gmrseat" target="_blank" href="https://www.tiktok.com/tag/gmrseat?refer=embed">#gmrseat</a> <a title="boss" target="_blank" href="https://www.tiktok.com/tag/boss?refer=embed">#boss</a> <a target="_blank" title="♬ original sound - GMRseat" href="https://www.tiktok.com/music/original-sound-7255680537073830699?refer=embed">♬ original sound - GMRseat</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> */}
+                {/* <iframe width="300" height="600" src="https://www.tiktok.com/embed/7209055934377659694" title="YouTube video player" allowFullScreen={false} className="overflow-hidden overflow-y-hidden scale-[.85]"
+                  allow="accelerometer; play; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; allow-forms allow-same-origin; allow-scripts; allow-top-navigation;">
+                </iframe> */}
+                  {/* <figcaption className="flex justify-center flex-row mt-3 bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 h-[55px] w-[200px]">
                     <h3 className="flex justify-center">
                       <Link href="https://www.youtube.com/@emergencyawesome"
                         className="text-lg font-extrabold font-MontserratAlternates text-white dark:text-black"
-                        aria-details='Emergency Awesome Youtubue Channel' target="_blank">
-                        <span className="text-black dark:text-white">New title</span> <br/> New origins
+                        aria-details='GMRxSeat Youtubue Channel' target="_blank">
+                        <span className="text-black dark:text-white">Familiar faces</span> <br/> New origins
                       </Link>
                     </h3>
                   </figcaption>
-                </figure>
+                </figure> */}
 
               </div>
               {/* <section className="mb-2 py-5 px-1 md:px-10">
@@ -410,7 +410,7 @@ const HomeBodyContent = ({posts}: Props) => {
                 {/* <figure className=" flex justify-center items-center flex-col">
                   <Link href="https://www.youtube.com/watch?v=s-Rw5aTB6Z8&t=228s"
                     className="text-2xl font-extrabold font-RubikMonoOne text-white dark:text-black"
-                    aria-details='Emergency Awesome Youtubue Channel' target="_blank">
+                    aria-details='GMRxSeat Youtubue Channel' target="_blank">
                     <Image alt="Comics Explained" src={INVASION}
                     className="sm:w-[340px] md:w-[300px] sm:h-[200px] md:h-[250px]"/>
                   </Link>
@@ -418,8 +418,8 @@ const HomeBodyContent = ({posts}: Props) => {
                     <h3>
                       <Link href="https://www.youtube.com/watch?v=s-Rw5aTB6Z8&t=228s"
                         className="text-2xl font-extrabold font-RubikMonoOne text-white dark:text-black"
-                        aria-details='Emergency Awesome Youtubue Channel' target="_blank">
-                        <p className="text-black dark:text-white">Emergency Awesome</p> (@emergencyawesome)
+                        aria-details='GMRxSeat Youtubue Channel' target="_blank">
+                        <p className="text-black dark:text-white">GMRxSeat</p> (@emergencyawesome)
                       </Link>
                     </h3>
                   </figcaption>
