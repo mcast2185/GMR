@@ -9,7 +9,6 @@ import Header from '../components/header';
 import Banner from '../components/banner';
 import INVASION from '../public/invasion.png';
 import ALAN from '../public/alanwake.png';
-import MGS from '../public/mgs3.png';
 import DCU from '../public/dcu.png';
 import CAPCOM from '../public/capcom.png';
 import GALAXY from '../public/Galaxy.png';
@@ -46,15 +45,18 @@ export default function Media () {
       <FloatButtonComp/>
       <div className="flex h-full w-full">
         <div className="max-w-5xl mx-auto py-4">
+      {/* <div className="max-w-[460px] md:max-w-5xl mx-0 md:mx-auto"> */}
           <Header/>
           <Banner/>
+
           <div className="flex justify-center overflow-hidden">
             <Link id='mainImg' href="https://www.youtube.com/watch?v=s-Rw5aTB6Z8&t=233s">
               <Image src={INVASION} alt="Comics Explained" id="mando"
                 className="object-cover rounded-sm transition-translate duration-500 ease-in-out"/>
             </Link>
-            <h1 className="font-bold p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
-              duration-200 ease-in-out bg-opacity-20 text-stone-50 mr-2 text-5xl font-Quicksand absolute">
+            
+            <h1 className="font-bold sm:w-[390px] p-2 rounded-sm bg-[#3c3c3c] hover:bg-transparent hover:scale-105 transition-transform 
+              duration-200 ease-in-out bg-opacity-20 text-stone-50 mr-2 text-5xl sm:text-lg font-Quicksand absolute">
               Deep Dive Into Marvel's Secret Invasion
             </h1>
           </div>
@@ -155,26 +157,26 @@ export default function Media () {
                   </div>
                 </Carousel>
                 <div id="scroll" className="flex flex-row overflow-y-scroll 
-                  md:grid-cols-2 gap-4 mr-4 pb-12 w-[580px] scale-95">
-                  <iframe className="scale-90 border-t-2 border-[#992715de] border-l-2"  
+                  md:grid-cols-2 gap-4 mr-4 pb-12 sm:pb-2 w-[580px] scale-95">
+                  <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
                     allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    width="375" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/dF2xZ-_jXGI">
+                    width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/X7HNixeDIxA">
                   </iframe>  
-                  <iframe className="border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/X7Iz4wYu0y8" 
+                  <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/A0QxwLH_iPE" 
                     allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen={false} title="YouTube video player" width="180" height="250">
                   </iframe>
-                  <iframe className="scale-90 border-t-2 border-[#992715de] border-l-2"  
+                  <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
                     allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    width="375" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/AGk9iv2AVPw">
+                    width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/wzGb4cM1_lo">
                   </iframe>    
-                  <iframe className="border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/fLmu19go2cs" 
+                  <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/fLmu19go2cs" 
                     allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen={false} title="YouTube video player" width="180" height="250">
                   </iframe>  
-                  <iframe className="scale-90 border-t-2 border-[#992715de] border-l-2"  
+                  <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
                     allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    width="375" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/gyFxUYulM4U">
+                    width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/gyFxUYulM4U">
                   </iframe> 
                 </div>
               </div>
@@ -195,28 +197,70 @@ export default function Media () {
                 </div>
               </div>
             </div>
-            <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold 
-              text-2xl font-MontserratAlternates mb-8 mt-8">
-              GMR Featured Content:
+
+            <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold px-2
+              md:text-2xl text-xl font-MontserratAlternates pt-6 sm:pt-1 md:pt-0 mb-8 md:mb-6">
+              [GMR] Exclusive:
             </h1>
-            <section className="flex w-full mb-20 md:mb-36 justify-between p-5 bg-transparent md:bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 md:shadow-md">
-              <figure >
-                <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen={false} title="YouTube video player" width="672" height="350" src="https://www.youtube.com/embed/5NlTehkiPEY"
-                  className="h-64 w-[500px] md:w-[670px] md:h-[350px]">
-                </iframe>
-              </figure>
-            </section>
-              <div className="flex justify-center pr-6 overflow-hidden cursor-default md:py-6">
-                <Link href="/podcasts">
-                  <Image src={MGS} alt="Metal Gear Solid 3" width={200} 
-                    className="h-64 w-52  object-cover rounded-sm hover:scale-105 transition-transform duration-200 ease-in-out"/>
-                </Link>
-                <h1 className="font-bold p-2 mt-40 rounded-sm bg-[#3c3c3c] 
-                  bg-opacity-80 text-stone-50 mr-2 text-sm font-Quicksand absolute">
-                  Metal Gear Solid 3
-                </h1>
+            <div className="flex flex-col">
+              <div className="mb-2 sm:py-2 sm:px-1 md:pr-9">
+                <div className="flex md:w-[1070px] w-full md:flex-row flex-col sm:justify-center relative shrink md:shrink-0">
+                  <section className="flex flex-col items-center sm:w-full md:w-[750px]">
+                    <figure className=" flex flex-col content-center items-center sm:w-full md:w-[750px]">
+                      <iframe src="https://www.youtube.com/embed/SIbVAK-O3TI" 
+                        allowFullScreen={false} width="672" height="350" title="YouTube video player"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                        className="h-64 w-[400px] sm:w-full sm:h-72 md:w-[670px] md:h-[350px] p-2">
+                      </iframe>
+                        <figcaption className="flex justify-center flex-row pb-1 
+                        sm:w-[350px] w-[95%]">
+                          <h3 className="flex justify-center items-center">
+                            <Link href="https://www.youtube.com/@GMRseat"
+                              className="text-2xl sm:text-xl font-extrabold flex justify-center items-center flex-col
+                              font-MontserratAlternates text-white dark:text-black"
+                              aria-details='GMRxSeat Youtubue Channel' target="_blank">
+                              <p className="text-black dark:text-white">GMRxSeat Content</p> <span className="text-[#992715de]">(<span className="text-black dark:text-white">@</span>GMRxSeat)</span>
+                            </Link>
+                          </h3>
+                        </figcaption>
+                    </figure>
+                    <div id="scroll" className="flex flex-row overflow-x-scroll overflow-scroll
+                      md:grid-cols-2 gap-4 pb-5 sm:pb-2 pt-5 w-[670px] scale-95 md:bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10">
+                      <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/X7Iz4wYu0y8">
+                      </iframe>  
+                      <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/WNKv8uxHlEA" 
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen={false} title="YouTube video player" width="180" height="250">
+                      </iframe>
+                      <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/AGk9iv2AVPw" 
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen={false} title="YouTube video player" width="180" height="250">
+                      </iframe>  
+                      <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/1mG-QMtF-YE">
+                      </iframe>    
+                      <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/dF2xZ-_jXGI">
+                      </iframe> 
+                    </div>
+                  </section>
+                  {/* <GoogleAdSense publisherId={}/> */}
+                  <figure className=" flex justify-center items-center flex-col overflow-hidden md:mb-6 object-contain overflow-y-hidden ">
+                    <blockquote cite="https://www.tiktok.com/@gmrseat/video/7256873646797409578" data-video-id="7256873646797409578" 
+                      className="tiktok-embed sm:max-w-full max-w-[420px] min-w-[325px]"> 
+                      <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2 sm:w-full"  
+                        allow="accelerometer; muted; mute; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="375" height="650" title="YouTube video player" allowFullScreen={false} src="https://www.tiktok.com/@gmrseat/video/7256873646797409578">
+                      </iframe>   
+                    </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                  </figure>
+                </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
