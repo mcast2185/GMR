@@ -28,7 +28,7 @@ function BlogList({posts}: Props) {
   });
 
   return (
-    <div className="blogList sm:mr-[65px]">
+    <div className="blogList ">
       <header>
         <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold 
           text-lg md:text-2xl font-MontserratAlternates m-2 mt-1 pb-4">
@@ -36,13 +36,13 @@ function BlogList({posts}: Props) {
         </h1>
       </header>
       <div className="grid grid-cols-1
-        md:grid-cols-2 px-10 pl-0 gap-10 gap-y-12 pb-24">
+        md:grid-cols-2 md:px-10 sm:pr-1 sm:w-full pl-0 gap-10 gap-y-12 pb-24">
         {filteredPosts.map((post) => (
           <ClientSideRoute key={post._id} 
             route={`/post/${post.slug.current}`}>
-            <article key={post._id}  className="flex flex-col overflow-hidden scale-90 md:scale-100">
-              <figure>
-                <section className="relative w-full h-80 
+            <article key={post._id}  className="flex flex-col overflow-hidden scale-90 md:scale-100 sm:w-full">
+              <figure className="sm:w-full sm:p-1">
+                <section className="relative w-full h-80 sm:h-64
                   hover:scale-105 transition-transform duration-200 ease-out">
                   <Image
                     className='object-cover 

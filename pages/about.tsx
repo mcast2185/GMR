@@ -21,13 +21,17 @@ export default function About () {
       <div className="max-w-[460px] md:max-w-5xl mx-0 md:mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-2 md:px-10 pb-10">
-          <section className="space-y-1 border-transparent text-black">
-            <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
-              <section className="p-4 bg-transparent w-full">
-                <div className="flex flex-col md:flex-row justify-between gap-y-5">
-                  <div>
-                    <h1 className="text-xl md:text-6xl dark:text-white font-extrabold font-MontserratAlternates">
+        <article className=" md:px-10 pb-10">
+          <section className="md:space-y-1 border-transparent text-black px-2">
+            <div className='relative min-h-56 sm:min-h-42 sm:mb-0 flex flex-col md:flex-row md:justify-between'>
+              <section className="p-4 sm:p-1 bg-transparent w-full">
+                <div className="md:flex md:flex-row justify-between gap-y-5 sm:gap-y-0 sm:mb-0">
+                  <div className="flex md:justify-center sm:mt-[25px] sm:mb-0">
+                    <h1 className="text-3xl md:text-8xl dark:text-white font-extrabold absolute z-0 opacity-[.15] 
+                      md:w-[550px] md:ml-[280px] md:mb-[280px] hover:text-[#992715de] hover:opacity-[.35]">
+                      玩家座位
+                    </h1>
+                    <h1 className="text-xl md:text-6xl dark:text-white font-extrabold font-RubikVinyl z-10 ml-4 md:mt-[50px] sm:mt-[10px] sm:mb-0">
                       About
                     </h1>
                   </div>
@@ -35,6 +39,16 @@ export default function About () {
               </section>
             </div>
           </section>
+          <div className="">
+           
+            <figure id="figure" className="md:px-4 sm:flex sm:justify-center sm:items-center">
+              <iframe src="https://www.youtube.com/embed/mDkoEMghRjI"  
+                allowFullScreen={false} height={350} width={660} title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="youtubeVideo shrink md:shrink-0 sm:w-full sm:h-[230px] sm:scale-95 object-cover md:w-[960px] pt-3">
+              </iframe>
+            </figure>
+          </div>
           <div className="border-r-black border-l-black border border-opacity-10 scale-90 md:scale-100
             bg-[#fff6f06c] border-t-transparent border-b-transparent cursor-default px-2 md:px-10" >
             <div className="mt-3 md:mt-16 mb-3 md:mb-16 px-2 md:px-20" >

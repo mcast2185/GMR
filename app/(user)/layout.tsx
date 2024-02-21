@@ -9,7 +9,8 @@ import Providers from 'app/providers';
 import FloatButtonComp from 'components/floatButton';
 import Helper from 'components/helpButton';
 
-
+// we need to adjust the height issue being created with the header being pushed off screen
+// check the axis for any mistakes then strip height from all elements and re establish the styling tree
 
 export default function RootLayout({
   children,

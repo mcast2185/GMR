@@ -15,7 +15,7 @@ import PS from "../public/ps.png"
 import GOW from '../public/GOW.png';
 import RE4 from '../public/remake.png';
 import ZELDA from '../public/zelda.png';
-import MARIO from '../public/mario.png';
+import MAD from '../public/MAD.png';
 import BOMB from '../public/bomb.png';
 import SPIDER2 from '../public/spider2.png';
 import KINDA from '../public/kinda.png';
@@ -48,8 +48,6 @@ const HomeBodyContent = ({posts}: Props) => {
     __html: dompurify.sanitize(data)
   });
 
-  // document.querySelector(".tiktok-embed")
-
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
 
@@ -59,16 +57,15 @@ const HomeBodyContent = ({posts}: Props) => {
       <Carousel/>
       <hr className="border-[#992715de] mb-0 md:mb-10"/>
       <FloatButtonComp/>
-
-      <main className="sm:w-[375px] md:w-full mx-1 md:mx-0">       
+      <main className="sm:w-[385px] md:w-full mx-1 md:mx-0">       
         <div className="flex flex-row  justify-between" >
-          <div className="flex flex-col px-0 md:px-4 py-4 md:py-0 shrink md:shrink-0 sm:w-[375px] md:w-[720px] 
+          <div className="flex flex-col sm:px-1 md:px-4 py-4 md:py-0 shrink md:shrink-0 sm:w-[390px] md:w-[720px] 
             justify-between cursor-default bg-transparent md:bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 md:shadow-md">
             <figure id="figure" className="md:px-4 sm:flex sm:justify-center sm:items-center">
               <iframe src="https://www.youtube.com/embed/9WHkhK8p0OY"  
                 allowFullScreen={false} height={350} width={660} title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                className="youtubeVideo shrink md:shrink-0 sm:w-[345px] sm:h-[280px] sm:scale-95 object-cover md:w-[660px] pt-3">
+                className="youtubeVideo shrink md:shrink-0 sm:w-full sm:h-[230px] sm:scale-95 object-cover md:w-[660px] pt-3">
               </iframe>
             </figure>
             <div className="h-[300px] md:h-auto sm:max-w-[375px] md:max-w-[750px] 
@@ -80,7 +77,8 @@ const HomeBodyContent = ({posts}: Props) => {
                   space-y-2 pr-4 font-RubikMonoOne stroke-[18px] stroke-black 
                   pl-0 z-[-30] absolute md:bottom-[11.2rem] sm:bottom-[-12px]">
                   <span className="flex justify-center items-center mt-4">
-                    <span className="stroke-[18px] mix-blend-difference text-5xl sm:text-[2.7rem] absolute sm:top-[-19rem] md:top-[-8rem] sm:left-[12.4rem] md:left-[27rem] text-[#4d4d4d] 
+                    <span className="stroke-[18px] mix-blend-difference text-5xl sm:text-[2.7rem] 
+                      absolute sm:top-[-19rem] md:top-[-8rem] sm:left-[12.4rem] md:left-[27rem] text-[#4d4d4d] 
                      dark:text-white stroke-white hover:text-transparent hover:stroke-black z-30 transition-transform duration-800 ease-in-out">
                       <i>[GMR]</i>
                     </span>
@@ -126,11 +124,11 @@ const HomeBodyContent = ({posts}: Props) => {
                 </div>
               </div>
             </div>
-            <div className="h-64 md:h-80 max-w-xl md:max-w-2xl px-4 mt-2 md:mt-4 pb-5">
+            <div className="h-64 sm:h-[200px] md:h-80 max-w-xl md:max-w-2xl px-4 mt-2 md:mt-4 pb-5 sm:pb-2">
               <div className="max-w-xl md:max-w-2xl h-full flex mx-auto md:mx-0 
                 justify-center md:justify-start overflow-hidden shrink md:shrink-0">
                 <Link href="/media">
-                  <Image className="h-full w-[450px] md:w-[670px] object-cover overflow-hidden
+                  <Image className="h-full sm:h-[200px] w-[450px] md:w-[670px] object-cover overflow-hidden
                     hover:scale-105 transition-transform duration-200 ease-in-out"
                     src={BOMB} alt="The Bombcast"/>
                 </Link>
@@ -230,23 +228,23 @@ const HomeBodyContent = ({posts}: Props) => {
               <div className="w-72 border-t mt-5 border-slate-50 pl-2 ">
                 <div className="ml-2 mr-1 h-44 flex flex-row">
                   <div className="mt-5 flex flex-row py-2">
-                    <Link aria-details="linking user to amazons listing of Mario+Rabbids Sparks of Hope" 
+                    <Link aria-details="linking user to amazons listing of Madden 24" 
                       rel="canonical" target="_blank" className="w-40 h-36"
-                      href="https://www.amazon.com/gp/search?ie=UTF8&tag=gmrseat91-20&linkCode=ur2&linkId=8a8d67cccd6b6a6fa73c38eec8d8a749&camp=1789&creative=9325&index=videogames&keywords=MarioRabbidsSparksofHope">
-                      <Image src={MARIO} height={100} width={90} alt="Mario+Rabbids Sparks of Hope"/>
+                      href="https://www.amazon.com/gp/search?ie=UTF8&tag=gmrseat91-20&linkCode=ur2&linkId=510e4e758265df3264494a586bafd378&camp=1789&creative=9325&index=videogames&keywords=Madden24">
+                      <Image src={MAD} height={100} width={90} alt="Madden 24"/>
                     </Link>
                     <div className="flex flex-col px-2 pt-2" >
                       <h3 className='font-bold text-sm text-white'>
                         <span className="text-slate-900 dark:text-slate-200">
-                          <b>Title:</b></span> Mario+Rabbids Sparks of Hope
+                          <b>Title:</b></span> Madden 2024
                       </h3>
                       <p className='font-medium text-xs text-white'>
                         <span className="text-slate-900 dark:text-slate-200">
-                          <b>Developer:</b></span> Ubisoft Paris, Ubisoft Milan
+                          <b>Developer:</b></span> EA Tiburon
                       </p>
                       <p className='font-medium text-xs text-white'>
                         <span className="text-slate-900 dark:text-slate-200">
-                          <b>Genre(s):</b></span> Strategy, Turn-Based
+                          <b>Genre(s):</b></span>  Sports video game, Simulation Game
                       </p>
                     </div>
                   </div>
@@ -289,11 +287,11 @@ const HomeBodyContent = ({posts}: Props) => {
           <div className="w-full h-[250px] sm:h-[90px] py-4 sm:py-0 cursor-default" >
             <Link href="https://www.youtube.com/watch?v=difL_diHo2o" aria-details="Avatar video game trailer" 
               rel="canonical" target="_blank">
-              <Image className="w-full sm:w-[360px]" alt="Avatar game" src={AVATAR}></Image>
+              <Image className="w-full sm:w-[390px]" alt="Avatar game" src={AVATAR}></Image>
             </Link>
           </div>
           <div className="border-r-2 border-opacity-40 border-black dark:border-white pt-6">
-          <section ref={ref} className="mb-2 md:mb-8 py-0 md:py-0">
+          <section ref={ref} className="mb-2 md:mb-0 py-0 md:py-0">
             <div className="flex flex-col md:flex-row w-full relative shrink md:shrink-0 ml-[-12px] md:ml-0">
               <div className="mb-2 md:mb-5 sm:mr-[3.3px] sm:ml-[3.3px] md:pr-3 md:pt-8 flex 
                 justify-between sm:w-[390px] md:w-[600px] sm:scale-x-90 sm:scale-y-90 md:scale-100" >
@@ -364,17 +362,17 @@ const HomeBodyContent = ({posts}: Props) => {
                   </section>
                 </div> 
               </div>
-              <div className=" mb-6 md:mb-0 px-2 sm:ml-1 md:px-8 pt-2 flex md:flex-none justify-between ">
-                <section className="grid clearfix sm:translate-x-0 sm:opacity-1" id="flash-parent-tag" style={{
+              <div className=" mb-6 sm:mb-0 md:mb-0 px-2 sm:px-0 md:px-8 pt-2 sm:pt-0 flex md:flex-none justify-between sm:h-[0px] sm:hidden">
+                <section className="grid clearfix sm:translate-x-0 sm:opacity-1 sm:h-[0px] sm:hidden" id="flash-parent-tag" style={{
                   transform: isInView ? "none" : "translateY(-20px)",
                   opacity: isInView ? 1 : 0,
                   transition: "all 1.75s cubic-bezier(0.17, 0.55, 0.55, 1)"}}>
                   <Link target="_blank" href="https://www.youtube.com/watch?v=rze8QYwWGMs">
                     <figure id="flash-wrapper" className="flex mt-[25px] 
-                      h-[250px] md:h-[220px] sm:w-[330px] mr-[10px] ml-[10px] sm:mr-0 sm:ml-[4px]">
-                      <Image className="h-[250px] md:h-[220px] sm:w-[330px] img-transform" 
+                      h-[250px] md:h-[220px] sm:w-[390px] mr-[10px] ml-[10px] sm:h-[0px] sm:hidden sm:mr-0 sm:ml-[0px]">
+                      <Image className="h-[250px] md:h-[220px] sm:w-[390px] img-transform sm:h-[0px] sm:hidden" 
                         id="flash" src={KRAVEN} alt="KRAVEN the Hunter movie"/>
-                      <Image className="h-[250px] md:h-[220px] sm:w-[330px] img-effect" 
+                      <Image className="h-[250px] md:h-[220px] sm:w-[390px] img-effect sm:h-[0px] sm:hidden" 
                         id="flash" src={KRAVEN2} alt="KRAVEN the Hunter movie"/>
                       <figcaption id="flash-content">
                         <h3 id="prompt-two" className="font-RubikMonoOne text-lg"> 
@@ -388,21 +386,21 @@ const HomeBodyContent = ({posts}: Props) => {
             </div>
           </section>
           <h1 className="text-black dark:text-white underline decoration-[#992715de] font-bold px-2
-            md:text-2xl text-xl font-MontserratAlternates pt-6 md:pt-0 sm:mb-0 md:mb-6">
+            md:text-2xl text-xl font-MontserratAlternates sm:mt-2 pt-6 md:pt-0 sm:mb-0 md:mb-6">
             Exclusive Content:
           </h1>
           <div className="flex flex-col">
-            <div className="mb-2 sm:pb-5 sm:pt-1 sm:px-1 md:pr-9">
+            <div className="mb-2 sm:pb-2 sm:pt-1 sm:px-1 md:pr-9">
               <div className="flex md:w-[1070px] w-full md:flex-row flex-col sm:justify-center relative shrink md:shrink-0">
-                <section className="flex flex-col items-center md:w-[750px]">
-                  <figure className=" flex flex-col content-center items-center md:w-[750px]">
-                    <iframe src="https://www.youtube.com/embed/5NlTehkiPEY" 
+                <section className="flex flex-col items-center md:w-[750px] object-contain">
+                  <figure className=" flex flex-col content-center object-contain items-center md:w-[750px]">
+                    <iframe src="https://www.youtube.com/embed/4sMi4mBxkmc" 
                       allowFullScreen={false} width="672" height="350" title="YouTube video player"
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
-                      className="sm:h-[250px] sm:w-[340px] sm:p-1 sm:pl-4 md:w-[670px] md:h-[350px] p-2">
+                      className="sm:h-[250px] sm:w-[380px] object-contain sm:p-0 sm:pl-0 md:w-[670px] md:h-[350px] p-2">
                     </iframe>
                       <figcaption className="flex justify-center flex-row pb-1 
-                      sm:w-[300px] w-[95%]">
+                      sm:w-[300px] w-[95%] sm:pb-0">
                         <h3 className="flex justify-center items-center">
                           <Link href="https://www.youtube.com/@GMRseat"
                             className="text-2xl sm:text-lg font-extrabold flex justify-center items-center flex-col
@@ -415,31 +413,31 @@ const HomeBodyContent = ({posts}: Props) => {
                       </figcaption>
                   </figure>
                   <div id="scroll" className="flex flex-row overflow-x-scroll overflow-scroll
-                    md:grid-cols-2 gap-4 pb-5 sm:pb-1 pt-5 sm:pt-1 w-[670px] sm:w-[360px] scale-95 sm:scale-90 md:bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10">
-                    <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
-                      allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/X7Iz4wYu0y8">
-                    </iframe>  
-                    <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/bvaTWYF25Zc" 
-                      allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen={false} title="YouTube video player" width="180" height="250">
-                    </iframe>
-                    <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/AGk9iv2AVPw" 
-                      allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      allowFullScreen={false} title="YouTube video player" width="180" height="250">
-                    </iframe>  
-                    <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
-                      allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/1mG-QMtF-YE">
-                    </iframe>    
-                    <iframe className="scale-90 sm:scale-95 border-t-2 border-[#992715de] border-l-2"  
-                      allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/dF2xZ-_jXGI">
-                    </iframe> 
+                    md:grid-cols-2 gap-4 sm:gap-0 sm:pb-0 sm:pt-0 w-[775px] sm:w-[390px] scale-95 sm:scale-90 dark:bg-[#3a3a3a6c] dark:bg-opacity-10">
+                      <iframe className="scale-90 sm:scale-[.8] border-t-2 border-[#992715de] border-l-2"  
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/wpwv9QsijYs">
+                      </iframe>  
+                      <iframe className="scale-90 sm:scale-[.8] border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/WNKv8uxHlEA" 
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen={false} title="YouTube video player" width="180" height="250">
+                      </iframe>
+                      <iframe className="scale-90 sm:scale-[.8] border-t-2 border-[#992715de] border-l-2" src="https://www.youtube.com/embed/AGk9iv2AVPw" 
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen={false} title="YouTube video player" width="180" height="250">
+                      </iframe>  
+                      <iframe className="scale-90 sm:scale-[.8] border-t-2 border-[#992715de] border-l-2"  
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/1mG-QMtF-YE">
+                      </iframe>    
+                      <iframe className="scale-90 sm:scale-[.8] border-t-2 border-[#992715de] border-l-2"  
+                        allow="accelerometer; play clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        width="180" height="250" title="YouTube video player" allowFullScreen={false} src="https://www.youtube.com/embed/dF2xZ-_jXGI">
+                      </iframe> 
                   </div>
                 </section>
                 {/* <GoogleAdSense publisherId={}/> */}
-                <figure className=" flex justify-center items-center flex-col overflow-hidden sm:mb-2 md:mb-8 object-contain overflow-y-hidden ">
+                <figure className=" flex justify-center items-center flex-col overflow-hidden sm:mt-0 sm:pt-0 sm:mb-0 md:mb-8 object-contain overflow-y-hidden sm:h-0 sm:hidden ">
                   <blockquote cite="https://www.tiktok.com/@gmrseat/video/7260155442133765422" data-video-id="7260155442133765422" 
                     className="tiktok-embed max-w-[420px] sm:w-[300px] sm:scale-90 scale-95"> 
                     <iframe className="scale-90 border-t-2 border-[#992715de] border-l-2"  
@@ -462,8 +460,10 @@ const HomeBodyContent = ({posts}: Props) => {
         </div>
       </div>
       <hr className="border-[#992715de] mb-10"/>
-      <div className="bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 shadow-md px-2 py-2 w-[450px] md:w-auto">
+      <div className="bg-[#bab8b76c] dark:bg-[#3a3a3a6c] dark:bg-opacity-10 shadow-md px-2 py-2 sm:py-0 sm:w-[390px] md:w-auto ">
+        <div className="sm:flex sm:justify-center sm:mr-[20px]">
       <BlogList posts={posts}/>
+      </div>
       </div>
     </div>
   );

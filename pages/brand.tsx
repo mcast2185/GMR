@@ -33,12 +33,16 @@ const Brand = ({brand}: Props) => {
         <Header/>
         <Banner/>
         <article className="px-2 md:px-10 pb-10">
-          <section className="space-y-1 border-transparent text-black">
-            <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
-              <section className="p-4 bg-transparent w-full">
-                <div className="flex flex-col md:flex-row justify-between gap-y-5">
-                  <div>
-                    <h1 className="text-6xl dark:text-white font-extrabold font-MontserratAlternates">
+          <section className="md:space-y-1 border-transparent text-black">
+            <div className='relative min-h-56 sm:min-h-42 sm:mb-0 flex flex-col md:flex-row md:justify-between'>
+              <section className="p-4 sm:p-1 bg-transparent w-full">
+                <div className="md:flex md:flex-row justify-between gap-y-5 sm:gap-y-0 sm:mb-0">
+                  <div className="flex md:justify-center sm:mt-[25px] sm:mb-0">
+                    <h1 className="text-3xl md:text-8xl dark:text-white font-extrabold absolute z-0 opacity-[.15] 
+                      md:w-[750px] md:ml-[280px] md:mb-[280px] hover:text-[#992715de] hover:opacity-[.35]">
+                      ゲーマーシート
+                    </h1>
+                    <h1 className="text-xl md:text-6xl dark:text-white font-extrabold font-PermanentMarker z-10 ml-4 md:mt-[50px] sm:mt-[10px] sm:mb-0">
                       [GMR] Brand
                     </h1>
                   </div>

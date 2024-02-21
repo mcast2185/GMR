@@ -31,7 +31,11 @@ module.exports = {
         "JuliusSansOne": ['Julius Sans One', "sans-serif"],
         "Thasadith" : ['Thasadith', "sans-serif"],
         "Fahkwang": ['Fahkwang', "sans-serif"],
-        "AdventPro": ['Advent Pro', "sans-serif"]
+        "AdventPro": ['Advent Pro', "sans-serif"],
+        "Kalam": ['Kalam', 'cursive'],
+        "BubbleGum": ['Bubblegum Sans', 'cursive'],
+        "PermanentMarker": ['Permanent Marker', 'cursive'],
+        "RubikVinyl": ['Rubik Vinyl', 'cursive']
       },
     },
   },

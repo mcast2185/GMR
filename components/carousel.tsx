@@ -10,7 +10,7 @@ import slide_image_2 from "../public/GOW.png";
 import slide_image_3 from "../public/ffxvi.png";
 import slide_image_4 from "../public/remake.png";
 import slide_image_5 from "../public/zelda.png";
-import slide_image_6 from "../public/hogwarts.png";
+import slide_image_6 from "../public/REM.png";
 
 import "../styles/globals.css";
 
@@ -138,15 +138,15 @@ const Carousel = () => {
           <SwiperSlide>
             <div className="flex justify-center">
               <figure>
-                <Image priority src={slide_image_6} alt="4.4/5" 
+                <Image priority src={slide_image_6} alt="Remnant 2" 
                   className='img hover:scale-105 hover:brightness-75 duration-500 h-[250px] w-[180px]
                   transition-transform ease-in-out object-contain overflow-hidden'/>
-                <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[158px] rounded-md absolute
+                <div className="bg-[#3c3c3c] bg-opacity-80 h-9 w-[137px] rounded-md absolute
                   -pb-3 mr-2 ml-2 top-[140px] flex flex-row justify-center items-center scale-90">
                   <p className="text-[#d3d3d3] text-base pl-1">
-                  4.4/5: 
+                  3.8/5: 
                   </p> 
-                  <span className="rating" aria-label='4.4 out of 5' role="img"/>
+                  <span className="rating" aria-label='3.8 out of 5' role="img"/>
                 </div> 
               </figure>
               </div>

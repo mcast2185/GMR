@@ -58,13 +58,17 @@ export default function Contact ({post}: Props) {
       <div className="max-w-[460px] md:max-w-5xl mx-0 md:mx-auto">
         <Header/>
         <Banner/>
-        <article className="px-2 md:px-10 pb-10">
-          <section className="space-y-1 border-transparent text-black">
-            <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
-              <section className="p-4 bg-transparent w-full">
-                <div className="flex flex-col md:flex-row justify-between gap-y-5">
-                  <div>
-                    <h1 className="text-xl md:text-6xl dark:text-white font-extrabold font-MontserratAlternates">
+        <article className="px-2 md:px-10 pb-5">
+          <section className="md:space-y-1 border-transparent text-black ">
+            <div className='relative md:min-h-56 flex flex-col md:flex-row justify-between'>
+              <section className="p-4 sm:pb-0 sm:mb-0 bg-transparent w-full sm:h-[30px]">
+                <div className="md:flex md:flex-row justify-between gap-y-5 sm:gap-y-0 sm:pb-0">
+                  <div className="flex md:justify-center sm:pt-[35px] sm:pb-0">
+                    <h1 className="text-3xl md:text-8xl dark:text-white font-extrabold absolute z-0 opacity-[.15] 
+                      md:w-[550px] md:ml-[280px] md:mb-[280px] hover:text-[#992715de] hover:opacity-[.35]">
+                       مقعد اللاعب
+                    </h1>
+                    <h1 className="text-xl md:text-6xl dark:text-white font-extrabold font-Kalam z-10 ml-4 md:mt-[50px] sm:mt-[10px] sm:pb-0">
                       Contact
                     </h1>
                   </div>
